@@ -68,8 +68,8 @@ module.exports = {
         },
       },
       fontFamily: {
-        sans: ['"DM Sans"', 'system-ui', 'sans-serif'],
-        display: ['"Space Grotesk"', 'system-ui', 'sans-serif'],
+        sans: ['var(--font-geist-sans)', 'system-ui', 'sans-serif'],
+        mono: ['var(--font-geist-mono)', 'monospace'],
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-out',
