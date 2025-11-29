@@ -894,6 +894,11 @@ export default function HomePage() {
                 <h4 className="text-sm font-bold uppercase tracking-wider mb-4">Resources</h4>
                 <ul className="space-y-2">
                   <li>
+                    <a href="https://intel.totalaudiopromo.com/blog" className="text-sm text-gray-400 hover:text-white transition-colors">
+                      Blog
+                    </a>
+                  </li>
+                  <li>
                     <a href="#newsletter" className="text-sm text-gray-400 hover:text-white transition-colors">
                       Newsletter
                     </a>
@@ -910,7 +915,7 @@ export default function HomePage() {
                   </li>
                   <li>
                     <a href="mailto:chris@totalaudiopromo.com" className="text-sm text-gray-400 hover:text-white transition-colors">
-                      Help Centre
+                      Contact
                     </a>
                   </li>
                 </ul>
@@ -921,22 +926,22 @@ export default function HomePage() {
                 <h4 className="text-sm font-bold uppercase tracking-wider mb-4">Legal</h4>
                 <ul className="space-y-2">
                   <li>
-                    <a href="/privacy" className="text-sm text-gray-400 hover:text-white transition-colors">
+                    <a href="https://intel.totalaudiopromo.com/privacy" className="text-sm text-gray-400 hover:text-white transition-colors">
                       Privacy Policy
                     </a>
                   </li>
                   <li>
-                    <a href="/terms" className="text-sm text-gray-400 hover:text-white transition-colors">
+                    <a href="https://intel.totalaudiopromo.com/terms" className="text-sm text-gray-400 hover:text-white transition-colors">
                       Terms of Service
                     </a>
                   </li>
                   <li>
-                    <a href="/cookies" className="text-sm text-gray-400 hover:text-white transition-colors">
+                    <a href="https://intel.totalaudiopromo.com/cookies" className="text-sm text-gray-400 hover:text-white transition-colors">
                       Cookie Policy
                     </a>
                   </li>
                   <li>
-                    <a href="/gdpr" className="text-sm text-gray-400 hover:text-white transition-colors">
+                    <a href="https://intel.totalaudiopromo.com/gdpr" className="text-sm text-gray-400 hover:text-white transition-colors">
                       GDPR
                     </a>
                   </li>
