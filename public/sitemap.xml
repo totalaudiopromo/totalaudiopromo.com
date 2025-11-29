@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Main landing page -->
+  <url>
+    <loc>https://www.totalaudiopromo.com/</loc>
+    <lastmod>2025-01-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- App subdomains (informational - these are separate sites) -->
+  <!--
+    Note: Each app subdomain should have its own sitemap:
+    - https://intel.totalaudiopromo.com/sitemap.xml
+    - https://pitch.totalaudiopromo.com/sitemap.xml
+    - https://tracker.totalaudiopromo.com/sitemap.xml
+  -->
+</urlset>

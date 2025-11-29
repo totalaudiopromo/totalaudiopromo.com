@@ -1,0 +1,18 @@
+# Total Audio Promo - robots.txt
+# https://www.totalaudiopromo.com
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.totalaudiopromo.com/sitemap.xml
+
+# Block admin/API paths if any exist
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
+
+# Allow search engines to crawl all public content
+Allow: /images/
+Allow: /*.css
+Allow: /*.js

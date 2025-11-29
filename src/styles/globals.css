@@ -4,35 +4,285 @@
 
 @import "./mobile-optimizations.css";
 
+/* ============================================
+   TOTAL AUDIO PROMO - Global Styles
+   Neo-brutalist design system with polish
+   ============================================ */
+
 @layer base {
+  /* Root variables for consistent timing */
+  :root {
+    --transition-fast: 150ms;
+    --transition-base: 240ms;
+    --transition-slow: 300ms;
+    --ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply bg-white text-gray-900 antialiased;
+    font-family: "DM Sans", system-ui, sans-serif;
   }
 
   * {
     box-sizing: border-box;
   }
 
+  /* Typography with display font for headings */
   h1, h2, h3, h4, h5, h6 {
     @apply text-gray-900 tracking-tight font-bold;
+    font-family: "Space Grotesk", system-ui, sans-serif;
+  }
+
+  /* Focus-visible states for accessibility */
+  *:focus-visible {
+    @apply outline-none ring-2 ring-brand-blue ring-offset-2;
+  }
+
+  /* Remove default focus outline for non-keyboard users */
+  *:focus:not(:focus-visible) {
+    @apply outline-none ring-0;
+  }
+
+  /* Selection styling */
+  ::selection {
+    @apply bg-brand-blue text-white;
   }
 }
 
 @layer components {
-  /* Pitch Generator-inspired design system */
+  /* ============================================
+     Glass Panel - Neo-brutalist card component
+     ============================================ */
   .glass-panel {
-    @apply rounded-2xl border-4 border-black bg-white p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transition-all hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:-translate-x-1 hover:-translate-y-1;
+    @apply rounded-2xl border-4 border-black bg-white p-8;
+    box-shadow: 8px 8px 0px 0px rgba(0,0,0,1);
+    transition: transform var(--transition-base) var(--ease-out-expo),
+                box-shadow var(--transition-base) var(--ease-out-expo);
   }
 
+  .glass-panel:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: 12px 12px 0px 0px rgba(0,0,0,1);
+  }
+
+  /* ============================================
+     Badge - Status/label component
+     ============================================ */
   .badge-postcraft {
-    @apply inline-flex items-center gap-2 rounded-full border-2 border-black bg-yellow-300 px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)];
+    @apply inline-flex items-center gap-2 rounded-full border-2 border-black px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-black;
+    background-color: #3AA9BE; /* TAP Cyan instead of yellow */
+    box-shadow: 2px 2px 0px 0px rgba(0,0,0,1);
+  }
+
+  /* ============================================
+     CTA Button - Primary action button
+     ============================================ */
+  .cta-button {
+    @apply inline-flex items-center justify-center rounded-xl border-4 border-black bg-brand-blue px-6 py-3 text-sm font-bold text-white;
+    box-shadow: 4px 4px 0px 0px rgba(0,0,0,1);
+    transition: transform var(--transition-fast) var(--ease-out-expo),
+                box-shadow var(--transition-fast) var(--ease-out-expo),
+                background-color var(--transition-fast) ease-out;
+  }
+
+  .cta-button:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px 0px rgba(0,0,0,1);
+  }
+
+  .cta-button:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px 0px rgba(0,0,0,1);
+  }
+
+  .cta-button:focus-visible {
+    @apply ring-2 ring-brand-blue ring-offset-2;
+  }
+
+  /* ============================================
+     Subtle Button - Secondary action button
+     ============================================ */
+  .subtle-button {
+    @apply inline-flex items-center justify-center rounded-xl border-2 border-black bg-white px-5 py-2.5 text-sm font-semibold text-black;
+    box-shadow: 3px 3px 0px 0px rgba(0,0,0,1);
+    transition: transform var(--transition-fast) var(--ease-out-expo),
+                box-shadow var(--transition-fast) var(--ease-out-expo),
+                background-color var(--transition-fast) ease-out;
+  }
+
+  .subtle-button:hover {
+    transform: translate(-1px, -1px);
+    box-shadow: 4px 4px 0px 0px rgba(0,0,0,1);
+    @apply bg-gray-50;
+  }
+
+  .subtle-button:active {
+    transform: translate(1px, 1px);
+    box-shadow: 2px 2px 0px 0px rgba(0,0,0,1);
+  }
+
+  /* ============================================
+     Product Cards - App showcase cards
+     ============================================ */
+  .product-card {
+    @apply rounded-2xl border-4 border-black bg-white p-6;
+    box-shadow: 6px 6px 0px 0px rgba(0,0,0,1);
+    transition: transform var(--transition-base) var(--ease-out-expo),
+                box-shadow var(--transition-base) var(--ease-out-expo);
+  }
+
+  .product-card:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: 9px 9px 0px 0px rgba(0,0,0,1);
+  }
+
+  /* Product card colour variants */
+  .product-card--intel {
+    @apply border-intel-600;
+    box-shadow: 6px 6px 0px 0px #2563EB;
+  }
+
+  .product-card--intel:hover {
+    box-shadow: 9px 9px 0px 0px #2563EB;
+  }
+
+  .product-card--pitch {
+    @apply border-pitch-600;
+    box-shadow: 6px 6px 0px 0px #7C3AED;
+  }
+
+  .product-card--pitch:hover {
+    box-shadow: 9px 9px 0px 0px #7C3AED;
+  }
+
+  .product-card--tracker {
+    @apply border-tracker-600;
+    box-shadow: 6px 6px 0px 0px #D97706;
+  }
+
+  .product-card--tracker:hover {
+    box-shadow: 9px 9px 0px 0px #D97706;
+  }
+
+  /* ============================================
+     Input Fields - Form styling
+     ============================================ */
+  .input-field {
+    @apply w-full rounded-xl border-2 border-black bg-white px-4 py-3 text-sm;
+    box-shadow: 3px 3px 0px 0px rgba(0,0,0,1);
+    transition: box-shadow var(--transition-fast) ease-out,
+                border-color var(--transition-fast) ease-out;
+  }
+
+  .input-field:focus {
+    @apply border-brand-blue;
+    box-shadow: 3px 3px 0px 0px #2563EB;
+  }
+
+  .input-field::placeholder {
+    @apply text-gray-400;
+  }
+
+  /* ============================================
+     Modal Overlay
+     ============================================ */
+  .modal-overlay {
+    @apply fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm;
+    animation: fadeIn var(--transition-base) ease-out;
+  }
+
+  .modal-content {
+    @apply rounded-2xl border-4 border-black bg-white p-8 max-w-md w-full mx-4;
+    box-shadow: 12px 12px 0px 0px rgba(0,0,0,1);
+    animation: slideUp var(--transition-slow) var(--ease-out-expo);
+  }
+
+  /* ============================================
+     Animations
+     ============================================ */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes pulse-subtle {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.7;
+    }
+  }
+
+  /* Page load animation */
+  .animate-fade-in {
+    animation: fadeIn var(--transition-slow) ease-out;
+  }
+
+  .animate-fade-in-up {
+    animation: slideUp var(--transition-slow) var(--ease-out-expo);
+  }
+
+  /* Staggered animations for lists */
+  .stagger-1 { animation-delay: 100ms; }
+  .stagger-2 { animation-delay: 200ms; }
+  .stagger-3 { animation-delay: 300ms; }
+  .stagger-4 { animation-delay: 400ms; }
+}
+
+/* ============================================
+   Reduced Motion Support
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .glass-panel:hover,
+  .product-card:hover,
+  .cta-button:hover,
+  .subtle-button:hover {
+    transform: none !important;
+  }
+}
+
+/* ============================================
+   High Contrast Mode Support
+   ============================================ */
+@media (prefers-contrast: high) {
+  .glass-panel,
+  .product-card,
+  .cta-button,
+  .subtle-button,
+  .input-field {
+    border-width: 3px !important;
   }
 
   .cta-button {
-    @apply inline-flex items-center justify-center rounded-xl border-4 border-black bg-blue-500 px-6 py-3 text-sm font-bold text-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:-translate-x-1 hover:-translate-y-1 active:scale-95;
-  }
-
-  .subtle-button {
-    @apply inline-flex items-center justify-center rounded-xl border-2 border-black bg-white px-5 py-2.5 text-sm font-semibold text-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] transition-all hover:shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] hover:-translate-x-0.5 hover:-translate-y-0.5;
+    @apply bg-black text-white;
   }
 }
