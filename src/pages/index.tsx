@@ -6,6 +6,7 @@ import { StatCard } from '../components/StatCard';
 import { CaseStudyBanner } from '../components/CaseStudyBanner';
 import { TrustBadges } from '../components/TrustBadges';
 import { FeatureShowcase } from '../components/FeatureShowcase';
+import { ScrollReveal } from '../components/ScrollReveal';
 
 export default function HomePage() {
   return (
@@ -57,7 +58,7 @@ export default function HomePage() {
               },
               sameAs: [
                 'https://intel.totalaudiopromo.com',
-                'https://pitch.totalaudiopromo.com',
+                'https://pitcher.totalaudiopromo.com',
                 'https://tracker.totalaudiopromo.com',
               ],
             }),
@@ -112,13 +113,13 @@ export default function HomePage() {
                 href="https://intel.totalaudiopromo.com"
                 className="px-3 py-2 text-sm font-semibold text-gray-700 hover:text-intel-600 transition-colors rounded-lg hover:bg-intel-50"
               >
-                <span className="hidden sm:inline">Audio </span>Intel
+                Intel
               </a>
               <a
-                href="https://pitch.totalaudiopromo.com"
+                href="https://pitcher.totalaudiopromo.com"
                 className="px-3 py-2 text-sm font-semibold text-gray-700 hover:text-pitch-600 transition-colors rounded-lg hover:bg-pitch-50"
               >
-                Pitch<span className="hidden sm:inline"> Generator</span>
+                Pitcher
               </a>
               <a
                 href="https://tracker.totalaudiopromo.com"
@@ -126,6 +127,12 @@ export default function HomePage() {
               >
                 Tracker
               </a>
+              <Link
+                href="/pricing"
+                className="px-3 py-2 text-sm font-semibold text-gray-800 rounded-lg border border-gray-200 hover:border-gray-300 hover:bg-gray-100 transition-colors"
+              >
+                Pricing
+              </Link>
 
               {/* Dashboard Button */}
               <a
@@ -140,7 +147,7 @@ export default function HomePage() {
 
         <main>
           {/* Hero Section - Complete Reimagining */}
-          <section className="relative overflow-hidden bg-white py-16 sm:py-24">
+          <section className="relative overflow-hidden bg-white py-12 sm:py-16">
             {/* Subtle grid pattern background */}
             <div className="absolute inset-0 opacity-[0.03]" style={{
               backgroundImage: 'linear-gradient(#000 1px, transparent 1px), linear-gradient(90deg, #000 1px, transparent 1px)',
@@ -151,15 +158,15 @@ export default function HomePage() {
               <div className="grid lg:grid-cols-5 gap-10 items-center">
                 {/* Left Column (60%) */}
                 <div className="lg:col-span-3">
-                  <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-gray-900 leading-tight mb-6">
+                  <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-gray-900 leading-tight mb-5">
                     Turn 15 Hours of Contact Research Into 15 Minutes
                   </h1>
 
-                  <p className="text-xl text-gray-600 mb-6 leading-relaxed">
+                  <p className="text-xl text-gray-600 mb-5 leading-relaxed">
                     Built by <span className="font-semibold text-gray-900">Chris Schofield</span> after 5 years of promoting to BBC Radio 1, 6 Music, and Spotify. Stop wasting weekends on spreadsheets.
                   </p>
 
-                  <div className="flex flex-wrap gap-4 mb-8">
+                  <div className="flex flex-wrap gap-4 mb-6">
                     <a
                       href="https://intel.totalaudiopromo.com"
                       className="cta-button text-lg px-8 py-4"
@@ -198,21 +205,26 @@ export default function HomePage() {
                       />
                     </div>
 
-                    {/* Floating enrichment card mockup */}
+                    {/* Time saved badge */}
                     <div className="absolute -bottom-4 -right-4 bg-white rounded-xl border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] p-3 z-20 animate-float">
                       <div className="flex items-center gap-2 text-xs">
                         <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-                        <span className="font-medium">Contact enriched</span>
+                        <span className="font-bold text-gray-900">15hrs → 15min</span>
                       </div>
                     </div>
 
-                    {/* Before/after visual hint */}
-                    <div className="absolute -top-4 -left-4 bg-red-100 rounded-xl border-2 border-red-300 p-2 z-0 rotate-[-6deg]">
-                      <span className="text-xs text-red-600 font-medium">Spreadsheet chaos</span>
+                    {/* Founder context badge */}
+                    <div className="absolute -top-6 -left-6 bg-white rounded-xl border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] p-3 z-30 rotate-[-4deg]">
+                      <div className="text-[11px] font-black text-gray-900 leading-tight">
+                        Built by a radio promoter
+                      </div>
+                      <div className="text-[10px] text-gray-600 font-medium">
+                        BBC Radio 1 · 6 Music · Spotify
+                      </div>
                     </div>
                   </div>
 
-                  <p className="mt-8 text-sm text-gray-500 text-center max-w-xs">
+                  <p className="mt-6 text-sm text-gray-500 text-center max-w-xs">
                     From scattered spreadsheets to organised databases in minutes
                   </p>
                 </div>
@@ -229,69 +241,98 @@ export default function HomePage() {
             }} />
 
             <div className="max-w-6xl mx-auto px-4 relative">
-              <header className="text-center mb-14">
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+              <header className="text-center mb-12">
+                <p className="text-red-600 font-bold uppercase tracking-wider text-sm mb-3">
+                  180 hours per year wasted on manual research
+                </p>
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 mb-4">
                   The Old Way is Costing You Weekends
                 </h2>
+                <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                  Agencies charge £500-2,000/month for contact research. You've been doing it yourself for free... but at what cost?
+                </p>
               </header>
 
               <div className="grid md:grid-cols-3 gap-6">
                 {/* Pain Point 1 */}
-                <div className="bg-white rounded-2xl border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] p-6 sm:p-8">
-                  <div className="w-16 h-16 bg-red-100 rounded-xl flex items-center justify-center mb-4 mx-auto">
-                    <Image
-                      src="/images/chaos-overwhelmed.png"
-                      alt="Overwhelmed by research"
-                      width={48}
-                      height={48}
-                      className="object-contain"
-                    />
+                <ScrollReveal delay={1}>
+                  <div className="bg-white rounded-2xl border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] p-6 sm:p-8 hover:-translate-y-1 hover:shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] transition-all duration-200 h-full">
+                    <div className="w-24 h-24 bg-red-100 rounded-2xl flex items-center justify-center mb-5 mx-auto border-2 border-red-200">
+                      <Image
+                        src="/images/chaos-overwhelmed.png"
+                        alt="Overwhelmed by research"
+                        width={64}
+                        height={64}
+                        className="object-contain hidden md:block"
+                      />
+                      <svg className="w-12 h-12 text-red-500 md:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                    </div>
+                    <h3 className="text-2xl font-black text-gray-900 mb-3 text-center">Your Weekend, Gone. Again.</h3>
+                    <p className="text-gray-600 text-center">
+                      Copying emails from LinkedIn, checking websites, cross-referencing spreadsheets... 15 hours per campaign, every single time.
+                    </p>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2 text-center">Hours of Googling</h3>
-                  <p className="text-gray-600 text-center text-sm">
-                    Copying emails from LinkedIn, checking websites, cross-referencing spreadsheets... sound familiar?
-                  </p>
-                </div>
+                </ScrollReveal>
 
                 {/* Pain Point 2 */}
-                <div className="bg-white rounded-2xl border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] p-6 sm:p-8">
-                  <div className="w-16 h-16 bg-red-100 rounded-xl flex items-center justify-center mb-4 mx-auto">
-                    <svg className="w-10 h-10 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
+                <ScrollReveal delay={2}>
+                  <div className="bg-white rounded-2xl border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] p-6 sm:p-8 hover:-translate-y-1 hover:shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] transition-all duration-200 h-full">
+                    <div className="w-24 h-24 bg-red-100 rounded-2xl flex items-center justify-center mb-5 mx-auto border-2 border-red-200">
+                      <Image
+                        src="/images/error-state.png"
+                        alt="Generic pitches get ignored"
+                        width={64}
+                        height={64}
+                        className="object-contain hidden md:block"
+                      />
+                      <svg className="w-12 h-12 text-red-500 md:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                      </svg>
+                    </div>
+                    <h3 className="text-2xl font-black text-gray-900 mb-3 text-center">Straight in the Bin</h3>
+                    <p className="text-gray-600 text-center">
+                      Sending the same template to BBC Radio 1 and a local station? They can tell. 2% response rate at best.
+                    </p>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2 text-center">Generic Pitches Ignored</h3>
-                  <p className="text-gray-600 text-center text-sm">
-                    Sending the same template to BBC Radio 1 and a local station? They can tell. 2% response rate.
-                  </p>
-                </div>
+                </ScrollReveal>
 
                 {/* Pain Point 3 */}
-                <div className="bg-white rounded-2xl border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] p-6 sm:p-8">
-                  <div className="w-16 h-16 bg-red-100 rounded-xl flex items-center justify-center mb-4 mx-auto">
-                    <svg className="w-10 h-10 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
+                <ScrollReveal delay={3}>
+                  <div className="bg-white rounded-2xl border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] p-6 sm:p-8 hover:-translate-y-1 hover:shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] transition-all duration-200 h-full">
+                    <div className="w-24 h-24 bg-red-100 rounded-2xl flex items-center justify-center mb-5 mx-auto border-2 border-red-200">
+                      <Image
+                        src="/images/processing-organizing.png"
+                        alt="Flying blind without tracking"
+                        width={64}
+                        height={64}
+                        className="object-contain hidden md:block"
+                      />
+                      <svg className="w-12 h-12 text-red-500 md:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                    </div>
+                    <h3 className="text-2xl font-black text-gray-900 mb-3 text-center">Flying Completely Blind</h3>
+                    <p className="text-gray-600 text-center">
+                      Did they open it? Reply? Add your track? You'll never know... unless you track everything.
+                    </p>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2 text-center">No Idea What Works</h3>
-                  <p className="text-gray-600 text-center text-sm">
-                    Did they open it? Reply? Add it? You will never know... unless you track everything.
-                  </p>
-                </div>
+                </ScrollReveal>
               </div>
             </div>
           </section>
 
           {/* Solution Section - Interactive Workflow */}
-          <section id="ecosystem" className="py-16 sm:py-24 bg-white">
+          <section id="ecosystem" className="py-12 sm:py-16 bg-white">
             <div className="max-w-6xl mx-auto px-4">
-              <header className="text-center mb-14">
-                <div className="inline-flex items-center gap-2 rounded-full border-2 border-intel-600 bg-intel-50 px-4 py-2 shadow-[3px_3px_0px_0px_#2563EB] mb-6">
+              <header className="text-center mb-10">
+                <div className="inline-flex items-center gap-2 rounded-full border-2 border-intel-600 bg-intel-50 px-4 py-2 shadow-[3px_3px_0px_0px_#2563EB] mb-4">
                   <span className="text-sm font-bold uppercase tracking-wider text-intel-600">
                     The Complete Workflow
                   </span>
                 </div>
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-3">
                   Three Tools That Actually Talk to Each Other
                 </h2>
                 <p className="text-lg text-gray-600 max-w-3xl mx-auto">
@@ -300,25 +341,25 @@ export default function HomePage() {
               </header>
 
               {/* Workflow Steps */}
-              <div className="space-y-8">
-                {/* Step 1: Audio Intel */}
-                <article className="rounded-2xl border-4 border-black bg-gradient-to-br from-intel-50 to-white shadow-[8px_8px_0px_0px_#2563EB] p-6 sm:p-10 hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[12px_12px_0px_0px_#2563EB] transition-all duration-200 ring-4 ring-intel-200 ring-offset-4">
-                  <div className="grid lg:grid-cols-2 gap-8 items-center">
+              <div className="space-y-6">
+                {/* Step 1: Intel */}
+                <article className="rounded-2xl border-4 border-black bg-gradient-to-br from-intel-50 to-white shadow-[8px_8px_0px_0px_#2563EB] p-5 sm:p-8 hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[12px_12px_0px_0px_#2563EB] transition-all duration-200 ring-4 ring-intel-200 ring-offset-4">
+                  <div className="grid lg:grid-cols-2 gap-6 items-center">
                     <div>
-                      <div className="flex items-center gap-3 mb-4">
+                      <div className="flex items-center gap-3 mb-3">
                         <div className="w-12 h-12 rounded-full bg-intel-600 text-white font-bold flex items-center justify-center border-2 border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] text-xl">
                           1
                         </div>
-                        <h3 className="text-2xl sm:text-3xl font-bold text-gray-900">Audio Intel</h3>
+                        <h3 className="text-2xl sm:text-3xl font-bold text-gray-900">Intel</h3>
                         <span className="ml-2 px-3 py-1 text-xs font-bold uppercase bg-intel-600 text-white rounded-full border-2 border-black">
                           Most Popular
                         </span>
                       </div>
 
                       <p className="text-xl font-semibold text-gray-900 mb-2">Research Contacts in Minutes, Not Hours</p>
-                      <p className="text-gray-600 mb-4 text-lg">AI-powered contact enrichment finds emails, social profiles, and submission details for any radio station or playlist curator.</p>
+                      <p className="text-gray-600 mb-3 text-lg">AI-powered contact enrichment finds emails, social profiles, and submission details for any radio station or playlist curator.</p>
 
-                      <ul className="space-y-3 text-gray-700 mb-6">
+                      <ul className="space-y-2.5 text-gray-700 mb-5">
                         <li className="flex items-start gap-3">
                           <span className="text-green-600 mt-0.5 text-lg">&#10003;</span>
                           <span>Upload any contact list - we enrich with role, platform, submission guidelines</span>
@@ -329,11 +370,11 @@ export default function HomePage() {
                         </li>
                         <li className="flex items-start gap-3">
                           <span className="text-green-600 mt-0.5 text-lg">&#10003;</span>
-                          <span>Export to Excel, PDF, or send directly to Pitch Generator</span>
+                          <span>Export to Excel, PDF, or send directly to Pitcher</span>
                         </li>
                       </ul>
 
-                      <div className="bg-intel-100 border-2 border-intel-600 rounded-xl p-4 mb-6">
+                      <div className="bg-intel-100 border-2 border-intel-600 rounded-xl p-4 mb-5">
                         <p className="text-sm font-bold text-intel-900">
                           Turn 15 hours of research into 15 minutes - tested with 47 BBC Radio contacts.
                         </p>
@@ -350,7 +391,7 @@ export default function HomePage() {
                     <div className="flex justify-center">
                       <Image
                         src="/images/intelligence-complete.png"
-                        alt="Audio Intel dashboard showing enriched contact data"
+                        alt="Intel dashboard showing enriched contact data"
                         width={320}
                         height={320}
                         className="drop-shadow-2xl animate-float"
@@ -362,18 +403,18 @@ export default function HomePage() {
                 {/* Arrow */}
                 <div className="flex justify-center">
                   <div className="flex flex-col items-center gap-1">
-                    <div className="w-1 h-8 bg-gray-300 rounded-full" />
+                    <div className="w-1 h-6 bg-gray-300 rounded-full" />
                     <div className="text-3xl text-gray-400">&#8595;</div>
                   </div>
                 </div>
 
-                {/* Step 2: Pitch Generator */}
-                <article className="rounded-2xl border-4 border-black bg-gradient-to-br from-pitch-50 to-white shadow-[8px_8px_0px_0px_#7C3AED] p-6 sm:p-10 hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[12px_12px_0px_0px_#7C3AED] transition-all duration-200">
-                  <div className="grid lg:grid-cols-2 gap-8 items-center">
+                {/* Step 2: Pitcher */}
+                <article className="rounded-2xl border-4 border-black bg-gradient-to-br from-pitch-50 to-white shadow-[8px_8px_0px_0px_#D97706] p-5 sm:p-8 hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[12px_12px_0px_0px_#D97706] transition-all duration-200">
+                  <div className="grid lg:grid-cols-2 gap-6 items-center">
                     <div className="flex justify-center lg:order-1">
                       <Image
                         src="/images/processing-contacts.png"
-                        alt="Pitch Generator creating personalised emails"
+                        alt="Pitcher creating personalised emails"
                         width={320}
                         height={320}
                         className="drop-shadow-2xl animate-float"
@@ -381,20 +422,20 @@ export default function HomePage() {
                       />
                     </div>
                     <div className="lg:order-2">
-                      <div className="flex items-center gap-3 mb-4">
+                      <div className="flex items-center gap-3 mb-3">
                         <div className="w-12 h-12 rounded-full bg-pitch-600 text-white font-bold flex items-center justify-center border-2 border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] text-xl">
                           2
                         </div>
-                        <h3 className="text-2xl sm:text-3xl font-bold text-gray-900">Pitch Generator</h3>
+                        <h3 className="text-2xl sm:text-3xl font-bold text-gray-900">Pitcher</h3>
                       </div>
 
                       <p className="text-xl font-semibold text-gray-900 mb-2">Personalised Pitches That Actually Get Replies</p>
-                      <p className="text-gray-600 mb-4 text-lg">AI writes pitches in your voice, tailored to each contact's preferences and past coverage.</p>
+                      <p className="text-gray-600 mb-3 text-lg">AI writes pitches in your voice, tailored to each contact's preferences and past coverage.</p>
 
-                      <ul className="space-y-3 text-gray-700 mb-6">
+                      <ul className="space-y-2.5 text-gray-700 mb-5">
                         <li className="flex items-start gap-3">
                           <span className="text-green-600 mt-0.5 text-lg">&#10003;</span>
-                          <span>Import enriched contacts from Audio Intel or add manually</span>
+                        <span>Import enriched contacts from Intel or add manually</span>
                         </li>
                         <li className="flex items-start gap-3">
                           <span className="text-green-600 mt-0.5 text-lg">&#10003;</span>
@@ -406,17 +447,17 @@ export default function HomePage() {
                         </li>
                       </ul>
 
-                      <div className="bg-pitch-100 border-2 border-pitch-600 rounded-xl p-4 mb-6">
+                      <div className="bg-pitch-100 border-2 border-pitch-600 rounded-xl p-4 mb-5">
                         <p className="text-sm font-bold text-pitch-900">
                           14-18% response rate from BBC Radio 1 (vs 2% for bulk emails)
                         </p>
                       </div>
 
                       <div className="flex items-center gap-4">
-                        <a href="https://pitch.totalaudiopromo.com" className="cta-button text-base px-6 py-3 bg-pitch-600 hover:bg-pitch-700">
+                        <a href="https://pitcher.totalaudiopromo.com" className="cta-button text-base px-6 py-3 bg-pitch-600 hover:bg-pitch-700">
                           Start Free Trial
                         </a>
-                        <span className="text-xl font-bold text-pitch-600">£12/month</span>
+                        <span className="text-xl font-bold text-pitch-600">£19/month</span>
                       </div>
                     </div>
                   </div>
@@ -425,16 +466,16 @@ export default function HomePage() {
                 {/* Arrow */}
                 <div className="flex justify-center">
                   <div className="flex flex-col items-center gap-1">
-                    <div className="w-1 h-8 bg-gray-300 rounded-full" />
+                    <div className="w-1 h-6 bg-gray-300 rounded-full" />
                     <div className="text-3xl text-gray-400">&#8595;</div>
                   </div>
                 </div>
 
                 {/* Step 3: Tracker */}
-                <article className="rounded-2xl border-4 border-black bg-gradient-to-br from-tracker-50 to-white shadow-[8px_8px_0px_0px_#D97706] p-6 sm:p-10 hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[12px_12px_0px_0px_#D97706] transition-all duration-200">
-                  <div className="grid lg:grid-cols-2 gap-8 items-center">
+                <article className="rounded-2xl border-4 border-black bg-gradient-to-br from-tracker-50 to-white shadow-[8px_8px_0px_0px_#0D9488] p-5 sm:p-8 hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[12px_12px_0px_0px_#0D9488] transition-all duration-200">
+                  <div className="grid lg:grid-cols-2 gap-6 items-center">
                     <div>
-                      <div className="flex items-center gap-3 mb-4">
+                      <div className="flex items-center gap-3 mb-3">
                         <div className="w-12 h-12 rounded-full bg-tracker-600 text-white font-bold flex items-center justify-center border-2 border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] text-xl">
                           3
                         </div>
@@ -442,9 +483,9 @@ export default function HomePage() {
                       </div>
 
                       <p className="text-xl font-semibold text-gray-900 mb-2">Track Every Submission, See What Works</p>
-                      <p className="text-gray-600 mb-4 text-lg">CRM-style tracking for radio campaigns with analytics to optimise your approach.</p>
+                      <p className="text-gray-600 mb-3 text-lg">CRM-style tracking for radio campaigns with analytics to optimise your approach.</p>
 
-                      <ul className="space-y-3 text-gray-700 mb-6">
+                      <ul className="space-y-2.5 text-gray-700 mb-5">
                         <li className="flex items-start gap-3">
                           <span className="text-green-600 mt-0.5 text-lg">&#10003;</span>
                           <span>AI campaign autopsy - what worked, what didn't, what to do next</span>
@@ -459,7 +500,7 @@ export default function HomePage() {
                         </li>
                       </ul>
 
-                      <div className="bg-tracker-100 border-2 border-tracker-600 rounded-xl p-4 mb-6">
+                      <div className="bg-tracker-100 border-2 border-tracker-600 rounded-xl p-4 mb-5">
                         <p className="text-sm font-bold text-tracker-900">
                           "14% response rate - above industry average. Focus on 6 Music next."
                         </p>
@@ -469,7 +510,7 @@ export default function HomePage() {
                         <a href="https://tracker.totalaudiopromo.com" className="cta-button text-base px-6 py-3 bg-tracker-600 hover:bg-tracker-700">
                           Start Free Trial
                         </a>
-                        <span className="text-xl font-bold text-tracker-600">£15/month</span>
+                        <span className="text-xl font-bold text-tracker-600">£19/month</span>
                       </div>
                     </div>
 
@@ -489,9 +530,9 @@ export default function HomePage() {
             </div>
           </section>
 
-          {/* Feature Deep-Dive - Audio Intel Spotlight */}
+          {/* Feature Deep-Dive - Intel Spotlight */}
           <FeatureShowcase
-            headline="Why Audio Intel Changes Everything"
+            headline="Why Intel Changes Everything"
             subheadline="The core product that makes the rest of the workflow possible"
             features={[
               {
@@ -521,7 +562,7 @@ export default function HomePage() {
               },
             ]}
             image="/images/analyzing-data.png"
-            imageAlt="Audio Intel enrichment process"
+            imageAlt="Intel enrichment process"
             mockupContent={{
               name: 'Jack Saunders',
               role: 'BBC Radio 1 DJ, New Music Champion',
@@ -542,10 +583,10 @@ export default function HomePage() {
           />
 
           {/* Social Proof - Redesigned with Context */}
-          <section className="py-16 sm:py-20 bg-white">
+          <section className="py-12 sm:py-16 bg-white">
             <div className="max-w-6xl mx-auto px-4">
-              <header className="text-center mb-12">
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+              <header className="text-center mb-10">
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-3">
                   Proven with Real Campaigns
                 </h2>
                 <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -553,7 +594,7 @@ export default function HomePage() {
                 </p>
               </header>
 
-              <div className="grid md:grid-cols-3 gap-6">
+              <div className="grid md:grid-cols-3 gap-5">
                 <StatCard
                   value="100%"
                   label="Enrichment Success Rate"
@@ -578,10 +619,10 @@ export default function HomePage() {
           </section>
 
           {/* Pricing Section - Visual Hierarchy */}
-          <section id="products" className="py-16 sm:py-24 bg-gray-50">
+          <section id="products" className="py-12 sm:py-16 bg-gray-50">
             <div className="max-w-6xl mx-auto px-4">
-              <header className="text-center mb-14">
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+              <header className="text-center mb-10">
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-3">
                   Choose Your Starting Point
                 </h2>
                 <p className="text-lg text-gray-600 max-w-3xl mx-auto">
@@ -589,161 +630,255 @@ export default function HomePage() {
                 </p>
               </header>
 
-              <div className="grid lg:grid-cols-3 gap-6 mb-12">
-                {/* Audio Intel Card - Featured */}
-                <div className="bg-white border-4 border-intel-600 shadow-[8px_8px_0px_0px_#2563EB] hover:shadow-[12px_12px_0px_0px_#2563EB] hover:-translate-x-1 hover:-translate-y-1 transition-all duration-200 rounded-2xl p-6 sm:p-8 flex flex-col relative ring-4 ring-intel-200 ring-offset-4">
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                    <span className="px-4 py-1 text-sm font-bold uppercase bg-intel-600 text-white rounded-full border-2 border-black">
-                      Start Here
+              <div className="grid lg:grid-cols-3 gap-6 mb-8">
+                {/* Intel Card - Featured */}
+                <div className="bg-gradient-to-br from-intel-50 via-white to-white border-4 border-intel-600 shadow-[8px_8px_0px_0px_#2563EB] hover:shadow-[12px_12px_0px_0px_#2563EB] hover:-translate-x-1 hover:-translate-y-1 transition-all duration-200 rounded-2xl p-5 sm:p-6 flex flex-col relative ring-4 ring-intel-200 ring-offset-4 group pt-10">
+                  {/* Subtle background pattern */}
+                  <div className="absolute inset-0 opacity-[0.02] pointer-events-none" style={{
+                    backgroundImage: 'radial-gradient(circle at 2px 2px, #2563EB 1px, transparent 0)',
+                    backgroundSize: '24px 24px',
+                  }} />
+                  
+                  {/* START HERE Badge - Enhanced Visibility */}
+                  <div className="absolute -top-8 left-1/2 -translate-x-1/2 z-20">
+                    <span className="px-6 py-3 text-sm font-black uppercase bg-intel-600 text-white rounded-full border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] group-hover:scale-110 group-hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transition-all duration-200 animate-pulse">
+                      START HERE
                     </span>
                   </div>
 
-                  <div className="w-20 h-20 bg-intel-100 rounded-xl flex items-center justify-center mb-5 mx-auto border-2 border-intel-200">
-                    <Image
-                      src="/images/analyzing-data.png"
-                      alt="Audio Intel - Contact Research"
-                      width={60}
-                      height={60}
-                      className="object-contain"
-                    />
+                  {/* Icon container with enhanced styling */}
+                  <div className="relative mb-5 z-10">
+                    <div className="w-24 h-24 bg-gradient-to-br from-intel-100 to-intel-50 rounded-2xl flex items-center justify-center mx-auto border-4 border-intel-300 shadow-[4px_4px_0px_0px_#2563EB] group-hover:scale-110 group-hover:rotate-2 transition-all duration-300 p-3 relative overflow-hidden">
+                      {/* Animated background shimmer */}
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+                      <Image
+                        src="/images/analyzing-data.png"
+                        alt="Intel - Contact Research"
+                        width={64}
+                        height={64}
+                        className="object-contain relative z-10"
+                      />
+                    </div>
                   </div>
 
-                  <h3 className="text-xl font-bold text-gray-900 mb-1 text-center">Audio Intel</h3>
-                  <p className="text-sm text-intel-600 font-semibold text-center mb-3">Contact Research</p>
+                  <h3 className="text-2xl font-black text-gray-900 mb-1 text-center group-hover:text-intel-700 transition-colors">Intel</h3>
+                  <p className="text-sm text-intel-600 font-bold text-center mb-4 uppercase tracking-wide">Contact Research</p>
 
-                  <div className="text-center mb-4">
-                    <span className="text-4xl font-bold text-gray-900">£19</span>
-                    <span className="text-gray-500">/month</span>
+                  {/* Price with enhanced styling */}
+                  <div className="text-center mb-4 relative">
+                    <div className="inline-flex items-baseline gap-1 px-4 py-2 bg-white/60 rounded-xl border-2 border-intel-200">
+                      <span className="text-5xl font-black text-gray-900">£19</span>
+                      <span className="text-lg text-gray-500 font-medium">/month</span>
+                    </div>
                   </div>
 
-                  <p className="text-sm text-gray-600 mb-5 text-center flex-grow">
+                  <p className="text-base text-gray-700 mb-5 text-center flex-grow font-medium leading-relaxed">
                     AI-powered contact enrichment. Find emails, roles, and submission guidelines in minutes.
                   </p>
 
-                  <ul className="space-y-2 mb-6 text-sm">
-                    <li className="flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 bg-intel-600 rounded-full" />
-                      <span>100 enrichments/month</span>
+                  {/* Feature list with enhanced styling */}
+                  <ul className="space-y-2.5 mb-5 text-sm relative z-10">
+                    <li className="flex items-start gap-3 group/item">
+                      <div className="mt-0.5 flex-shrink-0 w-6 h-6 rounded-md bg-intel-100 border-2 border-intel-300 flex items-center justify-center group-hover/item:bg-intel-200 transition-colors">
+                        <svg className="w-4 h-4 text-intel-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                        </svg>
+                      </div>
+                      <span className="text-gray-700 font-medium pt-0.5">100 enrichments/month</span>
                     </li>
-                    <li className="flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 bg-intel-600 rounded-full" />
-                      <span>Email validation</span>
+                    <li className="flex items-start gap-3 group/item">
+                      <div className="mt-0.5 flex-shrink-0 w-6 h-6 rounded-md bg-intel-100 border-2 border-intel-300 flex items-center justify-center group-hover/item:bg-intel-200 transition-colors">
+                        <svg className="w-4 h-4 text-intel-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                        </svg>
+                      </div>
+                      <span className="text-gray-700 font-medium pt-0.5">Email validation</span>
                     </li>
-                    <li className="flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 bg-intel-600 rounded-full" />
-                      <span>Export to Excel/PDF</span>
+                    <li className="flex items-start gap-3 group/item">
+                      <div className="mt-0.5 flex-shrink-0 w-6 h-6 rounded-md bg-intel-100 border-2 border-intel-300 flex items-center justify-center group-hover/item:bg-intel-200 transition-colors">
+                        <svg className="w-4 h-4 text-intel-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                        </svg>
+                      </div>
+                      <span className="text-gray-700 font-medium pt-0.5">Export to Excel/PDF</span>
                     </li>
-                    <li className="flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 bg-intel-600 rounded-full" />
-                      <span>Direct Pitch Generator integration</span>
+                    <li className="flex items-start gap-3 group/item">
+                      <div className="mt-0.5 flex-shrink-0 w-6 h-6 rounded-md bg-intel-100 border-2 border-intel-300 flex items-center justify-center group-hover/item:bg-intel-200 transition-colors">
+                        <svg className="w-4 h-4 text-intel-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                        </svg>
+                      </div>
+                      <span className="text-gray-700 font-medium pt-0.5">Direct Pitcher integration</span>
                     </li>
                   </ul>
 
                   <a
                     href="https://intel.totalaudiopromo.com"
-                    className="cta-button w-full text-center bg-intel-600 hover:bg-intel-700 mt-auto"
+                    className="cta-button w-full text-center bg-intel-600 hover:bg-intel-700 mt-auto text-base font-bold py-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all relative z-10"
                   >
                     Start Free Trial
                   </a>
                 </div>
 
-                {/* Pitch Generator Card */}
-                <div className="bg-white border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[9px_9px_0px_0px_rgba(0,0,0,1)] hover:-translate-x-1 hover:-translate-y-1 transition-all duration-200 rounded-2xl p-6 sm:p-8 flex flex-col">
-                  <div className="w-20 h-20 bg-pitch-100 rounded-xl flex items-center justify-center mb-5 mx-auto border-2 border-pitch-200">
-                    <Image
-                      src="/images/vinyl-throw-action.png"
-                      alt="Pitch Generator - AI Pitches"
-                      width={60}
-                      height={60}
-                      className="object-contain"
-                    />
+                {/* Pitcher Card */}
+                <div className="bg-gradient-to-br from-pitch-50 via-white to-white border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[9px_9px_0px_0px_rgba(0,0,0,1)] hover:-translate-x-1 hover:-translate-y-1 transition-all duration-200 rounded-2xl p-5 sm:p-6 flex flex-col group overflow-hidden relative">
+                  {/* Subtle background pattern */}
+                  <div className="absolute inset-0 opacity-[0.02] pointer-events-none" style={{
+                    backgroundImage: 'radial-gradient(circle at 2px 2px, #D97706 1px, transparent 0)',
+                    backgroundSize: '24px 24px',
+                  }} />
+                  
+                  {/* Icon container with enhanced styling */}
+                  <div className="relative mb-5 z-10">
+                    <div className="w-24 h-24 bg-gradient-to-br from-pitch-100 to-pitch-50 rounded-2xl flex items-center justify-center mx-auto border-4 border-pitch-300 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] group-hover:scale-110 group-hover:rotate-2 transition-all duration-300 p-3 relative overflow-hidden">
+                      {/* Animated background shimmer */}
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+                      <Image
+                        src="/images/vinyl-throw-action.png"
+                        alt="Pitcher - AI Pitches"
+                        width={64}
+                        height={64}
+                        className="object-contain relative z-10"
+                      />
+                    </div>
                   </div>
 
-                  <h3 className="text-xl font-bold text-gray-900 mb-1 text-center">Pitch Generator</h3>
-                  <p className="text-sm text-pitch-600 font-semibold text-center mb-3">AI-Powered Pitches</p>
+                  <h3 className="text-2xl font-black text-gray-900 mb-1 text-center group-hover:text-pitch-700 transition-colors">Pitcher</h3>
+                  <p className="text-sm text-pitch-600 font-bold text-center mb-4 uppercase tracking-wide">AI-Powered Pitches</p>
 
-                  <div className="text-center mb-4">
-                    <span className="text-4xl font-bold text-gray-900">£12</span>
-                    <span className="text-gray-500">/month</span>
+                  {/* Price with enhanced styling */}
+                  <div className="text-center mb-4 relative">
+                    <div className="inline-flex items-baseline gap-1 px-4 py-2 bg-white/60 rounded-xl border-2 border-pitch-200">
+                      <span className="text-5xl font-black text-gray-900">£19</span>
+                      <span className="text-lg text-gray-500 font-medium">/month</span>
+                    </div>
                   </div>
 
-                  <p className="text-sm text-gray-600 mb-5 text-center flex-grow">
+                  <p className="text-base text-gray-700 mb-5 text-center flex-grow font-medium leading-relaxed">
                     Write 50 personalised pitches in 20 minutes. Tailored to each contact's preferences.
                   </p>
 
-                  <ul className="space-y-2 mb-6 text-sm">
-                    <li className="flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 bg-pitch-600 rounded-full" />
-                      <span>50 pitches/month</span>
+                  {/* Feature list with enhanced styling */}
+                  <ul className="space-y-2.5 mb-5 text-sm relative z-10">
+                    <li className="flex items-start gap-3 group/item">
+                      <div className="mt-0.5 flex-shrink-0 w-6 h-6 rounded-md bg-pitch-100 border-2 border-pitch-300 flex items-center justify-center group-hover/item:bg-pitch-200 transition-colors">
+                        <svg className="w-4 h-4 text-pitch-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                        </svg>
+                      </div>
+                      <span className="text-gray-700 font-medium pt-0.5">50 pitches/month</span>
                     </li>
-                    <li className="flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 bg-pitch-600 rounded-full" />
-                      <span>Voice matching</span>
+                    <li className="flex items-start gap-3 group/item">
+                      <div className="mt-0.5 flex-shrink-0 w-6 h-6 rounded-md bg-pitch-100 border-2 border-pitch-300 flex items-center justify-center group-hover/item:bg-pitch-200 transition-colors">
+                        <svg className="w-4 h-4 text-pitch-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                        </svg>
+                      </div>
+                      <span className="text-gray-700 font-medium pt-0.5">Voice matching</span>
                     </li>
-                    <li className="flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 bg-pitch-600 rounded-full" />
-                      <span>Batch generation</span>
+                    <li className="flex items-start gap-3 group/item">
+                      <div className="mt-0.5 flex-shrink-0 w-6 h-6 rounded-md bg-pitch-100 border-2 border-pitch-300 flex items-center justify-center group-hover/item:bg-pitch-200 transition-colors">
+                        <svg className="w-4 h-4 text-pitch-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                        </svg>
+                      </div>
+                      <span className="text-gray-700 font-medium pt-0.5">Batch generation</span>
                     </li>
-                    <li className="flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 bg-pitch-600 rounded-full" />
-                      <span>Gmail integration</span>
+                    <li className="flex items-start gap-3 group/item">
+                      <div className="mt-0.5 flex-shrink-0 w-6 h-6 rounded-md bg-pitch-100 border-2 border-pitch-300 flex items-center justify-center group-hover/item:bg-pitch-200 transition-colors">
+                        <svg className="w-4 h-4 text-pitch-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                        </svg>
+                      </div>
+                      <span className="text-gray-700 font-medium pt-0.5">Gmail integration</span>
                     </li>
                   </ul>
 
                   <a
-                    href="https://pitch.totalaudiopromo.com"
-                    className="cta-button w-full text-center bg-pitch-600 hover:bg-pitch-700 mt-auto"
+                    href="https://pitcher.totalaudiopromo.com"
+                    className="cta-button w-full text-center bg-pitch-600 hover:bg-pitch-700 mt-auto text-base font-bold py-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all relative z-10"
                   >
                     Try Free
                   </a>
                 </div>
 
                 {/* Tracker Card */}
-                <div className="bg-white border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[9px_9px_0px_0px_rgba(0,0,0,1)] hover:-translate-x-1 hover:-translate-y-1 transition-all duration-200 rounded-2xl p-6 sm:p-8 flex flex-col">
-                  <div className="w-20 h-20 bg-tracker-100 rounded-xl flex items-center justify-center mb-5 mx-auto border-2 border-tracker-200">
-                    <Image
-                      src="/images/success-complete.png"
-                      alt="Campaign Tracker - Analytics"
-                      width={60}
-                      height={60}
-                      className="object-contain"
-                    />
+                <div className="bg-gradient-to-br from-tracker-50 via-white to-white border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[9px_9px_0px_0px_rgba(0,0,0,1)] hover:-translate-x-1 hover:-translate-y-1 transition-all duration-200 rounded-2xl p-5 sm:p-6 flex flex-col group overflow-hidden relative">
+                  {/* Subtle background pattern */}
+                  <div className="absolute inset-0 opacity-[0.02] pointer-events-none" style={{
+                    backgroundImage: 'radial-gradient(circle at 2px 2px, #0D9488 1px, transparent 0)',
+                    backgroundSize: '24px 24px',
+                  }} />
+                  
+                  {/* Icon container with enhanced styling */}
+                  <div className="relative mb-5 z-10">
+                    <div className="w-24 h-24 bg-gradient-to-br from-tracker-100 to-tracker-50 rounded-2xl flex items-center justify-center mx-auto border-4 border-tracker-300 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] group-hover:scale-110 group-hover:rotate-2 transition-all duration-300 p-3 relative overflow-hidden">
+                      {/* Animated background shimmer */}
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+                      <Image
+                        src="/images/success-complete.png"
+                        alt="Campaign Tracker - Analytics"
+                        width={64}
+                        height={64}
+                        className="object-contain relative z-10"
+                      />
+                    </div>
                   </div>
 
-                  <h3 className="text-xl font-bold text-gray-900 mb-1 text-center">Tracker</h3>
-                  <p className="text-sm text-tracker-600 font-semibold text-center mb-3">Campaign Analytics</p>
+                  <h3 className="text-2xl font-black text-gray-900 mb-1 text-center group-hover:text-tracker-700 transition-colors">Tracker</h3>
+                  <p className="text-sm text-tracker-600 font-bold text-center mb-4 uppercase tracking-wide">Campaign Analytics</p>
 
-                  <div className="text-center mb-4">
-                    <span className="text-4xl font-bold text-gray-900">£15</span>
-                    <span className="text-gray-500">/month</span>
+                  {/* Price with enhanced styling */}
+                  <div className="text-center mb-4 relative">
+                    <div className="inline-flex items-baseline gap-1 px-4 py-2 bg-white/60 rounded-xl border-2 border-tracker-200">
+                      <span className="text-5xl font-black text-gray-900">£19</span>
+                      <span className="text-lg text-gray-500 font-medium">/month</span>
+                    </div>
                   </div>
 
-                  <p className="text-sm text-gray-600 mb-5 text-center flex-grow">
+                  <p className="text-base text-gray-700 mb-5 text-center flex-grow font-medium leading-relaxed">
                     Track every submission. Know which contacts respond and optimise your approach.
                   </p>
 
-                  <ul className="space-y-2 mb-6 text-sm">
-                    <li className="flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 bg-tracker-600 rounded-full" />
-                      <span>Unlimited tracking</span>
+                  {/* Feature list with enhanced styling */}
+                  <ul className="space-y-2.5 mb-5 text-sm relative z-10">
+                    <li className="flex items-start gap-3 group/item">
+                      <div className="mt-0.5 flex-shrink-0 w-6 h-6 rounded-md bg-tracker-100 border-2 border-tracker-300 flex items-center justify-center group-hover/item:bg-tracker-200 transition-colors">
+                        <svg className="w-4 h-4 text-tracker-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                        </svg>
+                      </div>
+                      <span className="text-gray-700 font-medium pt-0.5">Unlimited tracking</span>
                     </li>
-                    <li className="flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 bg-tracker-600 rounded-full" />
-                      <span>AI campaign autopsy</span>
+                    <li className="flex items-start gap-3 group/item">
+                      <div className="mt-0.5 flex-shrink-0 w-6 h-6 rounded-md bg-tracker-100 border-2 border-tracker-300 flex items-center justify-center group-hover/item:bg-tracker-200 transition-colors">
+                        <svg className="w-4 h-4 text-tracker-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                        </svg>
+                      </div>
+                      <span className="text-gray-700 font-medium pt-0.5">AI campaign autopsy</span>
                     </li>
-                    <li className="flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 bg-tracker-600 rounded-full" />
-                      <span>Performance reports</span>
+                    <li className="flex items-start gap-3 group/item">
+                      <div className="mt-0.5 flex-shrink-0 w-6 h-6 rounded-md bg-tracker-100 border-2 border-tracker-300 flex items-center justify-center group-hover/item:bg-tracker-200 transition-colors">
+                        <svg className="w-4 h-4 text-tracker-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                        </svg>
+                      </div>
+                      <span className="text-gray-700 font-medium pt-0.5">Performance reports</span>
                     </li>
-                    <li className="flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 bg-tracker-600 rounded-full" />
-                      <span>Industry benchmarks</span>
+                    <li className="flex items-start gap-3 group/item">
+                      <div className="mt-0.5 flex-shrink-0 w-6 h-6 rounded-md bg-tracker-100 border-2 border-tracker-300 flex items-center justify-center group-hover/item:bg-tracker-200 transition-colors">
+                        <svg className="w-4 h-4 text-tracker-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                        </svg>
+                      </div>
+                      <span className="text-gray-700 font-medium pt-0.5">Industry benchmarks</span>
                     </li>
                   </ul>
 
                   <a
                     href="https://tracker.totalaudiopromo.com"
-                    className="cta-button w-full text-center bg-tracker-600 hover:bg-tracker-700 mt-auto"
+                    className="cta-button w-full text-center bg-tracker-600 hover:bg-tracker-700 mt-auto text-base font-bold py-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all relative z-10"
                   >
                     Try Free
                   </a>
@@ -757,13 +892,13 @@ export default function HomePage() {
           </section>
 
           {/* Guarantee/Trust Section */}
-          <section className="py-16 bg-white">
+          <section className="py-12 bg-white">
             <div className="max-w-4xl mx-auto px-4 text-center">
-              <div className="bg-green-50 rounded-2xl border-4 border-green-600 shadow-[8px_8px_0px_0px_#16A34A] p-8 sm:p-12">
-                <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
+              <div className="bg-green-50 rounded-2xl border-4 border-green-600 shadow-[8px_8px_0px_0px_#16A34A] p-6 sm:p-10">
+                <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
                   90% Data Accuracy Guarantee
                 </h2>
-                <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+                <p className="text-lg text-gray-600 mb-6 max-w-2xl mx-auto">
                   If your enriched contacts are less than 90% accurate, we will refund your month. No questions asked.
                 </p>
 
@@ -792,18 +927,18 @@ export default function HomePage() {
           </section>
 
           {/* Newsletter Section - Enhanced */}
-          <section id="newsletter" className="py-16 sm:py-20 bg-gray-50">
+          <section id="newsletter" className="py-12 sm:py-16 bg-gray-50">
             <div className="max-w-6xl mx-auto px-4">
-              <div className="grid lg:grid-cols-2 gap-10 items-center">
+              <div className="grid lg:grid-cols-2 gap-8 items-center">
                 <div>
-                  <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+                  <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
                     The Unsigned Advantage
                   </h2>
-                  <p className="text-lg text-gray-600 mb-6">
+                  <p className="text-lg text-gray-600 mb-5">
                     Weekly insights from 5+ years of radio promotion. What's working, what's not, and industry intel you won't find elsewhere.
                   </p>
 
-                  <div className="space-y-3 mb-8">
+                  <div className="space-y-2.5 mb-6">
                     <div className="flex items-start gap-3 text-gray-700">
                       <span className="text-intel-600 mt-1">&#8594;</span>
                       <span>"How I got 6 plays on BBC Radio 1 with one campaign"</span>
@@ -868,12 +1003,12 @@ export default function HomePage() {
                 <ul className="space-y-2">
                   <li>
                     <a href="https://intel.totalaudiopromo.com" className="text-sm text-gray-400 hover:text-white transition-colors">
-                      Audio Intel
+                      Intel
                     </a>
                   </li>
                   <li>
-                    <a href="https://pitch.totalaudiopromo.com" className="text-sm text-gray-400 hover:text-white transition-colors">
-                      Pitch Generator
+                    <a href="https://pitcher.totalaudiopromo.com" className="text-sm text-gray-400 hover:text-white transition-colors">
+                      Pitcher
                     </a>
                   </li>
                   <li>
@@ -894,6 +1029,11 @@ export default function HomePage() {
                 <h4 className="text-sm font-bold uppercase tracking-wider mb-4">Resources</h4>
                 <ul className="space-y-2">
                   <li>
+                    <a href="https://intel.totalaudiopromo.com/blog" className="text-sm text-gray-400 hover:text-white transition-colors">
+                      Blog
+                    </a>
+                  </li>
+                  <li>
                     <a href="#newsletter" className="text-sm text-gray-400 hover:text-white transition-colors">
                       Newsletter
                     </a>
@@ -904,13 +1044,13 @@ export default function HomePage() {
                     </a>
                   </li>
                   <li>
-                    <a href="#products" className="text-sm text-gray-400 hover:text-white transition-colors">
+                    <Link href="/pricing" className="text-sm text-gray-400 hover:text-white transition-colors">
                       Pricing
-                    </a>
+                    </Link>
                   </li>
                   <li>
                     <a href="mailto:chris@totalaudiopromo.com" className="text-sm text-gray-400 hover:text-white transition-colors">
-                      Help Centre
+                      Contact
                     </a>
                   </li>
                 </ul>
@@ -921,22 +1061,22 @@ export default function HomePage() {
                 <h4 className="text-sm font-bold uppercase tracking-wider mb-4">Legal</h4>
                 <ul className="space-y-2">
                   <li>
-                    <a href="/privacy" className="text-sm text-gray-400 hover:text-white transition-colors">
+                    <a href="https://intel.totalaudiopromo.com/privacy" className="text-sm text-gray-400 hover:text-white transition-colors">
                       Privacy Policy
                     </a>
                   </li>
                   <li>
-                    <a href="/terms" className="text-sm text-gray-400 hover:text-white transition-colors">
+                    <a href="https://intel.totalaudiopromo.com/terms" className="text-sm text-gray-400 hover:text-white transition-colors">
                       Terms of Service
                     </a>
                   </li>
                   <li>
-                    <a href="/cookies" className="text-sm text-gray-400 hover:text-white transition-colors">
+                    <a href="https://intel.totalaudiopromo.com/cookies" className="text-sm text-gray-400 hover:text-white transition-colors">
                       Cookie Policy
                     </a>
                   </li>
                   <li>
-                    <a href="/gdpr" className="text-sm text-gray-400 hover:text-white transition-colors">
+                    <a href="https://intel.totalaudiopromo.com/gdpr" className="text-sm text-gray-400 hover:text-white transition-colors">
                       GDPR
                     </a>
                   </li>
