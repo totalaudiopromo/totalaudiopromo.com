@@ -14,7 +14,7 @@ export default function Document() {
 
         {/* Preconnect to app subdomains */}
         <link rel="dns-prefetch" href="https://intel.totalaudiopromo.com" />
-        <link rel="dns-prefetch" href="https://pitch.totalaudiopromo.com" />
+        <link rel="dns-prefetch" href="https://pitcher.totalaudiopromo.com" />
         <link rel="dns-prefetch" href="https://tracker.totalaudiopromo.com" />
 
         {/* Theme colour for mobile browsers */}
