@@ -52,7 +52,7 @@ const products: Product[] = [
     description: 'Radio CRM that shows who opened, replied, and added your track.',
     href: 'https://tracker.totalaudiopromo.com',
     accent: 'tracker',
-    image: '/images/success-complete.png',
+    image: '/images/tracker-mascot.png',
     bullets: ['Unlimited submissions', 'AI campaign autopsy', 'Benchmarks vs BBC/Spotify'],
   },
 ];
@@ -130,11 +130,15 @@ export default function PricingPage() {
       <div className="min-h-screen bg-white">
         <nav className="sticky top-0 z-50 bg-white border-b-4 border-black px-4 py-4 shadow-[0_4px_0_0_rgba(0,0,0,0.1)]">
           <div className="max-w-6xl mx-auto flex items-center justify-between">
-            <Link href="/" className="flex items-center gap-3 group">
-              <div className="w-10 h-10 rounded-lg flex items-center justify-center shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] border-4 border-black overflow-hidden bg-white transition-all group-hover:shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] group-hover:-translate-x-0.5 group-hover:-translate-y-0.5">
-                <Image src="/images/total_audio_promo_logo_trans.png" alt="Total Audio Promo Logo" width={40} height={40} className="object-contain w-full h-full" priority />
-              </div>
-              <span className="text-xl font-bold text-gray-900 hidden sm:block">Total Audio Promo</span>
+            <Link href="/" className="flex items-center group">
+              <Image
+                src="/images/total-audio-promo-wordmark.png"
+                alt="Total Audio Promo"
+                width={180}
+                height={100}
+                className="object-contain h-10 w-auto"
+                priority
+              />
             </Link>
 
             <div className="flex items-center gap-2 sm:gap-4">
@@ -341,9 +345,13 @@ export default function PricingPage() {
         <footer className="bg-gray-900 text-white py-10">
           <div className="max-w-6xl mx-auto px-4 flex flex-wrap items-center justify-between gap-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-lg flex items-center justify-center border-2 border-white/20 overflow-hidden bg-white">
-                <Image src="/images/total_audio_promo_logo_trans.png" alt="Total Audio Promo" width={40} height={40} className="object-contain w-full h-full" />
-              </div>
+              <Image
+                src="/images/total-audio-promo-wordmark.png"
+                alt="Total Audio Promo"
+                width={140}
+                height={78}
+                className="object-contain h-10 w-auto brightness-0 invert"
+              />
               <span className="text-sm text-gray-300">Built by radio promoters for radio promoters.</span>
             </div>
             <div className="flex items-center gap-4 text-sm text-gray-400">

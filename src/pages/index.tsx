@@ -93,18 +93,15 @@ export default function HomePage() {
         {/* Navigation - Sticky with scroll shrink */}
         <nav className="sticky top-0 z-50 bg-white border-b-4 border-black px-4 py-4 shadow-[0_4px_0_0_rgba(0,0,0,0.1)]">
           <div className="max-w-7xl mx-auto flex items-center justify-between">
-            <Link href="/" className="flex items-center gap-3 group">
-              <div className="w-10 h-10 rounded-lg flex items-center justify-center shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] border-4 border-black overflow-hidden bg-white transition-all group-hover:shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] group-hover:-translate-x-0.5 group-hover:-translate-y-0.5">
-                <Image
-                  src="/images/total_audio_promo_logo_trans.png"
-                  alt="Total Audio Promo Logo"
-                  width={40}
-                  height={40}
-                  className="object-contain w-full h-full"
-                  priority
-                />
-              </div>
-              <span className="text-xl font-bold text-gray-900 hidden sm:block">Total Audio Promo</span>
+            <Link href="/" className="flex items-center group">
+              <Image
+                src="/images/total-audio-promo-wordmark.png"
+                alt="Total Audio Promo"
+                width={180}
+                height={100}
+                className="object-contain h-10 w-auto"
+                priority
+              />
             </Link>
 
             {/* Tool Links */}
@@ -413,8 +410,8 @@ export default function HomePage() {
                   <div className="grid lg:grid-cols-2 gap-6 items-center">
                     <div className="flex justify-center lg:order-1">
                       <Image
-                        src="/images/processing-contacts.png"
-                        alt="Pitcher creating personalised emails"
+                        src="/images/vinyl-throw-action.png"
+                        alt="Dog throwing vinyl records"
                         width={320}
                         height={320}
                         className="drop-shadow-2xl animate-float"
@@ -516,8 +513,8 @@ export default function HomePage() {
 
                     <div className="flex justify-center">
                       <Image
-                        src="/images/success-complete.png"
-                        alt="Campaign Tracker showing performance analytics"
+                        src="/images/tracker-mascot.png"
+                        alt="Dog with magnifying glass tracking campaigns"
                         width={320}
                         height={320}
                         className="drop-shadow-2xl animate-float"
@@ -816,8 +813,8 @@ export default function HomePage() {
                       {/* Animated background shimmer */}
                       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
                       <Image
-                        src="/images/success-complete.png"
-                        alt="Campaign Tracker - Analytics"
+                        src="/images/tracker-mascot.png"
+                        alt="Dog with magnifying glass"
                         width={64}
                         height={64}
                         className="object-contain relative z-10"
@@ -968,17 +965,14 @@ export default function HomePage() {
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
               {/* Brand Section */}
               <div className="sm:col-span-2 lg:col-span-1">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 rounded-lg flex items-center justify-center border-2 border-white/20 overflow-hidden bg-white">
-                    <Image
-                      src="/images/total_audio_promo_logo_trans.png"
-                      alt="Total Audio Promo"
-                      width={48}
-                      height={48}
-                      className="object-contain w-full h-full"
-                    />
-                  </div>
-                  <span className="text-lg font-bold">Total Audio Promo</span>
+                <div className="mb-4">
+                  <Image
+                    src="/images/total-audio-promo-wordmark.png"
+                    alt="Total Audio Promo"
+                    width={160}
+                    height={89}
+                    className="object-contain h-12 w-auto brightness-0 invert"
+                  />
                 </div>
                 <p className="text-sm text-gray-400 mb-4">
                   Music promotion tools that actually work. Built by a radio promoter, for radio promoters.
