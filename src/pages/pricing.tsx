@@ -134,9 +134,9 @@ export default function PricingPage() {
               <Image
                 src="/images/total-audio-promo-wordmark.png"
                 alt="Total Audio Promo"
-                width={180}
-                height={100}
-                className="object-contain h-10 w-auto"
+                width={200}
+                height={111}
+                className="object-contain h-14 sm:h-16 w-auto"
                 priority
               />
             </Link>
