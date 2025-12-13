@@ -95,11 +95,11 @@ export default function HomePage() {
           <div className="max-w-7xl mx-auto flex items-center justify-between">
             <Link href="/" className="flex items-center group">
               <Image
-                src="/images/total-audio-promo-wordmark.png"
+                src="/images/total-audio-promo-wordmark-stacked.png"
                 alt="Total Audio Promo"
-                width={200}
-                height={111}
-                className="object-contain h-14 sm:h-16 w-auto"
+                width={100}
+                height={100}
+                className="object-contain h-16 sm:h-20 w-auto"
                 priority
               />
             </Link>
@@ -131,13 +131,13 @@ export default function HomePage() {
                 Pricing
               </Link>
 
-              {/* Dashboard Button */}
-              <a
-                href="https://command.totalaudiopromo.com"
-                className="ml-2 px-4 py-2 text-sm font-bold text-white bg-gray-900 border-2 border-black rounded-lg shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] transition-all hover:shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] hover:-translate-x-0.5 hover:-translate-y-0.5 active:translate-x-0 active:translate-y-0 active:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]"
+              {/* Dashboard Button - Coming Soon */}
+              <span
+                className="ml-2 px-4 py-2 text-sm font-bold text-white bg-gray-400 border-2 border-gray-500 rounded-lg cursor-not-allowed"
+                title="Dashboard coming soon"
               >
-                Dashboard
-              </a>
+                Dashboard Soon
+              </span>
             </div>
           </div>
         </nav>
@@ -967,11 +967,11 @@ export default function HomePage() {
               <div className="sm:col-span-2 lg:col-span-1">
                 <div className="mb-4">
                   <Image
-                    src="/images/total-audio-promo-wordmark.png"
+                    src="/images/total-audio-promo-wordmark-stacked.png"
                     alt="Total Audio Promo"
-                    width={160}
-                    height={89}
-                    className="object-contain h-12 w-auto brightness-0 invert"
+                    width={80}
+                    height={80}
+                    className="object-contain h-16 w-auto brightness-0 invert"
                   />
                 </div>
                 <p className="text-sm text-gray-400 mb-4">
