@@ -131,13 +131,13 @@ export default function HomePage() {
                 Pricing
               </Link>
 
-              {/* Dashboard Button - Coming Soon */}
-              <span
-                className="ml-2 px-4 py-2 text-sm font-bold text-white bg-gray-400 border-2 border-gray-500 rounded-lg cursor-not-allowed"
-                title="Dashboard coming soon"
+              {/* Dashboard Button */}
+              <a
+                href="https://dashboard.totalaudiopromo.com"
+                className="ml-2 px-4 py-2 text-sm font-bold text-white bg-gray-900 border-2 border-black rounded-lg shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] transition-all hover:shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] hover:-translate-x-0.5 hover:-translate-y-0.5 active:translate-x-0 active:translate-y-0 active:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]"
               >
-                Dashboard Soon
-              </span>
+                Dashboard
+              </a>
             </div>
           </div>
         </nav>
@@ -1011,7 +1011,7 @@ export default function HomePage() {
                     </a>
                   </li>
                   <li>
-                    <a href="https://command.totalaudiopromo.com" className="text-sm text-gray-400 hover:text-white transition-colors">
+                    <a href="https://dashboard.totalaudiopromo.com" className="text-sm text-gray-400 hover:text-white transition-colors">
                       Dashboard
                     </a>
                   </li>
