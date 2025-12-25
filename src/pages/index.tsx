@@ -65,6 +65,59 @@ export default function HomePage() {
           }}
         />
 
+        {/* Structured Data - FAQ */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'FAQPage',
+              mainEntity: [
+                {
+                  '@type': 'Question',
+                  name: 'How does Intel find contact information?',
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'Intel uses AI-powered web research to find publicly available contact information, social profiles, and submission guidelines. We cross-reference multiple sources and validate emails to ensure 90%+ data accuracy.',
+                  },
+                },
+                {
+                  '@type': 'Question',
+                  name: 'Is my data safe and GDPR compliant?',
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'Yes. We use 256-bit AES encryption, are fully GDPR compliant, and run on SOC 2 certified infrastructure. Your contact lists and campaign data are never shared or sold. You can request data deletion at any time.',
+                  },
+                },
+                {
+                  '@type': 'Question',
+                  name: 'Can I use just one tool or do I need all three?',
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'Each tool works completely standalone. Start with whichever solves your biggest problem - most users begin with Intel for contact research. The tools integrate seamlessly when you\'re ready to expand your workflow.',
+                  },
+                },
+                {
+                  '@type': 'Question',
+                  name: 'What happens after my free trial?',
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'After 14 days, you can choose to subscribe at £19/month per tool. No credit card is required for the trial, and you can cancel anytime with no questions asked.',
+                  },
+                },
+                {
+                  '@type': 'Question',
+                  name: 'How accurate is the contact data?',
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'We guarantee 90% data accuracy or your money back. Intel validates emails before delivery and provides confidence scores so you know which data to trust. Tested with 200+ BBC Radio, Spotify, and industry contacts.',
+                  },
+                },
+              ],
+            }),
+          }}
+        />
+
         {/* Google Tag Manager */}
         <script
           dangerouslySetInnerHTML={{
@@ -224,6 +277,61 @@ export default function HomePage() {
                   <p className="mt-6 text-sm text-gray-500 text-center max-w-xs">
                     From scattered spreadsheets to organised databases in minutes
                   </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Radio Station Logo Bar - Social Proof */}
+          <section className="py-8 sm:py-10 bg-gray-50 border-y-2 border-gray-200">
+            <div className="max-w-6xl mx-auto px-4">
+              <p className="text-center text-sm font-medium text-gray-500 uppercase tracking-wider mb-6">
+                Built for pitching to stations like
+              </p>
+              <div className="flex flex-wrap justify-center items-center gap-8 sm:gap-12 opacity-60 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-500">
+                {/* BBC Radio */}
+                <div className="flex items-center gap-2 group">
+                  <div className="w-10 h-10 bg-black rounded flex items-center justify-center">
+                    <span className="text-white font-black text-xs">BBC</span>
+                  </div>
+                  <span className="text-gray-700 font-bold text-sm hidden sm:block">Radio 1</span>
+                </div>
+                {/* NPR */}
+                <div className="flex items-center gap-2 group">
+                  <div className="w-10 h-10 bg-[#EC1C24] rounded flex items-center justify-center">
+                    <span className="text-white font-black text-[10px]">NPR</span>
+                  </div>
+                  <span className="text-gray-700 font-bold text-sm hidden sm:block">Music</span>
+                </div>
+                {/* Triple J */}
+                <div className="flex items-center gap-2 group">
+                  <div className="w-10 h-10 bg-[#00A651] rounded flex items-center justify-center">
+                    <span className="text-white font-black text-[10px]">JJJ</span>
+                  </div>
+                  <span className="text-gray-700 font-bold text-sm hidden sm:block">triple j</span>
+                </div>
+                {/* KEXP */}
+                <div className="flex items-center gap-2 group">
+                  <div className="w-10 h-10 bg-[#FF6B00] rounded flex items-center justify-center">
+                    <span className="text-white font-black text-[8px]">KEXP</span>
+                  </div>
+                  <span className="text-gray-700 font-bold text-sm hidden sm:block">Seattle</span>
+                </div>
+                {/* 6 Music */}
+                <div className="flex items-center gap-2 group">
+                  <div className="w-10 h-10 bg-[#FF5A00] rounded flex items-center justify-center">
+                    <span className="text-white font-black text-xs">6</span>
+                  </div>
+                  <span className="text-gray-700 font-bold text-sm hidden sm:block">Music</span>
+                </div>
+                {/* Spotify */}
+                <div className="flex items-center gap-2 group">
+                  <div className="w-10 h-10 bg-[#1DB954] rounded-full flex items-center justify-center">
+                    <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
+                    </svg>
+                  </div>
+                  <span className="text-gray-700 font-bold text-sm hidden sm:block">Playlists</span>
                 </div>
               </div>
             </div>
@@ -882,7 +990,50 @@ export default function HomePage() {
                 </div>
               </div>
 
-              <p className="text-center text-gray-500 text-sm">
+              {/* Bundle Pricing Option */}
+              <div className="mt-8 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 rounded-2xl border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] p-6 sm:p-8 relative overflow-hidden">
+                {/* Background pattern */}
+                <div className="absolute inset-0 opacity-5" style={{
+                  backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)',
+                  backgroundSize: '24px 24px',
+                }} />
+
+                <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-6">
+                  <div className="text-center lg:text-left">
+                    <div className="inline-flex items-center gap-2 mb-3">
+                      <span className="px-3 py-1 text-xs font-bold uppercase bg-green-500 text-white rounded-full">
+                        Save £8/month
+                      </span>
+                    </div>
+                    <h3 className="text-2xl sm:text-3xl font-black text-white mb-2">
+                      Get the Complete Workflow
+                    </h3>
+                    <p className="text-gray-300 max-w-xl">
+                      Bundle all three tools and save. Intel finds your contacts, Pitcher writes your emails, Tracker shows you what works.
+                    </p>
+                  </div>
+
+                  <div className="flex flex-col sm:flex-row items-center gap-4">
+                    <div className="text-center">
+                      <div className="flex items-baseline justify-center gap-1">
+                        <span className="text-gray-400 line-through text-lg">£57</span>
+                        <span className="text-4xl sm:text-5xl font-black text-white">£49</span>
+                        <span className="text-gray-400 text-lg">/month</span>
+                      </div>
+                      <p className="text-sm text-gray-400 mt-1">for all 3 tools</p>
+                    </div>
+
+                    <a
+                      href="https://intel.totalaudiopromo.com"
+                      className="px-8 py-4 bg-white text-gray-900 font-bold text-base rounded-xl border-2 border-black shadow-[4px_4px_0px_0px_rgba(255,255,255,0.3)] hover:shadow-[6px_6px_0px_0px_rgba(255,255,255,0.3)] hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all whitespace-nowrap"
+                    >
+                      Start with Intel
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <p className="text-center text-gray-500 text-sm mt-8">
                 All plans include 14-day free trial. Cancel anytime. No credit card required.
               </p>
             </div>
@@ -923,6 +1074,211 @@ export default function HomePage() {
             </div>
           </section>
 
+          {/* GDPR & Data Protection Section */}
+          <section className="py-12 sm:py-16 bg-gray-50">
+            <div className="max-w-6xl mx-auto px-4">
+              <header className="text-center mb-10">
+                <div className="inline-flex items-center gap-2 rounded-full border-2 border-green-600 bg-green-50 px-4 py-2 shadow-[3px_3px_0px_0px_#16A34A] mb-4">
+                  <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                  <span className="text-sm font-bold uppercase tracking-wider text-green-700">
+                    Your Data, Protected
+                  </span>
+                </div>
+                <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
+                  Enterprise-Grade Security for Independents
+                </h2>
+                <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                  Your contact lists and campaign data are valuable. We treat them with the same security standards used by banks and healthcare.
+                </p>
+              </header>
+
+              <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                {/* GDPR Compliant */}
+                <div className="bg-white rounded-xl border-2 border-gray-200 p-5 hover:border-green-300 hover:shadow-lg transition-all">
+                  <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mb-4">
+                    <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <h3 className="font-bold text-gray-900 mb-2">GDPR Compliant</h3>
+                  <p className="text-sm text-gray-600">
+                    Full compliance with EU data protection regulations. Your rights to access, rectify, and delete your data are guaranteed.
+                  </p>
+                </div>
+
+                {/* Encryption */}
+                <div className="bg-white rounded-xl border-2 border-gray-200 p-5 hover:border-green-300 hover:shadow-lg transition-all">
+                  <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mb-4">
+                    <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                    </svg>
+                  </div>
+                  <h3 className="font-bold text-gray-900 mb-2">256-bit Encryption</h3>
+                  <p className="text-sm text-gray-600">
+                    All data encrypted at rest and in transit using AES-256. The same standard used by governments and financial institutions.
+                  </p>
+                </div>
+
+                {/* No Data Selling */}
+                <div className="bg-white rounded-xl border-2 border-gray-200 p-5 hover:border-green-300 hover:shadow-lg transition-all">
+                  <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mb-4">
+                    <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" />
+                    </svg>
+                  </div>
+                  <h3 className="font-bold text-gray-900 mb-2">Never Sold or Shared</h3>
+                  <p className="text-sm text-gray-600">
+                    Your contact lists are yours alone. We never sell, share, or use your data for training AI models.
+                  </p>
+                </div>
+
+                {/* Data Deletion */}
+                <div className="bg-white rounded-xl border-2 border-gray-200 p-5 hover:border-green-300 hover:shadow-lg transition-all">
+                  <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mb-4">
+                    <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                    </svg>
+                  </div>
+                  <h3 className="font-bold text-gray-900 mb-2">Delete Anytime</h3>
+                  <p className="text-sm text-gray-600">
+                    Request complete data deletion at any time. We'll remove everything within 30 days, no questions asked.
+                  </p>
+                </div>
+              </div>
+
+              <div className="mt-8 text-center">
+                <a
+                  href="https://intel.totalaudiopromo.com/privacy"
+                  className="inline-flex items-center gap-2 text-sm font-semibold text-green-700 hover:text-green-800 transition-colors"
+                >
+                  Read our full Privacy Policy
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </section>
+
+          {/* FAQ Section */}
+          <section id="faq" className="py-12 sm:py-16 bg-white">
+            <div className="max-w-4xl mx-auto px-4">
+              <header className="text-center mb-10">
+                <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
+                  Frequently Asked Questions
+                </h2>
+                <p className="text-lg text-gray-600">
+                  Everything you need to know before getting started
+                </p>
+              </header>
+
+              <div className="space-y-4">
+                {/* FAQ Item 1 */}
+                <details className="group bg-gray-50 rounded-xl border-2 border-gray-200 hover:border-gray-300 transition-colors">
+                  <summary className="flex items-center justify-between p-5 cursor-pointer list-none">
+                    <span className="text-lg font-semibold text-gray-900">How does Intel find contact information?</span>
+                    <span className="ml-4 flex-shrink-0 w-8 h-8 rounded-full bg-gray-200 group-open:bg-intel-600 flex items-center justify-center transition-colors">
+                      <svg className="w-4 h-4 text-gray-600 group-open:text-white group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </span>
+                  </summary>
+                  <div className="px-5 pb-5 text-gray-600">
+                    Intel uses AI-powered web research to find publicly available contact information, social profiles, and submission guidelines. We cross-reference multiple sources and validate emails to ensure 90%+ data accuracy.
+                  </div>
+                </details>
+
+                {/* FAQ Item 2 */}
+                <details className="group bg-gray-50 rounded-xl border-2 border-gray-200 hover:border-gray-300 transition-colors">
+                  <summary className="flex items-center justify-between p-5 cursor-pointer list-none">
+                    <span className="text-lg font-semibold text-gray-900">Is my data safe and GDPR compliant?</span>
+                    <span className="ml-4 flex-shrink-0 w-8 h-8 rounded-full bg-gray-200 group-open:bg-intel-600 flex items-center justify-center transition-colors">
+                      <svg className="w-4 h-4 text-gray-600 group-open:text-white group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </span>
+                  </summary>
+                  <div className="px-5 pb-5 text-gray-600">
+                    <p className="mb-3">Yes. Your data security is our top priority:</p>
+                    <ul className="space-y-2">
+                      <li className="flex items-start gap-2">
+                        <svg className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                        </svg>
+                        <span><strong>256-bit AES encryption</strong> for all data at rest and in transit</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <svg className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                        </svg>
+                        <span><strong>Fully GDPR compliant</strong> - we never share or sell your data</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <svg className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                        </svg>
+                        <span><strong>SOC 2 certified infrastructure</strong> with regular security audits</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <svg className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                        </svg>
+                        <span><strong>Data deletion on request</strong> - your data, your control</span>
+                      </li>
+                    </ul>
+                  </div>
+                </details>
+
+                {/* FAQ Item 3 */}
+                <details className="group bg-gray-50 rounded-xl border-2 border-gray-200 hover:border-gray-300 transition-colors">
+                  <summary className="flex items-center justify-between p-5 cursor-pointer list-none">
+                    <span className="text-lg font-semibold text-gray-900">Can I use just one tool or do I need all three?</span>
+                    <span className="ml-4 flex-shrink-0 w-8 h-8 rounded-full bg-gray-200 group-open:bg-intel-600 flex items-center justify-center transition-colors">
+                      <svg className="w-4 h-4 text-gray-600 group-open:text-white group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </span>
+                  </summary>
+                  <div className="px-5 pb-5 text-gray-600">
+                    Each tool works completely standalone. Start with whichever solves your biggest problem - most users begin with Intel for contact research. The tools integrate seamlessly when you're ready to expand your workflow.
+                  </div>
+                </details>
+
+                {/* FAQ Item 4 */}
+                <details className="group bg-gray-50 rounded-xl border-2 border-gray-200 hover:border-gray-300 transition-colors">
+                  <summary className="flex items-center justify-between p-5 cursor-pointer list-none">
+                    <span className="text-lg font-semibold text-gray-900">What happens after my free trial?</span>
+                    <span className="ml-4 flex-shrink-0 w-8 h-8 rounded-full bg-gray-200 group-open:bg-intel-600 flex items-center justify-center transition-colors">
+                      <svg className="w-4 h-4 text-gray-600 group-open:text-white group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </span>
+                  </summary>
+                  <div className="px-5 pb-5 text-gray-600">
+                    After 14 days, you can choose to subscribe at £19/month per tool. No credit card is required for the trial, and you can cancel anytime with no questions asked.
+                  </div>
+                </details>
+
+                {/* FAQ Item 5 */}
+                <details className="group bg-gray-50 rounded-xl border-2 border-gray-200 hover:border-gray-300 transition-colors">
+                  <summary className="flex items-center justify-between p-5 cursor-pointer list-none">
+                    <span className="text-lg font-semibold text-gray-900">How accurate is the contact data?</span>
+                    <span className="ml-4 flex-shrink-0 w-8 h-8 rounded-full bg-gray-200 group-open:bg-intel-600 flex items-center justify-center transition-colors">
+                      <svg className="w-4 h-4 text-gray-600 group-open:text-white group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </span>
+                  </summary>
+                  <div className="px-5 pb-5 text-gray-600">
+                    We guarantee 90% data accuracy or your money back. Intel validates emails before delivery and provides confidence scores so you know which data to trust. Tested with 200+ BBC Radio, Spotify, and industry contacts.
+                  </div>
+                </details>
+              </div>
+            </div>
+          </section>
+
           {/* Newsletter Section - Enhanced */}
           <section id="newsletter" className="py-12 sm:py-16 bg-gray-50">
             <div className="max-w-6xl mx-auto px-4">
@@ -959,8 +1315,21 @@ export default function HomePage() {
           </section>
         </main>
 
+        {/* Floating Mobile CTA */}
+        <div className="fixed bottom-0 left-0 right-0 z-40 p-4 bg-gradient-to-t from-white via-white to-transparent sm:hidden">
+          <a
+            href="https://intel.totalaudiopromo.com"
+            className="flex items-center justify-center gap-2 w-full py-4 px-6 bg-intel-600 text-white font-bold text-base rounded-xl border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:translate-x-0.5 active:translate-y-0.5 active:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] transition-all"
+          >
+            <span>Start Free Trial</span>
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            </svg>
+          </a>
+        </div>
+
         {/* Footer - Complete with Legal */}
-        <footer className="bg-gray-900 text-white py-12 sm:py-16">
+        <footer className="bg-gray-900 text-white py-12 sm:py-16 pb-28 sm:pb-16">
           <div className="max-w-6xl mx-auto px-4">
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
               {/* Brand Section */}
