@@ -200,10 +200,10 @@ export default function HomePage() {
 
                   <MotionScrollReveal variant="fadeUp" delay={0.1}>
                     <p className="text-xl text-gray-600 mb-5 leading-relaxed">
-                      Intel provides relationship intelligence for music
-                      promotion. Enrich contacts, understand submission
-                      preferences, and make better pitch decisions. Your data,
-                      your control.
+                      Intel surfaces relationship health and submission context
+                      for music promotion. Understand who is warming, who is
+                      cooling, and exactly how to approach them before you hit
+                      send. Decision support for high-stakes PR.
                     </p>
                     <p className="text-lg font-bold text-gray-900 mb-5">
                       For small PR agencies, experienced operators, and managers
@@ -378,11 +378,11 @@ export default function HomePage() {
                   </span>
                 </div>
                 <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-3">
-                  Three Tools That Actually Talk to Each Other
+                  One Intelligence Layer, Three Supporting Tools
                 </h2>
                 <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                  Each tool solves one problem really well, then hands off to
-                  the next. Built the way I actually run campaigns.
+                  Intel is the core system. Pitcher and Tracker support drafting
+                  and learning — they don’t replace judgement.
                 </p>
               </header>
 
@@ -408,8 +408,8 @@ export default function HomePage() {
                         Relationship Intelligence for Better Decisions
                       </p>
                       <p className="text-gray-600 mb-3 text-lg">
-                        Intel enriches your contacts with verified emails,
-                        social profiles, and specific submission preferences.
+                        Intel monitors relationship health and provides the
+                        context you need to make better decisions.
                       </p>
 
                       <ul className="space-y-2.5 text-gray-700 mb-5">
@@ -418,8 +418,8 @@ export default function HomePage() {
                             &#10003;
                           </span>
                           <span>
-                            Upload any contact list - we enrich with role,
-                            platform, submission guidelines
+                            Surface relationship health (warming / neutral /
+                            cooling / at risk)
                           </span>
                         </li>
                         <li className="flex items-start gap-3">
@@ -427,8 +427,8 @@ export default function HomePage() {
                             &#10003;
                           </span>
                           <span>
-                            Email validation filters dead addresses before you
-                            waste time pitching
+                            Explainable context (roles, platform, and verified
+                            submission preferences)
                           </span>
                         </li>
                         <li className="flex items-start gap-3">
@@ -436,7 +436,8 @@ export default function HomePage() {
                             &#10003;
                           </span>
                           <span>
-                            Export to Excel, PDF, or send directly to Pitcher
+                            Validation and export to Excel, PDF, or directly to
+                            Pitcher
                           </span>
                         </li>
                       </ul>
@@ -535,8 +536,8 @@ export default function HomePage() {
                             &#10003;
                           </span>
                           <span>
-                            Batch generate 50 pitches, copy all to Gmail with
-                            one click
+                            Carefully draft context-aware pitches in batches,
+                            ready for review and one-click export
                           </span>
                         </li>
                       </ul>
@@ -598,8 +599,8 @@ export default function HomePage() {
                             &#10003;
                           </span>
                           <span>
-                            AI campaign autopsy - what worked, what didn't, what
-                            to do next
+                            AI campaign autopsy - what worked, what didn&apos;t,
+                            and what was learned
                           </span>
                         </li>
                         <li className="flex items-start gap-3">
@@ -704,6 +705,12 @@ export default function HomePage() {
           />
 
           {/* Case Study Banner */}
+          <div className="max-w-6xl mx-auto px-4 mb-4">
+            <p className="text-sm text-gray-500 italic text-center">
+              Historical results from manual campaigns run by the founder. Not
+              automated outcomes.
+            </p>
+          </div>
           <CaseStudyBanner
             title="BBC Radio 1 Campaign Results"
             metrics={[
@@ -727,6 +734,10 @@ export default function HomePage() {
             <div className="max-w-6xl mx-auto px-4">
               <MotionScrollReveal variant="fadeUp">
                 <header className="text-center mb-10">
+                  <p className="text-sm text-gray-500 italic mb-4">
+                    Historical results from manual campaigns run by the founder.
+                    Not automated outcomes.
+                  </p>
                   <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-3">
                     Proven with Real Campaigns
                   </h2>
