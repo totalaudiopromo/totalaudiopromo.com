@@ -17,12 +17,12 @@ interface JourneyItem {
 const journeyItems: JourneyItem[] = [
   {
     image: "/images/journey/chris1992.png",
-    alt: "Chris Schofield as a child in 1992, asleep with headphones on",
+    alt: "Chris Schofield as a child in 1988, asleep with headphones on",
     title: "Rooted in Sound",
     subtitle: "Early Obsession",
     description:
       "Before I could walk, I was listening. A lifelong obsession with audio was the starting point for everything we build today.",
-    year: "1992",
+    year: "1988",
   },
   {
     image: "/images/journey/chrisdj2022.JPG",
@@ -133,13 +133,14 @@ export const ExperienceTimeline = () => {
             Legacy & Logic
           </div>
           <h2 className="text-5xl lg:text-6xl font-black text-white mb-6 tracking-tight">
-            Three decades <span className="text-intel-500">on the ground.</span>
+            Nearly four decades{" "}
+            <span className="text-intel-500">on the ground.</span>
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed font-medium">
-            I built Total Audio Promo because the work demanded it. After thirty
-            years in this industry—from DIY tours in vans to national radio
-            campaigns—it became clear that the tools we rely on were never
-            actually designed for the people doing the work.
+            I built Total Audio Promo because the work demanded it. Since
+            1988—from DIY tours in vans to national radio campaigns—it became
+            clear that the tools we rely on were never actually designed for the
+            people doing the work.
           </p>
         </MotionScrollReveal>
 
@@ -162,7 +163,7 @@ export const ExperienceTimeline = () => {
           delay={0.6}
           className="mt-24 flex flex-col items-center gap-6"
         >
-          <Link href="/intel" className="group">
+          <a href="https://intel.totalaudiopromo.com" className="group">
             <motion.div
               whileHover={{ scale: 1.02 }}
               className="inline-block p-[2px] rounded-full bg-gradient-to-r from-intel-500 via-blue-500 to-purple-500 shadow-[0_0_30px_rgba(58,169,190,0.3)]"
@@ -185,11 +186,11 @@ export const ExperienceTimeline = () => {
                 </svg>
               </div>
             </motion.div>
-          </Link>
+          </a>
 
           <div className="flex flex-col sm:flex-row items-center gap-4">
             <p className="text-sm text-gray-500 font-medium">
-              Built on 30+ years of industry experience
+              Established 1988
             </p>
             <span className="hidden sm:inline text-gray-700">•</span>
             <a
