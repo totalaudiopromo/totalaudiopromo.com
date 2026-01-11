@@ -15,6 +15,7 @@ import {
   HeroGradient,
   DarkGradient,
 } from "../components/animations";
+import { ExperienceTimeline } from "../components/ExperienceTimeline";
 
 export default function HomePage() {
   return (
@@ -729,6 +730,9 @@ export default function HomePage() {
             ]}
           />
 
+          {/* New Experience Timeline Section */}
+          <ExperienceTimeline />
+
           {/* Social Proof - Redesigned with Context */}
           <section className="py-12 sm:py-16 bg-white">
             <div className="max-w-6xl mx-auto px-4">
@@ -748,7 +752,7 @@ export default function HomePage() {
                 </header>
               </MotionScrollReveal>
 
-              <MotionScrollReveal variant="stagger" staggerChildren={0.15}>
+              <MotionScrollReveal variant="stagger">
                 <div className="grid md:grid-cols-3 gap-5">
                   <MotionStaggerChild>
                     <div className="bg-gradient-to-br from-intel-50 to-white rounded-2xl border-4 border-intel-600 shadow-glow-intel-sm p-6 text-center">
