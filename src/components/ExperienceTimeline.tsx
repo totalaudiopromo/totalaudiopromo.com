@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { MotionScrollReveal, MotionStaggerChild } from "./animations";
 import { motion, AnimatePresence } from "framer-motion";
-import Link from "next/link";
 
 interface JourneyItem {
   image: string;
@@ -21,7 +20,7 @@ const journeyItems: JourneyItem[] = [
     title: "Rooted in Sound",
     subtitle: "Early Obsession",
     description:
-      "Before I could walk, I was listening. A lifelong obsession with audio was the starting point for everything we build today.",
+      "Headphones on before I could talk. The obsession started early and never really stopped.",
     year: "1988",
   },
   {
@@ -30,7 +29,7 @@ const journeyItems: JourneyItem[] = [
     title: "Building Experience",
     subtitle: "Gold Soundz DJ Service",
     description:
-      "Transitioning to the business side. Running a commercial DJ company and understanding how to professionalise musical passion.",
+      "Learning that a music business is 10% music and 90% logistics, relationships, and showing up on time.",
     year: "2012",
   },
   {
@@ -39,7 +38,7 @@ const journeyItems: JourneyItem[] = [
     title: "Stage & Spirit",
     subtitle: "His & Hers",
     description:
-      "Touring, performing, and living the DIY reality of the music industry. Learning what it means to be an artist from the inside out.",
+      "DIY or die. Touring with His & Hers taught me the reality of the grind—loading vans and empty rooms.",
     year: "2015",
   },
   {
@@ -48,7 +47,7 @@ const journeyItems: JourneyItem[] = [
     title: "The Catalyst",
     subtitle: "Radio Promoter",
     description:
-      "Managing major radio campaigns. The complexity of tracking relationship health became the direct inspiration for Total Audio Promo.",
+      "Five years of radio promotion. Seeing first-hand how 'luck' is usually just a well-managed relationship.",
     year: "2021",
   },
   {
@@ -57,7 +56,7 @@ const journeyItems: JourneyItem[] = [
     title: "Technical Depth",
     subtitle: "sadact / Sound Design",
     description:
-      "Deep-diving into synthesis and production. Understanding the technical needs of the modern creator.",
+      "Back in the studio as sadact. Rediscovering the technical side of sound so I could build tools that respect the craft.",
     year: "2023",
     link: "https://sadact.uk",
   },
@@ -67,7 +66,7 @@ const journeyItems: JourneyItem[] = [
     title: "Industry Native",
     subtitle: "Decadance UK",
     description:
-      "Behind the desk at one of the UK's most exciting radio stations. Gaining the relationship perspective that now powers our platform.",
+      "On the air at Decadance UK. Getting a proper look at the other side of the desk and why most pitches get ignored.",
     year: "2024",
   },
   {
@@ -76,7 +75,7 @@ const journeyItems: JourneyItem[] = [
     title: "Founder",
     subtitle: "Total Audio Promo",
     description:
-      "Built from decades of skin in the game. I built the system I needed for my own campaigns.",
+      "Distilling thirty years of wins, losses, and noise into the system I wish I'd had from day one.",
     year: "2026",
   },
 ];
