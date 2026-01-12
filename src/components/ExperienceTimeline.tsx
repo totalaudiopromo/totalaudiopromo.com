@@ -82,7 +82,7 @@ const journeyItems: JourneyItem[] = [
 
 export const ExperienceTimeline = () => {
   return (
-    <section className="py-24 bg-black overflow-hidden relative">
+    <section className="py-24 bg-black overflow-visible relative">
       {/* Background Decorative Elements */}
       <div className="absolute inset-0 opacity-[0.05] pointer-events-none mix-blend-overlay">
         <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
@@ -149,6 +149,7 @@ export const ExperienceTimeline = () => {
 
           <MotionScrollReveal
             variant="stagger"
+            trigger="eager"
             className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 gap-6"
           >
             {journeyItems.map((item, index) => (
@@ -225,7 +226,7 @@ const JourneyCard = ({ item, index }: { item: JourneyItem; index: number }) => {
             src={item.image}
             alt={item.alt}
             fill
-            className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110"
+            className="object-cover grayscale-0 sm:grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110"
             priority={index < 3}
             sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, (max-width: 1280px) 25vw, 14vw"
           />
