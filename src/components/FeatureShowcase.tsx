@@ -82,19 +82,19 @@ export function FeatureShowcase({
   mockupContent,
 }: FeatureShowcaseProps) {
   return (
-    <section className="py-16 sm:py-20 bg-gray-50">
+    <section className="py-12 sm:py-16 bg-gray-50">
       <div className="max-w-6xl mx-auto px-4">
-        <header className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">{headline}</h2>
+        <header className="text-center mb-10">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-3">{headline}</h2>
           {subheadline && <p className="text-lg text-gray-600 max-w-3xl mx-auto">{subheadline}</p>}
         </header>
 
-        <div className="grid lg:grid-cols-2 gap-10 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 items-center">
           {/* Left: Mockup or Image */}
           <div className="order-2 lg:order-1">
             {mockupContent ? (
-              <div className="bg-white rounded-2xl border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] p-6 max-w-md mx-auto">
-                <div className="flex items-center gap-3 mb-4 pb-4 border-b-2 border-gray-100">
+              <div className="bg-white rounded-2xl border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] p-5 max-w-md mx-auto">
+                <div className="flex items-center gap-3 mb-3 pb-3 border-b-2 border-gray-100">
                   <div className="w-12 h-12 rounded-full bg-intel-100 flex items-center justify-center">
                     <span className="text-intel-600 font-bold text-lg">
                       {mockupContent.name.charAt(0)}
@@ -106,7 +106,7 @@ export function FeatureShowcase({
                   </div>
                 </div>
 
-                <div className="space-y-3">
+                <div className="space-y-2.5">
                   <div className="flex items-center gap-2">
                     <span className="text-green-600">{featureIcons.email}</span>
                     <span className="text-sm text-gray-600">{mockupContent.email}</span>
@@ -134,7 +134,7 @@ export function FeatureShowcase({
           </div>
 
           {/* Right: Features */}
-          <div className="order-1 lg:order-2 space-y-6">
+          <div className="order-1 lg:order-2 space-y-5">
             {features.map((feature, i) => (
               <div key={i} className="flex items-start gap-4">
                 <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-intel-100 flex items-center justify-center text-intel-600">
