@@ -31,11 +31,11 @@ const products: Product[] = [
   {
     id: 'intel',
     name: 'Intel Pro',
-    description: 'Contact enrichment & verification that stops bounced emails.',
+    description: 'Turn chaotic spreadsheets into organised contact intelligence with AI enrichment.',
     href: 'https://intel.totalaudiopromo.com',
     accent: 'intel',
     image: '/images/analyzing-data.png',
-    bullets: ['100 enrichments/month', 'Email validation + submission notes', 'Direct export to Pitcher'],
+    bullets: ['100 enrichments/month', 'Email validation + submission guidelines', 'Relationship protection'],
   },
   {
     id: 'pitch',
@@ -49,11 +49,11 @@ const products: Product[] = [
   {
     id: 'tracker',
     name: 'Tracker Pro',
-    description: 'Radio CRM that shows who opened, replied, and added your track.',
+    description: 'Campaign learning system. Outcomes feed back into Intel to improve future decisions.',
     href: 'https://tracker.totalaudiopromo.com',
     accent: 'tracker',
     image: '/images/tracker-mascot.png',
-    bullets: ['Unlimited submissions', 'AI campaign autopsy', 'Benchmarks vs BBC/Spotify'],
+    bullets: ['Log campaign outcomes', 'Pattern recognition', 'Included with Intel Professional'],
   },
 ];
 
@@ -123,7 +123,7 @@ export default function PricingPage() {
     <>
       <Head>
         <title>Pricing | Total Audio Promo</title>
-        <meta name="description" content="Straightforward pricing for Intel, Pitcher, Campaign Tracker, plus the Pro Bundle that saves you £8/month." />
+        <meta name="description" content="Straightforward pricing for Intel, Pitcher, and Tracker." />
         <link rel="canonical" href="https://totalaudiopromo.com/pricing" />
       </Head>
 
@@ -136,7 +136,7 @@ export default function PricingPage() {
                 alt="Total Audio Promo"
                 width={100}
                 height={100}
-                className="object-contain h-16 sm:h-20 w-auto"
+                className="object-contain h-14 sm:h-20 w-auto"
                 priority
               />
             </Link>
@@ -156,7 +156,7 @@ export default function PricingPage() {
               </Link>
               <a
                 href="https://dashboard.totalaudiopromo.com"
-                className="ml-2 px-4 py-2 text-sm font-bold text-white bg-gray-900 border-2 border-black rounded-lg shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] transition-all hover:shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] hover:-translate-x-0.5 hover:-translate-y-0.5 active:translate-x-0 active:translate-y-0 active:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]"
+                className="ml-2 px-4 py-2 text-sm font-bold text-white bg-gray-900 border-2 border-black rounded-lg shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] transition-all hover:shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] hover:-translate-x-0.5 hover:-translate-y-0.5"
               >
                 Dashboard
               </a>
@@ -169,9 +169,9 @@ export default function PricingPage() {
             <div className="max-w-5xl mx-auto px-4">
               <div className="flex flex-wrap items-center justify-between gap-4 mb-8">
                 <div>
-                  <p className="text-sm font-semibold uppercase tracking-wide text-intel-600 mb-2">Standardised Pricing</p>
-                  <h1 className="text-3xl sm:text-4xl font-black text-gray-900 leading-tight">Pricing that respects your budget</h1>
-                  <p className="text-lg text-gray-600 mt-2">One price sheet for all three tools. Bundle them and keep £8/month in your pocket.</p>
+                  <p className="text-sm font-semibold uppercase tracking-wide text-intel-600 mb-2">Simple Pricing</p>
+                  <h1 className="text-3xl sm:text-4xl font-black text-gray-900 leading-tight">All three tools. One subscription.</h1>
+                  <p className="text-lg text-gray-600 mt-2">Professional plan unlocks <strong>Intel + Pitcher + Tracker</strong> for £19/month.</p>
                 </div>
 
                 <div className="inline-flex items-center border-2 border-black rounded-2xl overflow-hidden shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
@@ -191,97 +191,120 @@ export default function PricingPage() {
               </div>
 
               <div className="grid lg:grid-cols-3 gap-6 items-stretch">
-                <div className="lg:col-span-2 bg-gradient-to-br from-gray-50 to-white border-4 border-black rounded-2xl p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
-                  <div className="flex flex-wrap items-start justify-between gap-4 mb-6">
-                    <div>
-                      <div className="inline-flex items-center gap-2 px-4 py-1 rounded-full border-2 border-black bg-intel-100 text-intel-700 text-xs font-bold uppercase tracking-wide">
-                        Standard across Intel, Pitcher, Tracker
-                      </div>
-                      <p className="text-lg text-gray-600 mt-3">Starter £{tierPricing.starter.toLocaleString()}{billingCycle === 'monthly' ? '/mo' : '/yr'} · Pro £{tierPricing.pro.toLocaleString()}{billingCycle === 'monthly' ? '/mo' : '/yr'} · Agency £{tierPricing.agency.toLocaleString()}{billingCycle === 'monthly' ? '/mo' : '/yr'}</p>
+              <div className="grid lg:grid-cols-3 gap-8 items-stretch pt-8">
+                {/* Tier 1: Starter */}
+                <article className="bg-white border-4 border-black rounded-3xl p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 transition-all flex flex-col">
+                  <div className="mb-6">
+                    <h3 className="text-2xl font-bold tracking-tighter mb-2">Starter</h3>
+                    <div className="flex items-baseline gap-1 mb-4">
+                      <span className="text-4xl font-extrabold italic text-gray-900">£{tierPricing.starter}</span>
+                      <span className="text-gray-400 font-bold uppercase text-[10px] tracking-widest">/{billingCycle === 'monthly' ? 'mo' : 'yr'}</span>
                     </div>
-                    <p className="text-sm text-gray-500">14-day free trial on every plan. Cancel anytime.</p>
+                    <p className="text-sm text-gray-600 font-medium leading-relaxed">
+                      For individuals testing the waters with professional contact intelligence.
+                    </p>
                   </div>
 
-                  <div className="grid sm:grid-cols-3 gap-4">
-                    <div className="border-2 border-intel-600 rounded-xl p-4 bg-intel-50">
-                      <p className="text-xs font-bold uppercase text-intel-700 mb-2">Starter</p>
-                      <p className="text-3xl font-black text-gray-900">£{tierPricing.starter}</p>
-                      <p className="text-sm text-gray-500">{billingCycle === 'monthly' ? 'per month' : 'per year (2 months free)'}</p>
-                    </div>
-                    <div className="border-2 border-pitch-600 rounded-xl p-4 bg-pitch-50">
-                      <p className="text-xs font-bold uppercase text-pitch-700 mb-2">Pro</p>
-                      <p className="text-3xl font-black text-gray-900">£{tierPricing.pro}</p>
-                      <p className="text-sm text-gray-500">{billingCycle === 'monthly' ? 'per month' : 'per year (2 months free)'}</p>
-                    </div>
-                    <div className="border-2 border-tracker-600 rounded-xl p-4 bg-tracker-50">
-                      <p className="text-xs font-bold uppercase text-tracker-700 mb-2">Agency</p>
-                      <p className="text-3xl font-black text-gray-900">£{tierPricing.agency}</p>
-                      <p className="text-sm text-gray-500">{billingCycle === 'monthly' ? 'per month' : 'per year (2 months free)'}</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div
-                  ref={bundleRef}
-                  id="bundle"
-                  className="bg-gradient-to-br from-gray-900 to-gray-800 border-4 border-black rounded-2xl p-8 text-white shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] relative"
-                >
-                  <div className="absolute -top-4 left-4">
-                    <span className="px-4 py-2 bg-amber-400 border-2 border-black rounded-full text-xs font-black uppercase tracking-wide text-gray-900 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
-                      Best Value
-                    </span>
-                  </div>
-                  <h2 className="text-2xl font-black mb-2">Pro Bundle</h2>
-                  <p className="text-sm text-gray-100 mb-4">All three tools. One bill. Save £8 every month (or 2 months on annual).</p>
-
-                  <div className="flex items-baseline gap-3 mb-2">
-                    <span className="text-5xl font-black">£{bundlePrice}</span>
-                    <span className="text-sm uppercase font-semibold">{billingCycle === 'monthly' ? '/month' : '/year'}</span>
-                  </div>
-                  <p className="text-sm text-amber-200 mb-6">
-                    {billingCycle === 'monthly' ? 'Normally £57/month for all three' : 'Normally £570/year. Keep £80/year in your pocket.'}
-                  </p>
-
-                  <ul className="space-y-2 text-sm mb-6">
-                    <li className="flex items-start gap-2">
-                      <span className="text-green-400 mt-0.5">&#10003;</span>
-                      <span>Intel Pro – contact enrichment & verification</span>
+                  <ul className="space-y-4 mb-8 flex-grow">
+                    <li className="flex items-center gap-3 text-xs font-bold text-gray-700">
+                      <span className="w-5 h-5 rounded-md bg-intel-100 border-2 border-intel-600 flex items-center justify-center text-[10px] text-intel-600">✓</span>
+                      Intel (Contact Enrichment)
                     </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-green-400 mt-0.5">&#10003;</span>
-                      <span>Pitcher Pro – AI-powered pitch writing</span>
+                    <li className="flex items-center gap-3 text-xs font-medium text-gray-400 italic">
+                      Tracker (Outcome Ledger)
                     </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-green-400 mt-0.5">&#10003;</span>
-                      <span>Tracker Pro – radio campaign management</span>
+                    <li className="flex items-center gap-3 text-xs font-medium text-gray-400 italic">
+                      Pitcher (Draft Assistance)
                     </li>
                   </ul>
 
-                  <form onSubmit={handleBundleCheckout} className="space-y-3">
-                    <label className="block text-sm font-semibold text-gray-100">
-                      Work email for your receipt
-                      <input
-                        type="email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        placeholder="you@label.co.uk"
-                        className="input-field mt-2 bg-white text-gray-900"
-                        required
-                      />
-                    </label>
-                    {error && <p className="text-sm text-amber-200">{error}</p>}
-                    <button
-                      type="submit"
-                      disabled={loading}
-                      className="w-full cta-button bg-amber-400 text-gray-900 border-black"
-                    >
-                      {loading ? 'Redirecting…' : 'Checkout Pro Bundle'}
-                    </button>
-                    <p className="text-xs text-gray-200">
-                      Secured by Stripe. We will process the {billingCycle} bundle you picked.
+                  <a
+                    href="https://dashboard.totalaudiopromo.com"
+                    className="w-full py-3 text-center border-2 border-black rounded-xl font-bold tracking-tight hover:bg-gray-50 transition-colors"
+                  >
+                    Start for Free
+                  </a>
+                </article>
+
+                {/* Tier 2: Professional (Highlight) */}
+                <article className="bg-white border-4 border-black rounded-[2.5rem] p-10 shadow-[12px_12px_0px_0px_rgba(37,99,235,1)] hover:-translate-y-2 transition-all flex flex-col relative ring-4 ring-blue-100 ring-offset-8">
+                  <div className="absolute -top-5 left-1/2 -translate-x-1/2 bg-blue-600 text-white px-6 py-2 rounded-full border-4 border-black text-xs font-black uppercase tracking-widest shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] whitespace-nowrap">
+                    All Access Included
+                  </div>
+                  
+                  <div className="mb-6 pt-4">
+                    <h3 className="text-3xl font-bold tracking-tighter mb-2">Professional</h3>
+                    <div className="flex items-baseline gap-1 mb-4">
+                      <span className="text-6xl font-extrabold italic text-blue-600">£{tierPricing.pro}</span>
+                      <span className="text-gray-400 font-bold uppercase text-xs tracking-widest">/{billingCycle === 'monthly' ? 'mo' : 'yr'}</span>
+                    </div>
+                    <p className="text-sm text-gray-900 font-bold leading-relaxed">
+                      Our flagship workflow. Intel + Pitcher + Tracker. All unlocked.
                     </p>
-                  </form>
-                </div>
+                  </div>
+
+                  <ul className="space-y-4 mb-8 flex-grow">
+                    <li className="flex items-center gap-3 text-sm font-bold text-gray-900">
+                      <span className="w-6 h-6 rounded-lg bg-intel-600 text-white flex items-center justify-center border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">✓</span>
+                      Intel (Enrichment)
+                    </li>
+                    <li className="flex items-center gap-3 text-sm font-bold text-gray-900">
+                      <span className="w-6 h-6 rounded-lg bg-pitch-600 text-white flex items-center justify-center border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">✓</span>
+                      Pitcher (Pitches)
+                    </li>
+                    <li className="flex items-center gap-3 text-sm font-bold text-gray-900">
+                      <span className="w-6 h-6 rounded-lg bg-tracker-600 text-white flex items-center justify-center border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">✓</span>
+                      Tracker (Ledger)
+                    </li>
+                    <li className="flex items-center gap-3 text-xs font-bold text-gray-500">
+                      <span className="text-green-600 font-bold">→</span> High-volume exports
+                    </li>
+                  </ul>
+
+                  <a
+                    href="https://dashboard.totalaudiopromo.com"
+                    className="w-full py-4 text-xl text-center bg-blue-600 text-white border-4 border-black rounded-2xl font-bold tracking-tight shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] transition-all"
+                  >
+                    Get All Access
+                  </a>
+                </article>
+
+                {/* Tier 3: Agency */}
+                <article className="bg-white border-4 border-black rounded-3xl p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 transition-all flex flex-col">
+                  <div className="mb-6">
+                    <h3 className="text-2xl font-bold tracking-tighter mb-2">Agency</h3>
+                    <div className="flex items-baseline gap-1 mb-4">
+                      <span className="text-4xl font-extrabold italic text-gray-900">£{tierPricing.agency}</span>
+                      <span className="text-gray-400 font-bold uppercase text-[10px] tracking-widest">/{billingCycle === 'monthly' ? 'mo' : 'yr'}</span>
+                    </div>
+                    <p className="text-sm text-gray-600 font-medium leading-relaxed">
+                      For teams and labels managing multiple artist rosters.
+                    </p>
+                  </div>
+
+                  <ul className="space-y-4 mb-8 flex-grow">
+                    <li className="flex items-center gap-3 text-xs font-bold text-gray-700">
+                      <span className="w-5 h-5 rounded-md bg-gray-900 text-white flex items-center justify-center text-[10px] border-2 border-black">✓</span>
+                      Everything in Professional
+                    </li>
+                    <li className="flex items-center gap-3 text-xs font-bold text-gray-700">
+                      <span className="w-5 h-5 rounded-md bg-gray-900 text-white flex items-center justify-center text-[10px] border-2 border-black">✓</span>
+                      Team Collaboration
+                    </li>
+                    <li className="flex items-center gap-3 text-xs font-bold text-gray-700">
+                      <span className="w-5 h-5 rounded-md bg-gray-900 text-white flex items-center justify-center text-[10px] border-2 border-black">✓</span>
+                      500+ enrichments
+                    </li>
+                  </ul>
+
+                  <a
+                    href="https://dashboard.totalaudiopromo.com"
+                    className="w-full py-3 text-center border-2 border-black rounded-xl font-bold tracking-tight hover:bg-gray-50 transition-colors"
+                  >
+                    Contact Us
+                  </a>
+                </article>
+              </div>
               </div>
             </div>
           </section>
@@ -292,51 +315,36 @@ export default function PricingPage() {
                 <div>
                   <p className="text-sm font-semibold uppercase tracking-wide text-gray-700">Individual Tools</p>
                   <h2 className="text-3xl font-black text-gray-900">Pick the tool you need today</h2>
-                  <p className="text-gray-600 mt-2">Same pricing across Intel, Pitcher, and Tracker. Upgrade or bundle anytime.</p>
+                  <p className="text-gray-600 mt-2">Same pricing across Intel, Pitcher, and Tracker. Upgrade anytime.</p>
                 </div>
-                <a href="#bundle" className="subtle-button">Want all three? Jump to the bundle</a>
               </div>
 
               <div className="grid lg:grid-cols-3 gap-6">
                 {products.map((product) => (
-                  <article key={product.id} className={`product-card product-card--${product.accent}`}>
-                    <div className="flex items-center gap-3 mb-4">
-                      <div className="w-12 h-12 rounded-xl border-2 border-black bg-white flex items-center justify-center overflow-hidden">
-                        <Image src={product.image} alt={product.name} width={48} height={48} className="object-contain" />
+                  <article key={product.id} className={`product-card product-card--${product.accent} flex flex-col`}>
+                    <div className="flex items-center gap-3 mb-6">
+                      <div className="w-16 h-16 rounded-2xl border-4 border-black bg-white flex items-center justify-center overflow-hidden shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                        <Image src={product.image} alt={product.name} width={56} height={56} className="object-contain" />
                       </div>
                       <div>
-                        <h3 className="text-xl font-black text-gray-900">{product.name}</h3>
-                        <p className="text-sm text-gray-600">{product.description}</p>
+                        <h3 className="text-2xl font-bold text-gray-900 tracking-tighter">{product.name}</h3>
+                        <p className="text-sm text-gray-600 font-medium">Included in Professional</p>
                       </div>
                     </div>
 
-                    <div className="bg-gray-100 border-2 border-black rounded-xl p-4 mb-4">
-                      <div className="flex items-center justify-between mb-2">
-                        <span className="text-xs font-semibold uppercase text-gray-700">Starter</span>
-                        <span className="text-lg font-black text-gray-900">£{tierPricing.starter}{billingCycle === 'monthly' ? '/mo' : '/yr'}</span>
-                      </div>
-                      <div className="flex items-center justify-between mb-2">
-                        <span className="text-xs font-semibold uppercase text-gray-700">Pro</span>
-                        <span className="text-lg font-black text-gray-900">£{tierPricing.pro}{billingCycle === 'monthly' ? '/mo' : '/yr'}</span>
-                      </div>
-                      <div className="flex items-center justify-between">
-                        <span className="text-xs font-semibold uppercase text-gray-700">Agency</span>
-                        <span className="text-lg font-black text-gray-900">£{tierPricing.agency}{billingCycle === 'monthly' ? '/mo' : '/yr'}</span>
-                      </div>
-                      {billingCycle === 'annual' && <p className="text-xs text-gray-500 mt-2">Annual saves 2 months on every tier.</p>}
+                    <div className="mb-6 flex-grow">
+                        <ul className="space-y-3 text-sm text-gray-700">
+                        {product.bullets.map((bullet) => (
+                            <li key={bullet} className="flex items-start gap-3">
+                            <span className="text-green-600 font-bold mt-0.5 border-2 border-green-600 rounded px-1 text-[10px] uppercase tracking-tighter shadow-[1px_1px_0px_0px_rgba(22,163,74,1)]">✓</span>
+                            <span className="font-medium">{bullet}</span>
+                            </li>
+                        ))}
+                        </ul>
                     </div>
 
-                    <ul className="space-y-2 text-sm text-gray-700 mb-6">
-                      {product.bullets.map((bullet) => (
-                        <li key={bullet} className="flex items-start gap-2">
-                          <span className="text-green-600 mt-0.5">&#10003;</span>
-                          <span>{bullet}</span>
-                        </li>
-                      ))}
-                    </ul>
-
-                    <a href={product.href} className="cta-button w-full text-center">
-                      Start Free Trial
+                    <a href={product.href} className="cta-button w-full text-center py-4 bg-white hover:bg-gray-50 text-gray-900 border-2 border-black font-bold tracking-tight shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:-translate-x-0.5 hover:-translate-y-0.5 mb-2">
+                      Start Trial
                     </a>
                   </article>
                 ))}
@@ -345,28 +353,32 @@ export default function PricingPage() {
           </section>
         </main>
 
-        <footer className="bg-gray-900 text-white py-10">
-          <div className="max-w-6xl mx-auto px-4 flex flex-wrap items-center justify-between gap-4">
-            <div className="flex items-center gap-3">
-              <Image
-                src="/images/total-audio-promo-wordmark-stacked.png"
-                alt="Total Audio Promo"
-                width={60}
-                height={60}
-                className="object-contain h-12 w-auto brightness-0 invert"
-              />
-              <span className="text-sm text-gray-300">Built by radio promoters for radio promoters.</span>
+        <footer className="bg-gray-900 text-white py-12 sm:py-16">
+          <div className="max-w-6xl mx-auto px-4">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
+              <div className="sm:col-span-2 lg:col-span-1">
+                <Image
+                  src="/images/total-audio-promo-wordmark-stacked.png"
+                  alt="Total Audio Promo"
+                  width={80}
+                  height={80}
+                  className="object-contain h-12 w-auto brightness-0 invert mb-4"
+                />
+                <p className="text-sm text-gray-400">
+                  Built by radio promoters for radio promoters.
+                </p>
+              </div>
+              <div>
+                <h4 className="text-sm font-bold uppercase tracking-wider mb-4">Legal</h4>
+                <ul className="space-y-2">
+                  <li><Link href="/privacy" className="text-sm text-gray-400 hover:text-white">Privacy Policy</Link></li>
+                  <li><Link href="/terms" className="text-sm text-gray-400 hover:text-white">Terms of Service</Link></li>
+                  <li><Link href="/gdpr" className="text-sm text-gray-400 hover:text-white">GDPR</Link></li>
+                </ul>
+              </div>
             </div>
-            <div className="flex items-center gap-4 text-sm text-gray-400">
-              <Link href="/" className="hover:text-white transition-colors">
-                Home
-              </Link>
-              <Link href="/pricing" className="hover:text-white transition-colors">
-                Pricing
-              </Link>
-              <a href="mailto:chris@totalaudiopromo.com" className="hover:text-white transition-colors">
-                Contact
-              </a>
+            <div className="pt-6 border-t border-white/10 text-center">
+              <p className="text-sm text-gray-400">© {new Date().getFullYear()} Total Audio Promo. Built in Brighton.</p>
             </div>
           </div>
         </footer>

@@ -133,7 +133,7 @@ export default function HomePage() {
                 alt="Total Audio Promo"
                 width={100}
                 height={100}
-                className="object-contain h-16 sm:h-20 w-auto"
+                className="object-contain h-14 sm:h-20 w-auto"
                 priority
               />
             </Link>
@@ -165,13 +165,13 @@ export default function HomePage() {
                 Pricing
               </Link>
 
-              {/* Dashboard Button - Coming Soon */}
-              <span
-                className="ml-2 px-4 py-2 text-sm font-bold text-white bg-gray-400 border-2 border-gray-500 rounded-lg cursor-not-allowed"
-                title="Dashboard coming soon"
+              {/* Dashboard Button */}
+              <a
+                href="https://dashboard.totalaudiopromo.com"
+                className="ml-2 px-4 py-2 text-sm font-bold text-white bg-gray-900 border-2 border-black rounded-lg shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] transition-all hover:shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] hover:-translate-x-0.5 hover:-translate-y-0.5"
               >
-                Dashboard Soon
-              </span>
+                Dashboard
+              </a>
             </div>
           </div>
         </nav>
@@ -201,14 +201,16 @@ export default function HomePage() {
 
                   <MotionScrollReveal variant="fadeUp" delay={0.1}>
                     <p className="text-xl text-gray-600 mb-5 leading-relaxed">
-                      Intel surfaces relationship health and submission context
-                      for music promotion. Understand who is warming, who is
-                      cooling, and exactly how to approach them before you hit
-                      send. Decision support for high-stakes PR.
+                      Total Audio Promo provides professional PR execution tools
+                      for music industry operators. Our core intelligence layer,
+                      <strong> Intel</strong>, surfaces relationship health and
+                      submission context so you can understand who is warming,
+                      who is cooling, and exactly how to approach them before
+                      you hit send.
                     </p>
                     <p className="text-lg font-bold text-gray-900 mb-5">
-                      For small PR agencies, experienced operators, and managers
-                      who value relationships over volume.
+                      Built for small PR agencies, experienced operators, and
+                      managers who value relationships over volume.
                     </p>
                   </MotionScrollReveal>
 
@@ -248,7 +250,7 @@ export default function HomePage() {
                   className="lg:col-span-2 flex flex-col items-center"
                 >
                   <div className="relative">
-                    {/* Founder Photo - Large and Prominent */}
+                    {/* Founder Photo */}
                     <div className="relative z-10">
                       <Image
                         src="/images/chris-schofield-founder-photo.jpg"
@@ -358,8 +360,8 @@ export default function HomePage() {
                 </div>
                 <div className="flex justify-center">
                   <Image
-                    src="/images/vinyl-throw-action.png"
-                    alt="Intel for experienced operators"
+                    src="/images/total_audio_promo_logo_trans.png"
+                    alt="Total Audio Promo - Dog with headphones and speakers"
                     width={400}
                     height={400}
                     className="drop-shadow-2xl"
@@ -458,7 +460,7 @@ export default function HomePage() {
                           Start Free Trial
                         </a>
                         <span className="text-xl font-bold text-intel-600">
-                          £19/month
+                          Included in Professional
                         </span>
                       </div>
                     </div>
@@ -558,7 +560,7 @@ export default function HomePage() {
                           Start Free Trial
                         </a>
                         <span className="text-xl font-bold text-pitch-600">
-                          £19/month
+                          Included in Professional
                         </span>
                       </div>
                     </div>
@@ -582,7 +584,7 @@ export default function HomePage() {
                           3
                         </div>
                         <h3 className="text-2xl sm:text-3xl font-bold text-gray-900">
-                          Campaign Tracker
+                          Tracker
                         </h3>
                       </div>
 
@@ -638,7 +640,7 @@ export default function HomePage() {
                           Start Free Trial
                         </a>
                         <span className="text-xl font-bold text-tracker-600">
-                          £19/month
+                          Included in Professional
                         </span>
                       </div>
                     </div>
@@ -757,14 +759,10 @@ export default function HomePage() {
                   <MotionStaggerChild>
                     <div className="bg-gradient-to-br from-intel-50 to-white rounded-2xl border-4 border-intel-600 shadow-glow-intel-sm p-6 text-center">
                       <div className="text-5xl font-black text-intel-600 mb-2">
-                        <AnimatedCounter
-                          target={100}
-                          suffix="%"
-                          duration={1.5}
-                        />
+                        Industry-Leading
                       </div>
                       <p className="text-lg font-bold text-gray-900 mb-1">
-                        Enrichment Success Rate
+                        Data Accuracy
                       </p>
                       <p className="text-sm text-gray-600">
                         Tested with BBC Radio 1, Spotify, and 200+ industry
@@ -810,460 +808,132 @@ export default function HomePage() {
             </div>
           </section>
 
-          {/* Pricing Section - Visual Hierarchy */}
-          <section id="products" className="py-12 sm:py-16 bg-gray-50">
+          {/* Pricing Section - Visual Hierarchy Restored */}
+          <section id="products" className="py-16 sm:py-24 bg-gray-50 border-y-4 border-black">
             <div className="max-w-6xl mx-auto px-4">
-              <header className="text-center mb-10">
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-3">
-                  Choose Your Starting Point
+              <header className="text-center mb-12 sm:mb-16">
+                <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 mb-4 tracking-tight">
+                  One <span className="text-intel-600">Intelligence</span> Layer. All Three Tools.
                 </h2>
-                <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                  Each tool works standalone. Start with what you need most.
+                <p className="text-xl text-gray-600 max-w-2xl mx-auto font-medium">
+                  The Professional plan unifies your workflow for <strong className="text-gray-900 text-2xl font-bold italic decoration-intel-600 decoration-4 underline underline-offset-4">£19/month</strong>.
                 </p>
               </header>
 
-              <div className="grid lg:grid-cols-3 gap-6 mb-8">
-                {/* Intel Card - Featured */}
-                <div className="bg-gradient-to-br from-intel-50 via-white to-white border-4 border-intel-600 shadow-[8px_8px_0px_0px_#2563EB] hover:shadow-[12px_12px_0px_0px_#2563EB] hover:-translate-x-1 hover:-translate-y-1 transition-all duration-200 rounded-2xl p-5 sm:p-6 flex flex-col relative ring-4 ring-intel-200 ring-offset-4 group pt-10">
-                  {/* Subtle background pattern */}
-                  <div
-                    className="absolute inset-0 opacity-[0.02] pointer-events-none"
-                    style={{
-                      backgroundImage:
-                        "radial-gradient(circle at 2px 2px, #2563EB 1px, transparent 0)",
-                      backgroundSize: "24px 24px",
-                    }}
-                  />
-
-                  {/* START HERE Badge - Enhanced Visibility */}
-                  <div className="absolute -top-8 left-1/2 -translate-x-1/2 z-20">
-                    <span className="px-6 py-3 text-sm font-black uppercase bg-intel-600 text-white rounded-full border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] group-hover:scale-110 group-hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transition-all duration-200 animate-pulse">
-                      START HERE
-                    </span>
-                  </div>
-
-                  {/* Icon container with enhanced styling */}
-                  <div className="relative mb-5 z-10">
-                    <div className="w-24 h-24 bg-gradient-to-br from-intel-100 to-intel-50 rounded-2xl flex items-center justify-center mx-auto border-4 border-intel-300 shadow-[4px_4px_0px_0px_#2563EB] group-hover:scale-110 group-hover:rotate-2 transition-all duration-300 p-3 relative overflow-hidden">
-                      {/* Animated background shimmer */}
-                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
-                      <Image
-                        src="/images/analyzing-data.png"
-                        alt="Intel - Contact Research"
-                        width={64}
-                        height={64}
-                        className="object-contain relative z-10"
-                      />
+              <div className="grid lg:grid-cols-3 gap-8 items-stretch">
+                {/* Tier 1: Starter */}
+                <article className="bg-white border-4 border-black rounded-3xl p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 transition-all flex flex-col">
+                  <div className="mb-8">
+                    <h3 className="text-2xl font-bold tracking-tighter mb-2">Starter</h3>
+                    <div className="flex items-baseline gap-1 mb-4">
+                      <span className="text-5xl font-extrabold italic">£5</span>
+                      <span className="text-gray-400 font-bold uppercase text-xs tracking-widest">/month</span>
                     </div>
+                    <p className="text-gray-600 font-medium leading-relaxed">
+                      For individuals testing the waters with professional contact intelligence.
+                    </p>
                   </div>
 
-                  <h3 className="text-2xl font-black text-gray-900 mb-1 text-center group-hover:text-intel-700 transition-colors">
-                    Intel
-                  </h3>
-                  <p className="text-sm text-intel-600 font-bold text-center mb-4 uppercase tracking-wide">
-                    Contact Research
-                  </p>
-
-                  {/* Price with enhanced styling */}
-                  <div className="text-center mb-4 relative">
-                    <div className="inline-flex items-baseline gap-1 px-4 py-2 bg-white/60 rounded-xl border-2 border-intel-200">
-                      <span className="text-5xl font-black text-gray-900">
-                        £19
-                      </span>
-                      <span className="text-lg text-gray-500 font-medium">
-                        /month
-                      </span>
-                    </div>
-                  </div>
-
-                  <p className="text-base text-gray-700 mb-5 text-center flex-grow font-medium leading-relaxed">
-                    Verified emails, roles, and submission preferences.
-                    Relationship intelligence, not automation.
-                  </p>
-
-                  {/* Feature list with enhanced styling */}
-                  <ul className="space-y-2.5 mb-5 text-sm relative z-10">
-                    <li className="flex items-start gap-3 group/item">
-                      <div className="mt-0.5 flex-shrink-0 w-6 h-6 rounded-md bg-intel-100 border-2 border-intel-300 flex items-center justify-center group-hover/item:bg-intel-200 transition-colors">
-                        <svg
-                          className="w-4 h-4 text-intel-600"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={3}
-                            d="M5 13l4 4L19 7"
-                          />
-                        </svg>
-                      </div>
-                      <span className="text-gray-700 font-medium pt-0.5">
-                        100 enrichments/month
-                      </span>
+                  <ul className="space-y-4 mb-10 flex-grow">
+                    <li className="flex items-center gap-3 text-sm font-bold text-gray-700">
+                      <span className="w-5 h-5 rounded-md bg-intel-100 border-2 border-intel-600 flex items-center justify-center text-[10px] text-intel-600">✓</span>
+                      Intel (Contact Enrichment)
                     </li>
-                    <li className="flex items-start gap-3 group/item">
-                      <div className="mt-0.5 flex-shrink-0 w-6 h-6 rounded-md bg-intel-100 border-2 border-intel-300 flex items-center justify-center group-hover/item:bg-intel-200 transition-colors">
-                        <svg
-                          className="w-4 h-4 text-intel-600"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={3}
-                            d="M5 13l4 4L19 7"
-                          />
-                        </svg>
-                      </div>
-                      <span className="text-gray-700 font-medium pt-0.5">
-                        Email validation
-                      </span>
+                    <li className="flex items-center gap-3 text-sm font-medium text-gray-400 italic">
+                      Tracker (Outcome Ledger)
                     </li>
-                    <li className="flex items-start gap-3 group/item">
-                      <div className="mt-0.5 flex-shrink-0 w-6 h-6 rounded-md bg-intel-100 border-2 border-intel-300 flex items-center justify-center group-hover/item:bg-intel-200 transition-colors">
-                        <svg
-                          className="w-4 h-4 text-intel-600"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={3}
-                            d="M5 13l4 4L19 7"
-                          />
-                        </svg>
-                      </div>
-                      <span className="text-gray-700 font-medium pt-0.5">
-                        Export to Excel/PDF
-                      </span>
-                    </li>
-                    <li className="flex items-start gap-3 group/item">
-                      <div className="mt-0.5 flex-shrink-0 w-6 h-6 rounded-md bg-intel-100 border-2 border-intel-300 flex items-center justify-center group-hover/item:bg-intel-200 transition-colors">
-                        <svg
-                          className="w-4 h-4 text-intel-600"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={3}
-                            d="M5 13l4 4L19 7"
-                          />
-                        </svg>
-                      </div>
-                      <span className="text-gray-700 font-medium pt-0.5">
-                        Direct Pitcher integration
-                      </span>
+                    <li className="flex items-center gap-3 text-sm font-medium text-gray-400 italic">
+                      Pitcher (Draft Assistance)
                     </li>
                   </ul>
 
                   <a
-                    href="https://intel.totalaudiopromo.com"
-                    className="cta-button w-full text-center bg-intel-600 hover:bg-intel-700 mt-auto text-base font-bold py-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all relative z-10"
+                    href="https://dashboard.totalaudiopromo.com"
+                    className="w-full py-4 text-center border-2 border-black rounded-xl font-bold tracking-tight hover:bg-gray-50 transition-colors"
                   >
-                    Start Free Trial
+                    Start for Free
                   </a>
-                </div>
+                </article>
 
-                {/* Pitcher Card */}
-                <div className="bg-gradient-to-br from-pitch-50 via-white to-white border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[9px_9px_0px_0px_rgba(0,0,0,1)] hover:-translate-x-1 hover:-translate-y-1 transition-all duration-200 rounded-2xl p-5 sm:p-6 flex flex-col group overflow-hidden relative">
-                  {/* Subtle background pattern */}
-                  <div
-                    className="absolute inset-0 opacity-[0.02] pointer-events-none"
-                    style={{
-                      backgroundImage:
-                        "radial-gradient(circle at 2px 2px, #D97706 1px, transparent 0)",
-                      backgroundSize: "24px 24px",
-                    }}
-                  />
-
-                  {/* Icon container with enhanced styling */}
-                  <div className="relative mb-5 z-10">
-                    <div className="w-24 h-24 bg-gradient-to-br from-pitch-100 to-pitch-50 rounded-2xl flex items-center justify-center mx-auto border-4 border-pitch-300 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] group-hover:scale-110 group-hover:rotate-2 transition-all duration-300 p-3 relative overflow-hidden">
-                      {/* Animated background shimmer */}
-                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
-                      <Image
-                        src="/images/vinyl-throw-action.png"
-                        alt="Pitcher - AI Pitches"
-                        width={64}
-                        height={64}
-                        className="object-contain relative z-10"
-                      />
+                {/* Tier 2: Professional (Highlight) */}
+                <article className="bg-white border-4 border-black rounded-[2.5rem] p-10 shadow-[12px_12px_0px_0px_rgba(37,99,235,1)] hover:-translate-y-2 transition-all flex flex-col relative ring-4 ring-blue-100 ring-offset-8">
+                  <div className="absolute -top-5 left-1/2 -translate-x-1/2 bg-blue-600 text-white px-6 py-2 rounded-full border-4 border-black text-xs font-black uppercase tracking-widest shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                    All Access
+                  </div>
+                  
+                  <div className="mb-8 pt-4">
+                    <h3 className="text-3xl font-bold tracking-tighter mb-2">Professional</h3>
+                    <div className="flex items-baseline gap-1 mb-4">
+                      <span className="text-6xl font-extrabold italic text-blue-600">£19</span>
+                      <span className="text-gray-400 font-bold uppercase text-xs tracking-widest">/month</span>
                     </div>
+                    <p className="text-gray-900 font-bold leading-relaxed">
+                      Our flagship workflow. Intel + Pitcher + Tracker. All unlocked.
+                    </p>
                   </div>
 
-                  <h3 className="text-2xl font-black text-gray-900 mb-1 text-center group-hover:text-pitch-700 transition-colors">
-                    Pitcher
-                  </h3>
-                  <p className="text-sm text-pitch-600 font-bold text-center mb-4 uppercase tracking-wide">
-                    Draft Assistance
-                  </p>
-
-                  {/* Price with enhanced styling */}
-                  <div className="text-center mb-4 relative">
-                    <div className="inline-flex items-baseline gap-1 px-4 py-2 bg-white/60 rounded-xl border-2 border-pitch-200">
-                      <span className="text-5xl font-black text-gray-900">
-                        £19
-                      </span>
-                      <span className="text-lg text-gray-500 font-medium">
-                        /month
-                      </span>
-                    </div>
-                  </div>
-
-                  <p className="text-base text-gray-700 mb-5 text-center flex-grow font-medium leading-relaxed">
-                    Context-aware outreach that respects your voice and
-                    recipient preferences.
-                  </p>
-
-                  {/* Feature list with enhanced styling */}
-                  <ul className="space-y-2.5 mb-5 text-sm relative z-10">
-                    <li className="flex items-start gap-3 group/item">
-                      <div className="mt-0.5 flex-shrink-0 w-6 h-6 rounded-md bg-pitch-100 border-2 border-pitch-300 flex items-center justify-center group-hover/item:bg-pitch-200 transition-colors">
-                        <svg
-                          className="w-4 h-4 text-pitch-600"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={3}
-                            d="M5 13l4 4L19 7"
-                          />
-                        </svg>
-                      </div>
-                      <span className="text-gray-700 font-medium pt-0.5">
-                        50 pitches/month
-                      </span>
+                  <ul className="space-y-5 mb-10 flex-grow">
+                    <li className="flex items-center gap-3 text-sm font-bold text-gray-900">
+                      <span className="w-6 h-6 rounded-lg bg-intel-600 text-white flex items-center justify-center border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">✓</span>
+                      Intel (Enrichment)
                     </li>
-                    <li className="flex items-start gap-3 group/item">
-                      <div className="mt-0.5 flex-shrink-0 w-6 h-6 rounded-md bg-pitch-100 border-2 border-pitch-300 flex items-center justify-center group-hover/item:bg-pitch-200 transition-colors">
-                        <svg
-                          className="w-4 h-4 text-pitch-600"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={3}
-                            d="M5 13l4 4L19 7"
-                          />
-                        </svg>
-                      </div>
-                      <span className="text-gray-700 font-medium pt-0.5">
-                        Voice matching
-                      </span>
+                    <li className="flex items-center gap-3 text-sm font-bold text-gray-900">
+                      <span className="w-6 h-6 rounded-lg bg-pitch-600 text-white flex items-center justify-center border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">✓</span>
+                      Pitcher (Pitches)
                     </li>
-                    <li className="flex items-start gap-3 group/item">
-                      <div className="mt-0.5 flex-shrink-0 w-6 h-6 rounded-md bg-pitch-100 border-2 border-pitch-300 flex items-center justify-center group-hover/item:bg-pitch-200 transition-colors">
-                        <svg
-                          className="w-4 h-4 text-pitch-600"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={3}
-                            d="M5 13l4 4L19 7"
-                          />
-                        </svg>
-                      </div>
-                      <span className="text-gray-700 font-medium pt-0.5">
-                        Batch generation
-                      </span>
+                    <li className="flex items-center gap-3 text-sm font-bold text-gray-900">
+                      <span className="w-6 h-6 rounded-lg bg-tracker-600 text-white flex items-center justify-center border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">✓</span>
+                      Tracker (Ledger)
                     </li>
-                    <li className="flex items-start gap-3 group/item">
-                      <div className="mt-0.5 flex-shrink-0 w-6 h-6 rounded-md bg-pitch-100 border-2 border-pitch-300 flex items-center justify-center group-hover/item:bg-pitch-200 transition-colors">
-                        <svg
-                          className="w-4 h-4 text-pitch-600"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={3}
-                            d="M5 13l4 4L19 7"
-                          />
-                        </svg>
-                      </div>
-                      <span className="text-gray-700 font-medium pt-0.5">
-                        Gmail integration
-                      </span>
+                    <li className="flex items-center gap-3 text-sm font-medium text-gray-500">
+                      <span className="text-green-600 font-bold">→</span> High-volume exports
                     </li>
                   </ul>
 
                   <a
-                    href="https://pitcher.totalaudiopromo.com"
-                    className="cta-button w-full text-center bg-pitch-600 hover:bg-pitch-700 mt-auto text-base font-bold py-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all relative z-10"
+                    href="https://dashboard.totalaudiopromo.com"
+                    className="w-full py-5 text-xl text-center bg-blue-600 text-white border-4 border-black rounded-2xl font-bold tracking-tight shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] transition-all"
                   >
-                    Try Free
+                    Get All Access
                   </a>
-                </div>
+                </article>
 
-                {/* Tracker Card */}
-                <div className="bg-gradient-to-br from-tracker-50 via-white to-white border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[9px_9px_0px_0px_rgba(0,0,0,1)] hover:-translate-x-1 hover:-translate-y-1 transition-all duration-200 rounded-2xl p-5 sm:p-6 flex flex-col group overflow-hidden relative">
-                  {/* Subtle background pattern */}
-                  <div
-                    className="absolute inset-0 opacity-[0.02] pointer-events-none"
-                    style={{
-                      backgroundImage:
-                        "radial-gradient(circle at 2px 2px, #0D9488 1px, transparent 0)",
-                      backgroundSize: "24px 24px",
-                    }}
-                  />
-
-                  {/* Icon container with enhanced styling */}
-                  <div className="relative mb-5 z-10">
-                    <div className="w-24 h-24 bg-gradient-to-br from-tracker-100 to-tracker-50 rounded-2xl flex items-center justify-center mx-auto border-4 border-tracker-300 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] group-hover:scale-110 group-hover:rotate-2 transition-all duration-300 p-3 relative overflow-hidden">
-                      {/* Animated background shimmer */}
-                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
-                      <Image
-                        src="/images/tracker-mascot.png"
-                        alt="Dog with magnifying glass"
-                        width={64}
-                        height={64}
-                        className="object-contain relative z-10"
-                      />
+                {/* Tier 3: Agency */}
+                <article className="bg-white border-4 border-black rounded-3xl p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 transition-all flex flex-col">
+                  <div className="mb-8">
+                    <h3 className="text-2xl font-bold tracking-tighter mb-2">Agency</h3>
+                    <div className="flex items-baseline gap-1 mb-4">
+                      <span className="text-5xl font-extrabold italic">£79</span>
+                      <span className="text-gray-400 font-bold uppercase text-xs tracking-widest">/month</span>
                     </div>
+                    <p className="text-gray-600 font-medium leading-relaxed">
+                      For teams and labels managing multiple artist rosters.
+                    </p>
                   </div>
 
-                  <h3 className="text-2xl font-black text-gray-900 mb-1 text-center group-hover:text-tracker-700 transition-colors">
-                    Tracker
-                  </h3>
-                  <p className="text-sm text-tracker-600 font-bold text-center mb-4 uppercase tracking-wide">
-                    Learning Extraction
-                  </p>
-
-                  {/* Price with enhanced styling */}
-                  <div className="text-center mb-4 relative">
-                    <div className="inline-flex items-baseline gap-1 px-4 py-2 bg-white/60 rounded-xl border-2 border-tracker-200">
-                      <span className="text-5xl font-black text-gray-900">
-                        £19
-                      </span>
-                      <span className="text-lg text-gray-500 font-medium">
-                        /month
-                      </span>
-                    </div>
-                  </div>
-
-                  <p className="text-base text-gray-700 mb-5 text-center flex-grow font-medium leading-relaxed">
-                    Turn campaign outcomes into narrative reporting and
-                    relationship intelligence.
-                  </p>
-
-                  {/* Feature list with enhanced styling */}
-                  <ul className="space-y-2.5 mb-5 text-sm relative z-10">
-                    <li className="flex items-start gap-3 group/item">
-                      <div className="mt-0.5 flex-shrink-0 w-6 h-6 rounded-md bg-tracker-100 border-2 border-tracker-300 flex items-center justify-center group-hover/item:bg-tracker-200 transition-colors">
-                        <svg
-                          className="w-4 h-4 text-tracker-600"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={3}
-                            d="M5 13l4 4L19 7"
-                          />
-                        </svg>
-                      </div>
-                      <span className="text-gray-700 font-medium pt-0.5">
-                        Unlimited tracking
-                      </span>
+                  <ul className="space-y-4 mb-10 flex-grow">
+                    <li className="flex items-center gap-3 text-sm font-bold text-gray-700">
+                      <span className="w-5 h-5 rounded-md bg-gray-900 text-white flex items-center justify-center text-[10px] border-2 border-black">✓</span>
+                      Everything in Professional
                     </li>
-                    <li className="flex items-start gap-3 group/item">
-                      <div className="mt-0.5 flex-shrink-0 w-6 h-6 rounded-md bg-tracker-100 border-2 border-tracker-300 flex items-center justify-center group-hover/item:bg-tracker-200 transition-colors">
-                        <svg
-                          className="w-4 h-4 text-tracker-600"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={3}
-                            d="M5 13l4 4L19 7"
-                          />
-                        </svg>
-                      </div>
-                      <span className="text-gray-700 font-medium pt-0.5">
-                        AI campaign autopsy
-                      </span>
+                    <li className="flex items-center gap-3 text-sm font-bold text-gray-700">
+                      <span className="w-5 h-5 rounded-md bg-gray-900 text-white flex items-center justify-center text-[10px] border-2 border-black">✓</span>
+                      Team Collaboration
                     </li>
-                    <li className="flex items-start gap-3 group/item">
-                      <div className="mt-0.5 flex-shrink-0 w-6 h-6 rounded-md bg-tracker-100 border-2 border-tracker-300 flex items-center justify-center group-hover/item:bg-tracker-200 transition-colors">
-                        <svg
-                          className="w-4 h-4 text-tracker-600"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={3}
-                            d="M5 13l4 4L19 7"
-                          />
-                        </svg>
-                      </div>
-                      <span className="text-gray-700 font-medium pt-0.5">
-                        Performance reports
-                      </span>
-                    </li>
-                    <li className="flex items-start gap-3 group/item">
-                      <div className="mt-0.5 flex-shrink-0 w-6 h-6 rounded-md bg-tracker-100 border-2 border-tracker-300 flex items-center justify-center group-hover/item:bg-tracker-200 transition-colors">
-                        <svg
-                          className="w-4 h-4 text-tracker-600"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={3}
-                            d="M5 13l4 4L19 7"
-                          />
-                        </svg>
-                      </div>
-                      <span className="text-gray-700 font-medium pt-0.5">
-                        Industry benchmarks
-                      </span>
+                    <li className="flex items-center gap-3 text-sm font-bold text-gray-700">
+                      <span className="w-5 h-5 rounded-md bg-gray-900 text-white flex items-center justify-center text-[10px] border-2 border-black">✓</span>
+                      500+ enrichments
                     </li>
                   </ul>
 
                   <a
-                    href="https://tracker.totalaudiopromo.com"
-                    className="cta-button w-full text-center bg-tracker-600 hover:bg-tracker-700 mt-auto text-base font-bold py-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all relative z-10"
+                    href="https://dashboard.totalaudiopromo.com"
+                    className="w-full py-4 text-center border-2 border-black rounded-xl font-bold tracking-tight hover:bg-gray-50 transition-colors"
                   >
-                    Try Free
+                    Contact Us
                   </a>
-                </div>
+                </article>
               </div>
-
-              <p className="text-center text-gray-500 text-sm">
-                All plans include 14-day free trial. Cancel anytime. No credit
-                card required.
-              </p>
             </div>
           </section>
 
@@ -1351,18 +1021,21 @@ export default function HomePage() {
                     <div className="flex items-start gap-3 text-gray-700">
                       <span className="text-intel-600 mt-1">&#8594;</span>
                       <span>
-                        "How I got 6 plays on BBC Radio 1 with one campaign"
+                        "How to spot relationship decay before you lose the
+                        contact"
                       </span>
                     </div>
                     <div className="flex items-start gap-3 text-gray-700">
                       <span className="text-intel-600 mt-1">&#8594;</span>
                       <span>
-                        "The submission timing that gets 3x more opens"
+                        "The submission rhythm that keeps your status 'Warm'"
                       </span>
                     </div>
                     <div className="flex items-start gap-3 text-gray-700">
                       <span className="text-intel-600 mt-1">&#8594;</span>
-                      <span>"Why personalisation beats volume every time"</span>
+                      <span>
+                        "Why relationship intelligence beats volume every time"
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -1449,12 +1122,12 @@ export default function HomePage() {
                       href="https://tracker.totalaudiopromo.com"
                       className="text-sm text-gray-400 hover:text-white transition-colors"
                     >
-                      Campaign Tracker
+                      Tracker
                     </a>
                   </li>
                   <li>
                     <a
-                      href="https://command.totalaudiopromo.com"
+                      href="https://dashboard.totalaudiopromo.com"
                       className="text-sm text-gray-400 hover:text-white transition-colors"
                     >
                       Dashboard
@@ -1503,7 +1176,7 @@ export default function HomePage() {
                   </li>
                   <li>
                     <a
-                      href="mailto:chris@totalaudiopromo.com"
+                      href="mailto:info@totalaudiopromo.com"
                       className="text-sm text-gray-400 hover:text-white transition-colors"
                     >
                       Contact
@@ -1519,20 +1192,20 @@ export default function HomePage() {
                 </h4>
                 <ul className="space-y-2">
                   <li>
-                    <a
-                      href="https://intel.totalaudiopromo.com/privacy"
+                    <Link
+                      href="/privacy"
                       className="text-sm text-gray-400 hover:text-white transition-colors"
                     >
                       Privacy Policy
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
-                      href="https://intel.totalaudiopromo.com/terms"
+                    <Link
+                      href="/terms"
                       className="text-sm text-gray-400 hover:text-white transition-colors"
                     >
                       Terms of Service
-                    </a>
+                    </Link>
                   </li>
                   <li>
                     <a
@@ -1543,12 +1216,12 @@ export default function HomePage() {
                     </a>
                   </li>
                   <li>
-                    <a
-                      href="https://intel.totalaudiopromo.com/gdpr"
+                    <Link
+                      href="/gdpr"
                       className="text-sm text-gray-400 hover:text-white transition-colors"
                     >
                       GDPR
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
