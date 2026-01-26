@@ -17,7 +17,7 @@ type Product = {
 };
 
 const BASE_TIER_PRICING = {
-  starter: 5,
+  starter: 0,
   pro: 19,
   agency: 79,
 } as const;
@@ -195,10 +195,9 @@ export default function PricingPage() {
                 {/* Tier 1: Starter */}
                 <article className="bg-white border-4 border-black rounded-3xl p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 transition-all flex flex-col">
                   <div className="mb-6">
-                    <h3 className="text-2xl font-bold tracking-tighter mb-2">Starter</h3>
+                    <h3 className="text-2xl font-bold tracking-tighter mb-2">Free</h3>
                     <div className="flex items-baseline gap-1 mb-4">
-                      <span className="text-4xl font-extrabold italic text-gray-900">£{tierPricing.starter}</span>
-                      <span className="text-gray-400 font-bold uppercase text-[10px] tracking-widest">/{billingCycle === 'monthly' ? 'mo' : 'yr'}</span>
+                      <span className="text-4xl font-extrabold italic text-gray-900">Free</span>
                     </div>
                     <p className="text-sm text-gray-600 font-medium leading-relaxed">
                       For individuals testing the waters with professional contact intelligence.
@@ -219,7 +218,7 @@ export default function PricingPage() {
                   </ul>
 
                   <a
-                    href="https://dashboard.totalaudiopromo.com"
+                    href="https://intel.totalaudiopromo.com/pricing?source=totalaudiopromo"
                     className="w-full py-3 text-center border-2 border-black rounded-xl font-bold tracking-tight hover:bg-gray-50 transition-colors"
                   >
                     Start for Free
@@ -233,7 +232,7 @@ export default function PricingPage() {
                   </div>
                   
                   <div className="mb-6 pt-4">
-                    <h3 className="text-3xl font-bold tracking-tighter mb-2">Professional</h3>
+                    <h3 className="text-3xl font-bold tracking-tighter mb-2">Pro</h3>
                     <div className="flex items-baseline gap-1 mb-4">
                       <span className="text-6xl font-extrabold italic text-blue-600">£{tierPricing.pro}</span>
                       <span className="text-gray-400 font-bold uppercase text-xs tracking-widest">/{billingCycle === 'monthly' ? 'mo' : 'yr'}</span>
@@ -262,7 +261,7 @@ export default function PricingPage() {
                   </ul>
 
                   <a
-                    href="https://dashboard.totalaudiopromo.com"
+                    href="https://intel.totalaudiopromo.com/pricing?source=totalaudiopromo"
                     className="w-full py-4 text-xl text-center bg-blue-600 text-white border-4 border-black rounded-2xl font-bold tracking-tight shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] transition-all"
                   >
                     Get All Access
@@ -298,7 +297,7 @@ export default function PricingPage() {
                   </ul>
 
                   <a
-                    href="https://dashboard.totalaudiopromo.com"
+                    href="https://intel.totalaudiopromo.com/pricing?source=totalaudiopromo"
                     className="w-full py-3 text-center border-2 border-black rounded-xl font-bold tracking-tight hover:bg-gray-50 transition-colors"
                   >
                     Contact Us
