@@ -21,6 +21,10 @@ const bundlePriceIds: Record<'monthly' | 'annual', string> = {
   annual: 'price_1SdCGjPqujcPv5fbO9OOw7QP',
 };
 
+/**
+ * @deprecated This endpoint is being retired in favour of Intel canonical pricing/checkout.
+ * Do not rely on this for new subscriptions.
+ */
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST');
