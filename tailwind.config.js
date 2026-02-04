@@ -16,6 +16,7 @@ module.exports = {
           teal: '#14B8A6', // Tracker
           black: '#0B0D0E', // TAP Dashboard black
           panel: '#161A1D', // TAP Dashboard panel
+          tap: '#3AA9BE',
         },
         // Tool-specific palettes
         intel: {

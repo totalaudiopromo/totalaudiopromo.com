@@ -73,9 +73,9 @@ const journeyItems: JourneyItem[] = [
     image: "/images/journey/chris-sadact-portrait.jpg",
     alt: "Chris Schofield, founder of Total Audio Promo, 2026",
     title: "Founder",
-    subtitle: "Total Audio Promo",
+    subtitle: "TAP by Total Audio Promo",
     description:
-      "Distilling thirty years of wins, losses, and noise into the system I wish I'd had from day one.",
+      "Built TAP -- one workspace for the work of music PR. Distilling thirty years of wins, losses, and noise into the system I wish I'd had from day one.",
     year: "2026",
   },
 ];
@@ -163,14 +163,14 @@ export const ExperienceTimeline = () => {
           delay={0.6}
           className="mt-24 flex flex-col items-center gap-6"
         >
-          <a href="https://intel.totalaudiopromo.com" className="group">
+          <a href="https://tap.totalaudiopromo.com/home?source=marketing" className="group">
             <motion.div
               whileHover={{ scale: 1.02 }}
               className="inline-block p-[2px] rounded-full bg-gradient-to-r from-intel-500 via-blue-500 to-purple-500 shadow-[0_0_30px_rgba(58,169,190,0.3)]"
             >
               <div className="px-10 py-4 rounded-full bg-black text-white font-bold text-lg group-hover:bg-transparent transition-all duration-300 flex items-center gap-3">
                 <span className="w-2 h-2 rounded-full bg-intel-500 animate-pulse" />
-                See the Platform
+                Try TAP Free
                 <svg
                   className="w-5 h-5 group-hover:translate-x-1 transition-transform"
                   fill="none"

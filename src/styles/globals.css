@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 /* ============================================
-   TOTAL AUDIO PROMO - Global Styles
+   TAP by Total Audio Promo - Global Styles
    Neo-brutalist design system with polish
    ============================================ */
 
@@ -79,6 +79,15 @@
     @apply inline-flex items-center gap-2 rounded-full border-2 border-black px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-black;
     background-color: #3AA9BE; /* TAP Cyan instead of yellow */
     box-shadow: 2px 2px 0px 0px rgba(0,0,0,1);
+  }
+
+  /* ============================================
+     Badge - TAP workspace badge
+     ============================================ */
+  .badge-tap {
+    @apply inline-flex items-center gap-2 rounded-full border-2 border-black px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-black;
+    background-color: #3AA9BE;
+    box-shadow: 3px 3px 0px 0px rgba(0,0,0,1);
   }
 
   /* ============================================

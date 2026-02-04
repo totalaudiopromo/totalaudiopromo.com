@@ -12,8 +12,8 @@ interface NewsletterSignupProps {
 
 export function NewsletterSignup({
   variant = 'card',
-  title = 'Get The Unsigned Advantage',
-  description = 'Weekly music industry insights, radio promotion tips, and tools to help you break through.',
+  title = 'Stay in the loop',
+  description = 'Product updates and music PR insights for PR professionals.',
   placeholder = 'your@email.com',
 }: NewsletterSignupProps) {
   const [email, setEmail] = useState('');
@@ -28,20 +28,10 @@ export function NewsletterSignup({
     setMessage('');
 
     try {
-      const response = await fetch('https://intel.totalaudiopromo.com/api/convertkit/subscribe', {
+      const response = await fetch('/api/mailing-list', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          subscriber: {
-            email_address: email,
-            tags: ['newsletter', 'totalaudiopromo_user'],
-            fields: {
-              lead_source: 'totalaudiopromo',
-              signup_tool: 'Total Audio Promo',
-            },
-          },
-          form_type: 'newsletter',
-        }),
+        body: JSON.stringify({ email }),
       });
 
       if (!response.ok) {
@@ -49,7 +39,7 @@ export function NewsletterSignup({
       }
 
       setStatus('success');
-      setMessage('Success! Check your email to confirm.');
+      setMessage("You're on the list! We'll be in touch.");
       setEmail('');
     } catch (error) {
       setStatus('error');
@@ -138,7 +128,7 @@ export function NewsletterSignup({
               </>
             ) : (
               <>
-                Join the Newsletter <ArrowRight className="h-4 w-4 ml-2" aria-hidden="true" />
+                Join the Mailing List <ArrowRight className="h-4 w-4 ml-2" aria-hidden="true" />
               </>
             )}
           </button>
@@ -152,7 +142,7 @@ export function NewsletterSignup({
           )}
         </form>
         <p className="text-xs text-gray-500">
-          Join 100+ artists getting weekly insights. No spam, unsubscribe anytime.
+          No spam, unsubscribe anytime.
         </p>
       </div>
     );
@@ -221,7 +211,7 @@ export function NewsletterSignup({
 
           {/* Social proof */}
           <p className="text-sm text-gray-500">
-            Join 100+ artists getting weekly insights from Total Audio Promo. No spam, unsubscribe anytime.
+            No spam, unsubscribe anytime.
           </p>
         </div>
       </div>

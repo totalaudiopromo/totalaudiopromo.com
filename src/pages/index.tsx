@@ -23,16 +23,15 @@ export default function HomePage() {
       <Head>
         {/* Primary Meta Tags */}
         <title>
-          Total Audio Promo | Professional PR Execution & Relationship
-          Intelligence
+          TAP by Total Audio Promo | The Music PR Workspace
         </title>
         <meta
           name="description"
-          content="Professional PR execution without enterprise complexity. Relationship-aware intelligence for experienced operators and small PR agencies."
+          content="TAP is where music PR work actually happens. Campaigns, contacts, pitches, outcomes, and learning in one continuous flow. Start free."
         />
         <meta
           name="keywords"
-          content="music promotion, radio promotion, contact research, pitch generator, campaign tracking, independent artists, UK music industry, BBC Radio, playlist pitching"
+          content="TAP, TAP music pr, music pr workspace, pr tools, music pr platform, music promotion, radio promotion, contact research, pitch generator, campaign tracking, UK music industry, BBC Radio, playlist pitching"
         />
         <meta name="author" content="Chris Schofield" />
         <meta name="robots" content="index, follow" />
@@ -45,11 +44,11 @@ export default function HomePage() {
         <meta property="og:url" content="https://totalaudiopromo.com" />
         <meta
           property="og:title"
-          content="Total Audio Promo | Professional PR Execution"
+          content="TAP by Total Audio Promo | The Music PR Workspace"
         />
         <meta
           property="og:description"
-          content="Professional PR execution without enterprise complexity. Relationship-aware intelligence for experienced agencies and operators."
+          content="TAP is where music PR work actually happens. Campaigns, contacts, pitches, outcomes, and learning in one continuous flow. Start free."
         />
         <meta
           property="og:image"
@@ -63,11 +62,11 @@ export default function HomePage() {
         <meta name="twitter:url" content="https://totalaudiopromo.com" />
         <meta
           name="twitter:title"
-          content="Total Audio Promo | Professional PR Execution"
+          content="TAP by Total Audio Promo | The Music PR Workspace"
         />
         <meta
           name="twitter:description"
-          content="Professional PR execution without enterprise complexity. Relationship-aware intelligence for experienced agencies."
+          content="TAP is where music PR work actually happens. Campaigns, contacts, pitches, outcomes, and learning in one continuous flow. Start free."
         />
         <meta
           name="twitter:image"
@@ -85,12 +84,13 @@ export default function HomePage() {
               url: "https://totalaudiopromo.com",
               logo: "https://totalaudiopromo.com/images/total_audio_promo_logo_trans.png",
               description:
-                "AI-powered music promotion tools for independent artists and radio promoters",
+                "TAP is the music PR workspace where campaigns, contacts, pitches, outcomes, and learning happen in one continuous flow.",
               founder: {
                 "@type": "Person",
                 name: "Chris Schofield",
               },
               sameAs: [
+                "https://tap.totalaudiopromo.com",
                 "https://intel.totalaudiopromo.com",
                 "https://pitcher.totalaudiopromo.com",
                 "https://tracker.totalaudiopromo.com",
@@ -138,25 +138,19 @@ export default function HomePage() {
               />
             </Link>
 
-            {/* Tool Links */}
+            {/* Navigation Links */}
             <div className="flex items-center gap-2 sm:gap-4">
               <a
-                href="https://intel.totalaudiopromo.com"
+                href="https://tap.totalaudiopromo.com/home?source=marketing"
+                className="px-3 py-2 text-sm font-semibold text-gray-700 hover:text-brand-cyan transition-colors rounded-lg hover:bg-cyan-50"
+              >
+                TAP
+              </a>
+              <a
+                href="#studios"
                 className="px-3 py-2 text-sm font-semibold text-gray-700 hover:text-intel-600 transition-colors rounded-lg hover:bg-intel-50"
               >
-                Intel
-              </a>
-              <a
-                href="https://pitcher.totalaudiopromo.com"
-                className="px-3 py-2 text-sm font-semibold text-gray-700 hover:text-pitch-600 transition-colors rounded-lg hover:bg-pitch-50"
-              >
-                Pitcher
-              </a>
-              <a
-                href="https://tracker.totalaudiopromo.com"
-                className="px-3 py-2 text-sm font-semibold text-gray-700 hover:text-tracker-600 transition-colors rounded-lg hover:bg-tracker-50"
-              >
-                Tracker
+                Studios
               </a>
               <Link
                 href="/pricing"
@@ -165,19 +159,19 @@ export default function HomePage() {
                 Pricing
               </Link>
 
-              {/* Dashboard Button */}
+              {/* Open TAP Button */}
               <a
-                href="https://intel.totalaudiopromo.com/signin"
+                href="https://tap.totalaudiopromo.com/home?source=marketing"
                 className="ml-2 px-4 py-2 text-sm font-bold text-gray-900 bg-white border-2 border-black rounded-lg shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] transition-all hover:shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] hover:-translate-x-0.5 hover:-translate-y-0.5"
               >
-                Account
+                Open TAP
               </a>
             </div>
           </div>
         </nav>
 
         <main>
-          {/* Hero Section - Complete Reimagining */}
+          {/* Hero Section */}
           <HeroGradient className="py-12 sm:py-16">
             {/* Subtle grid pattern background */}
             <div
@@ -195,22 +189,19 @@ export default function HomePage() {
                 <div className="lg:col-span-3">
                   <MotionScrollReveal variant="fadeUp">
                     <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-gray-900 leading-tight mb-5">
-                      Professional PR execution without enterprise complexity
+                      Music PR is still run on spreadsheets, inboxes, and memory.
                     </h1>
                   </MotionScrollReveal>
 
                   <MotionScrollReveal variant="fadeUp" delay={0.1}>
                     <p className="text-xl text-gray-600 mb-5 leading-relaxed">
-                      Total Audio Promo provides professional PR execution tools
-                      for music industry operators. Our core intelligence layer,
-                      <strong> Intel</strong>, surfaces relationship health and
-                      submission context so you can understand who is warming,
-                      who is cooling, and exactly how to approach them before
-                      you hit send.
+                      TAP is one place to run your entire PR operation -- campaigns,
+                      follow-ups, outcomes, and learning. No more jumping between
+                      tools.
                     </p>
                     <p className="text-lg font-bold text-gray-900 mb-5">
-                      Built for small PR agencies, experienced operators, and
-                      managers who value relationships over volume.
+                      Built for small PR agencies and experienced operators who
+                      value relationships over volume.
                     </p>
                   </MotionScrollReveal>
 
@@ -219,25 +210,25 @@ export default function HomePage() {
                       <GlowButton
                         variant="intel"
                         size="lg"
-                        href="https://intel.totalaudiopromo.com"
+                        href="https://tap.totalaudiopromo.com/signup?source=marketing"
                         glowPulse
                       >
-                        Start Free Trial
+                        Start Free
                       </GlowButton>
                       <GlowButton
                         variant="secondary"
                         size="lg"
-                        href="#ecosystem"
+                        href="#studios"
                       >
-                        See It In Action
+                        See How It Works
                       </GlowButton>
                     </div>
                   </MotionScrollReveal>
 
                   <TrustBadges
                     badges={[
-                      { text: "Verified Relationship Intel", icon: "check" },
-                      { text: "Decision Support Focus", icon: "shield" },
+                      { text: "One Workspace", icon: "check" },
+                      { text: "Start Free", icon: "shield" },
                       { text: "Cancel Anytime", icon: "clock" },
                     ]}
                   />
@@ -291,6 +282,39 @@ export default function HomePage() {
             </div>
           </HeroGradient>
 
+          {/* TAP Workspace Strip */}
+          <section className="py-12 sm:py-14 bg-gradient-to-br from-brand-cyan/5 to-white">
+            <div className="max-w-4xl mx-auto px-4 text-center">
+              <MotionScrollReveal variant="fadeUp">
+                <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
+                  A calm workspace for the work that matters
+                </h2>
+                <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
+                  TAP gives you a clear view of what needs attention today, keeps
+                  campaigns organised, and moves work forward -- without
+                  context-switching between tools.
+                </p>
+              </MotionScrollReveal>
+
+              <MotionScrollReveal variant="fadeUp" delay={0.1}>
+                <div className="inline-flex flex-wrap justify-center gap-4 sm:gap-6">
+                  <div className="flex items-center gap-2 px-4 py-2 bg-white rounded-xl border-2 border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
+                    <span className="w-2 h-2 bg-blue-500 rounded-full" />
+                    <span className="text-sm font-bold text-gray-900">Today View</span>
+                  </div>
+                  <div className="flex items-center gap-2 px-4 py-2 bg-white rounded-xl border-2 border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
+                    <span className="w-2 h-2 bg-amber-500 rounded-full" />
+                    <span className="text-sm font-bold text-gray-900">Campaigns</span>
+                  </div>
+                  <div className="flex items-center gap-2 px-4 py-2 bg-white rounded-xl border-2 border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
+                    <span className="w-2 h-2 bg-teal-500 rounded-full" />
+                    <span className="text-sm font-bold text-gray-900">Follow-ups</span>
+                  </div>
+                </div>
+              </MotionScrollReveal>
+            </div>
+          </section>
+
           {/* Who This Is For - ICP Clarity */}
           <section className="py-16 sm:py-20 bg-gradient-to-br from-blue-50 to-white relative overflow-hidden">
             {/* Subtle background pattern */}
@@ -325,7 +349,7 @@ export default function HomePage() {
                         </li>
                         <li className="flex items-start gap-3">
                           <span className="font-bold">Experienced DIY</span> —
-                          Artist, label, or manager with a proven track record.
+                          Label or manager with a proven track record.
                         </li>
                         <li className="flex items-start gap-3">
                           <span className="font-bold">Relationship First</span>{" "}
@@ -371,48 +395,43 @@ export default function HomePage() {
             </div>
           </section>
 
-          {/* Solution Section - Interactive Workflow */}
-          <section id="ecosystem" className="py-12 sm:py-16 bg-white">
+          {/* Studios Section */}
+          <section id="studios" className="py-12 sm:py-16 bg-white">
             <div className="max-w-6xl mx-auto px-4">
               <header className="text-center mb-10">
-                <div className="inline-flex items-center gap-2 rounded-full border-2 border-intel-600 bg-intel-50 px-4 py-2 shadow-[3px_3px_0px_0px_#2563EB] mb-4">
-                  <span className="text-sm font-bold uppercase tracking-wider text-intel-600">
-                    The Complete Workflow
+                <div className="inline-flex items-center gap-2 rounded-full border-2 border-brand-cyan bg-cyan-50 px-4 py-2 shadow-[3px_3px_0px_0px_#06B6D4] mb-4">
+                  <span className="text-sm font-bold uppercase tracking-wider text-brand-cyan">
+                    Inside TAP
                   </span>
                 </div>
                 <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-3">
-                  One Intelligence Layer, Three Supporting Tools
+                  When you need depth, step into a studio.
                 </h2>
                 <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                  Intel is the core system. Pitcher and Tracker support drafting
-                  and learning — they don’t replace judgement.
+                  Each studio handles one type of focused work. Research, draft,
+                  learn -- without switching context. They share intelligence
+                  across TAP, so nothing falls through the cracks.
                 </p>
               </header>
 
-              {/* Workflow Steps */}
+              {/* Studio Cards */}
               <div className="space-y-6">
-                {/* Step 1: Intel */}
-                <article className="rounded-2xl border-4 border-black bg-gradient-to-br from-intel-50 to-white shadow-[8px_8px_0px_0px_#2563EB] p-5 sm:p-8 hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[12px_12px_0px_0px_#2563EB] transition-all duration-200 ring-4 ring-intel-200 ring-offset-4">
+                {/* Intel Studio */}
+                <article className="rounded-2xl border-4 border-black bg-gradient-to-br from-intel-50 to-white shadow-[8px_8px_0px_0px_#2563EB] p-5 sm:p-8 hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[12px_12px_0px_0px_#2563EB] transition-all duration-200">
                   <div className="grid lg:grid-cols-2 gap-6 items-center">
                     <div>
                       <div className="flex items-center gap-3 mb-3">
-                        <div className="w-12 h-12 rounded-full bg-intel-600 text-white font-bold flex items-center justify-center border-2 border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] text-xl">
-                          1
-                        </div>
                         <h3 className="text-2xl sm:text-3xl font-bold text-gray-900">
-                          Intel
+                          Intel Studio
                         </h3>
-                        <span className="ml-2 px-3 py-1 text-xs font-bold uppercase bg-intel-600 text-white rounded-full border-2 border-black">
-                          Most Popular
-                        </span>
                       </div>
 
                       <p className="text-xl font-semibold text-gray-900 mb-2">
-                        Relationship Intelligence for Better Decisions
+                        Research &amp; Enrichment
                       </p>
                       <p className="text-gray-600 mb-3 text-lg">
-                        Intel monitors relationship health and provides the
-                        context you need to make better decisions.
+                        Surface relationship signals, verify contacts, and
+                        understand submission preferences before you reach out.
                       </p>
 
                       <ul className="space-y-2.5 text-gray-700 mb-5">
@@ -440,35 +459,23 @@ export default function HomePage() {
                           </span>
                           <span>
                             Validation and export to Excel, PDF, or directly to
-                            Pitcher
+                            Pitcher Studio
                           </span>
                         </li>
                       </ul>
 
-                      <div className="bg-intel-100 border-2 border-intel-600 rounded-xl p-4 mb-5">
+                      <div className="bg-intel-100 border-2 border-intel-600 rounded-xl p-4">
                         <p className="text-sm font-bold text-intel-900">
                           Validated against BBC Radio, Spotify, and major PR
                           agency databases.
                         </p>
-                      </div>
-
-                      <div className="flex items-center gap-4">
-                        <a
-                          href="https://intel.totalaudiopromo.com"
-                          className="cta-button text-base px-6 py-3 bg-intel-600 hover:bg-intel-700"
-                        >
-                          Start Free Trial
-                        </a>
-                        <span className="text-xl font-bold text-intel-600">
-                          Included in Professional
-                        </span>
                       </div>
                     </div>
 
                     <div className="flex justify-center">
                       <Image
                         src="/images/intelligence-complete.png"
-                        alt="Intel dashboard showing enriched contact data"
+                        alt="Intel Studio showing enriched contact data"
                         width={320}
                         height={320}
                         className="drop-shadow-2xl animate-float"
@@ -477,15 +484,7 @@ export default function HomePage() {
                   </div>
                 </article>
 
-                {/* Arrow */}
-                <div className="flex justify-center">
-                  <div className="flex flex-col items-center gap-1">
-                    <div className="w-1 h-6 bg-gray-300 rounded-full" />
-                    <div className="text-3xl text-gray-400">&#8595;</div>
-                  </div>
-                </div>
-
-                {/* Step 2: Pitcher */}
+                {/* Pitcher Studio */}
                 <article className="rounded-2xl border-4 border-black bg-gradient-to-br from-pitch-50 to-white shadow-[8px_8px_0px_0px_#D97706] p-5 sm:p-8 hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[12px_12px_0px_0px_#D97706] transition-all duration-200">
                   <div className="grid lg:grid-cols-2 gap-6 items-center">
                     <div className="flex justify-center lg:order-1">
@@ -500,20 +499,17 @@ export default function HomePage() {
                     </div>
                     <div className="lg:order-2">
                       <div className="flex items-center gap-3 mb-3">
-                        <div className="w-12 h-12 rounded-full bg-pitch-600 text-white font-bold flex items-center justify-center border-2 border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] text-xl">
-                          2
-                        </div>
                         <h3 className="text-2xl sm:text-3xl font-bold text-gray-900">
-                          Pitcher
+                          Pitcher Studio
                         </h3>
                       </div>
 
                       <p className="text-xl font-semibold text-gray-900 mb-2">
-                        High-Stakes Drafting Assistance
+                        Drafting &amp; Outreach
                       </p>
                       <p className="text-gray-600 mb-3 text-lg">
-                        Pitcher drafts context-aware outreach that respects your
-                        voice and the recipient&apos;s preferences.
+                        Draft context-aware pitches that respect your voice and
+                        each contact&apos;s preferences.
                       </p>
 
                       <ul className="space-y-2.5 text-gray-700 mb-5">
@@ -522,7 +518,7 @@ export default function HomePage() {
                             &#10003;
                           </span>
                           <span>
-                            Import enriched contacts from Intel or add manually
+                            Import enriched contacts from Intel Studio or add manually
                           </span>
                         </li>
                         <li className="flex items-start gap-3">
@@ -545,55 +541,32 @@ export default function HomePage() {
                         </li>
                       </ul>
 
-                      <div className="bg-pitch-100 border-2 border-pitch-600 rounded-xl p-4 mb-5">
+                      <div className="bg-pitch-100 border-2 border-pitch-600 rounded-xl p-4">
                         <p className="text-sm font-bold text-pitch-900">
                           Optimised for relationship protection and professional
                           tone.
                         </p>
                       </div>
-
-                      <div className="flex items-center gap-4">
-                        <a
-                          href="https://pitcher.totalaudiopromo.com"
-                          className="cta-button text-base px-6 py-3 bg-pitch-600 hover:bg-pitch-700"
-                        >
-                          Start Free Trial
-                        </a>
-                        <span className="text-xl font-bold text-pitch-600">
-                          Included in Professional
-                        </span>
-                      </div>
                     </div>
                   </div>
                 </article>
 
-                {/* Arrow */}
-                <div className="flex justify-center">
-                  <div className="flex flex-col items-center gap-1">
-                    <div className="w-1 h-6 bg-gray-300 rounded-full" />
-                    <div className="text-3xl text-gray-400">&#8595;</div>
-                  </div>
-                </div>
-
-                {/* Step 3: Tracker */}
+                {/* Tracker Studio */}
                 <article className="rounded-2xl border-4 border-black bg-gradient-to-br from-tracker-50 to-white shadow-[8px_8px_0px_0px_#0D9488] p-5 sm:p-8 hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[12px_12px_0px_0px_#0D9488] transition-all duration-200">
                   <div className="grid lg:grid-cols-2 gap-6 items-center">
                     <div>
                       <div className="flex items-center gap-3 mb-3">
-                        <div className="w-12 h-12 rounded-full bg-tracker-600 text-white font-bold flex items-center justify-center border-2 border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] text-xl">
-                          3
-                        </div>
                         <h3 className="text-2xl sm:text-3xl font-bold text-gray-900">
-                          Tracker
+                          Tracker Studio
                         </h3>
                       </div>
 
                       <p className="text-xl font-semibold text-gray-900 mb-2">
-                        Extract Learning from Outcomes
+                        Learning &amp; Reporting
                       </p>
                       <p className="text-gray-600 mb-3 text-lg">
-                        Tracker turns campaign data into narrative reporting and
-                        provides insights to improve future pitches.
+                        Turn campaign outcomes into actionable intelligence. Know
+                        what worked and what to try next.
                       </p>
 
                       <ul className="space-y-2.5 text-gray-700 mb-5">
@@ -625,23 +598,11 @@ export default function HomePage() {
                         </li>
                       </ul>
 
-                      <div className="bg-tracker-100 border-2 border-tracker-600 rounded-xl p-4 mb-5">
+                      <div className="bg-tracker-100 border-2 border-tracker-600 rounded-xl p-4">
                         <p className="text-sm font-bold text-tracker-900">
                           Build institutional memory. Know exactly how and when
                           to follow up.
                         </p>
-                      </div>
-
-                      <div className="flex items-center gap-4">
-                        <a
-                          href="https://tracker.totalaudiopromo.com"
-                          className="cta-button text-base px-6 py-3 bg-tracker-600 hover:bg-tracker-700"
-                        >
-                          Start Free Trial
-                        </a>
-                        <span className="text-xl font-bold text-tracker-600">
-                          Included in Professional
-                        </span>
                       </div>
                     </div>
 
@@ -658,13 +619,28 @@ export default function HomePage() {
                   </div>
                 </article>
               </div>
+
+              {/* Section-level CTA */}
+              <div className="text-center mt-10">
+                <MotionScrollReveal variant="fadeUp">
+                  <a
+                    href="https://tap.totalaudiopromo.com/signup?source=marketing"
+                    className="inline-block px-8 py-4 text-lg font-bold text-white bg-gray-900 border-4 border-black rounded-2xl shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 transition-all"
+                  >
+                    Start using TAP free -- all three studios included
+                  </a>
+                  <p className="text-sm text-gray-500 mt-4">
+                    Each studio also works as a standalone tool if you prefer.
+                  </p>
+                </MotionScrollReveal>
+              </div>
             </div>
           </section>
 
-          {/* Feature Deep-Dive - Intel Spotlight */}
+          {/* Feature Deep-Dive - Intel Studio Spotlight */}
           <FeatureShowcase
-            headline="Why Intel Changes Everything"
-            subheadline="The core product that makes the rest of the workflow possible"
+            headline="What Intel Studio surfaces"
+            subheadline="The research studio that powers your entire workflow"
             features={[
               {
                 icon: "email",
@@ -698,7 +674,7 @@ export default function HomePage() {
               },
             ]}
             image="/images/analyzing-data.png"
-            imageAlt="Intel enrichment process"
+            imageAlt="Intel Studio enrichment process"
             mockupContent={{
               name: "Jack Saunders",
               role: "BBC Radio 1 DJ, New Music Champion",
@@ -715,7 +691,7 @@ export default function HomePage() {
             </p>
           </div>
           <CaseStudyBanner
-            title="BBC Radio 1 Campaign Results"
+            title="BBC Radio 1 Campaign Results -- powered by TAP"
             metrics={[
               { before: "18 hours", after: "1h 48m", label: "Research Time" },
               {
@@ -808,20 +784,20 @@ export default function HomePage() {
             </div>
           </section>
 
-          {/* Pricing Section - Visual Hierarchy Restored */}
-          <section id="products" className="py-16 sm:py-24 bg-gray-50 border-y-4 border-black">
+          {/* Pricing Section */}
+          <section id="pricing" className="py-16 sm:py-24 bg-gray-50 border-y-4 border-black">
             <div className="max-w-6xl mx-auto px-4">
               <header className="text-center mb-12 sm:mb-16">
                 <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 mb-4 tracking-tight">
-                  One <span className="text-intel-600">Intelligence</span> Layer. All Three Tools.
+                  Simple pricing for <span className="text-brand-cyan">TAP</span>
                 </h2>
                 <p className="text-xl text-gray-600 max-w-2xl mx-auto font-medium">
-                  The Professional plan unifies your workflow for <strong className="text-gray-900 text-2xl font-bold italic decoration-intel-600 decoration-4 underline underline-offset-4">£19/month</strong>.
+                  All three studios included in every plan. Start free, upgrade when you&apos;re ready.
                 </p>
               </header>
 
               <div className="grid lg:grid-cols-3 gap-8 items-stretch">
-                {/* Tier 1: Starter */}
+                {/* Tier 1: Free */}
                 <article className="bg-white border-4 border-black rounded-3xl p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 transition-all flex flex-col">
                   <div className="mb-8">
                     <h3 className="text-2xl font-bold tracking-tighter mb-2">Free</h3>
@@ -829,71 +805,80 @@ export default function HomePage() {
                       <span className="text-5xl font-extrabold italic">Free</span>
                     </div>
                     <p className="text-gray-600 font-medium leading-relaxed">
-                      For individuals testing the waters with professional contact intelligence.
+                      All studios, genuinely free. No credit card required.
                     </p>
                   </div>
 
                   <ul className="space-y-4 mb-10 flex-grow">
                     <li className="flex items-center gap-3 text-sm font-bold text-gray-700">
                       <span className="w-5 h-5 rounded-md bg-intel-100 border-2 border-intel-600 flex items-center justify-center text-[10px] text-intel-600">✓</span>
-                      Intel (Contact Enrichment)
+                      All three studios
                     </li>
-                    <li className="flex items-center gap-3 text-sm font-medium text-gray-400 italic">
-                      Tracker (Outcome Ledger)
+                    <li className="flex items-center gap-3 text-sm font-bold text-gray-700">
+                      <span className="w-5 h-5 rounded-md bg-intel-100 border-2 border-intel-600 flex items-center justify-center text-[10px] text-intel-600">✓</span>
+                      10 enrichments/month
                     </li>
-                    <li className="flex items-center gap-3 text-sm font-medium text-gray-400 italic">
-                      Pitcher (Draft Assistance)
+                    <li className="flex items-center gap-3 text-sm font-bold text-gray-700">
+                      <span className="w-5 h-5 rounded-md bg-intel-100 border-2 border-intel-600 flex items-center justify-center text-[10px] text-intel-600">✓</span>
+                      5 pitches/month
+                    </li>
+                    <li className="flex items-center gap-3 text-sm font-bold text-gray-700">
+                      <span className="w-5 h-5 rounded-md bg-intel-100 border-2 border-intel-600 flex items-center justify-center text-[10px] text-intel-600">✓</span>
+                      1 campaign
                     </li>
                   </ul>
 
                   <a
-                    href="https://intel.totalaudiopromo.com/pricing?source=totalaudiopromo"
-                    className="w-full py-4 text-center border-2 border-black rounded-xl font-bold tracking-tight hover:bg-gray-50 transition-colors"
+                    href="https://tap.totalaudiopromo.com/signup?source=marketing"
+                    className="w-full py-4 text-center border-2 border-black rounded-xl font-bold tracking-tight hover:bg-gray-50 transition-colors block"
                   >
-                    Start for Free
+                    Start Free
                   </a>
                 </article>
 
-                {/* Tier 2: Professional (Highlight) */}
+                {/* Tier 2: Pro (Highlight) */}
                 <article className="bg-white border-4 border-black rounded-[2.5rem] p-10 shadow-[12px_12px_0px_0px_rgba(37,99,235,1)] hover:-translate-y-2 transition-all flex flex-col relative ring-4 ring-blue-100 ring-offset-8">
                   <div className="absolute -top-5 left-1/2 -translate-x-1/2 bg-blue-600 text-white px-6 py-2 rounded-full border-4 border-black text-xs font-black uppercase tracking-widest shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-                    All Access
+                    Most Popular
                   </div>
-                  
+
                   <div className="mb-8 pt-4">
                     <h3 className="text-3xl font-bold tracking-tighter mb-2">Pro</h3>
-                    <div className="flex items-baseline gap-1 mb-4">
-                      <span className="text-6xl font-extrabold italic text-blue-600">£19</span>
+                    <div className="flex items-baseline gap-1 mb-1">
+                      <span className="text-6xl font-extrabold italic text-blue-600">&pound;19</span>
                       <span className="text-gray-400 font-bold uppercase text-xs tracking-widest">/month</span>
                     </div>
+                    <p className="text-sm text-gray-500 mb-4">
+                      or &pound;190/year (save 2 months)
+                    </p>
                     <p className="text-gray-900 font-bold leading-relaxed">
-                      Our flagship workflow. Intel + Pitcher + Tracker. All unlocked.
+                      Everything you need for professional PR operations.
                     </p>
                   </div>
 
                   <ul className="space-y-5 mb-10 flex-grow">
                     <li className="flex items-center gap-3 text-sm font-bold text-gray-900">
                       <span className="w-6 h-6 rounded-lg bg-intel-600 text-white flex items-center justify-center border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">✓</span>
-                      Intel (Enrichment)
+                      100 enrichments/month
                     </li>
                     <li className="flex items-center gap-3 text-sm font-bold text-gray-900">
                       <span className="w-6 h-6 rounded-lg bg-pitch-600 text-white flex items-center justify-center border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">✓</span>
-                      Pitcher (Pitches)
+                      50 pitches/month
                     </li>
                     <li className="flex items-center gap-3 text-sm font-bold text-gray-900">
                       <span className="w-6 h-6 rounded-lg bg-tracker-600 text-white flex items-center justify-center border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">✓</span>
-                      Tracker (Ledger)
+                      Unlimited campaigns
                     </li>
                     <li className="flex items-center gap-3 text-sm font-medium text-gray-500">
-                      <span className="text-green-600 font-bold">→</span> High-volume exports
+                      <span className="text-green-600 font-bold">→</span> Priority support
                     </li>
                   </ul>
 
                   <a
-                    href="https://intel.totalaudiopromo.com/pricing?source=totalaudiopromo"
-                    className="w-full py-5 text-xl text-center bg-blue-600 text-white border-4 border-black rounded-2xl font-bold tracking-tight shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] transition-all"
+                    href="https://tap.totalaudiopromo.com/signup?source=marketing"
+                    className="w-full py-5 text-xl text-center bg-blue-600 text-white border-4 border-black rounded-2xl font-bold tracking-tight shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] transition-all block"
                   >
-                    Get All Access
+                    Upgrade to Pro
                   </a>
                 </article>
 
@@ -901,10 +886,13 @@ export default function HomePage() {
                 <article className="bg-white border-4 border-black rounded-3xl p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 transition-all flex flex-col">
                   <div className="mb-8">
                     <h3 className="text-2xl font-bold tracking-tighter mb-2">Agency</h3>
-                    <div className="flex items-baseline gap-1 mb-4">
-                      <span className="text-5xl font-extrabold italic">£79</span>
+                    <div className="flex items-baseline gap-1 mb-1">
+                      <span className="text-5xl font-extrabold italic">&pound;79</span>
                       <span className="text-gray-400 font-bold uppercase text-xs tracking-widest">/month</span>
                     </div>
+                    <p className="text-sm text-gray-500 mb-4">
+                      or &pound;790/year (save 2 months)
+                    </p>
                     <p className="text-gray-600 font-medium leading-relaxed">
                       For teams and labels managing multiple artist rosters.
                     </p>
@@ -913,26 +901,30 @@ export default function HomePage() {
                   <ul className="space-y-4 mb-10 flex-grow">
                     <li className="flex items-center gap-3 text-sm font-bold text-gray-700">
                       <span className="w-5 h-5 rounded-md bg-gray-900 text-white flex items-center justify-center text-[10px] border-2 border-black">✓</span>
-                      Everything in Professional
+                      Unlimited everything
                     </li>
                     <li className="flex items-center gap-3 text-sm font-bold text-gray-700">
                       <span className="w-5 h-5 rounded-md bg-gray-900 text-white flex items-center justify-center text-[10px] border-2 border-black">✓</span>
-                      Team Collaboration
+                      Team access
                     </li>
                     <li className="flex items-center gap-3 text-sm font-bold text-gray-700">
                       <span className="w-5 h-5 rounded-md bg-gray-900 text-white flex items-center justify-center text-[10px] border-2 border-black">✓</span>
-                      500+ enrichments
+                      Dedicated support
                     </li>
                   </ul>
 
                   <a
-                    href="https://intel.totalaudiopromo.com/pricing?source=totalaudiopromo"
-                    className="w-full py-4 text-center border-2 border-black rounded-xl font-bold tracking-tight hover:bg-gray-50 transition-colors"
+                    href="mailto:info@totalaudiopromo.com"
+                    className="w-full py-4 text-center border-2 border-black rounded-xl font-bold tracking-tight hover:bg-gray-50 transition-colors block"
                   >
                     Contact Us
                   </a>
                 </article>
               </div>
+
+              <p className="text-center text-sm text-gray-500 mt-8">
+                All plans include all three studios. Annual billing saves 2 months. Cancel anytime.
+              </p>
             </div>
           </section>
 
@@ -941,7 +933,7 @@ export default function HomePage() {
             <div className="max-w-4xl mx-auto px-4 text-center">
               <div className="bg-green-50 rounded-2xl border-4 border-green-600 shadow-[8px_8px_0px_0px_#16A34A] p-6 sm:p-10">
                 <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
-                  Professional Standard PR Execution
+                  Professional standard. Powered by TAP.
                 </h2>
                 <p className="text-lg text-gray-600 mb-6 max-w-2xl mx-auto">
                   Built for professionals who require precise intelligence and
@@ -1002,47 +994,16 @@ export default function HomePage() {
             </div>
           </section>
 
-          {/* Newsletter Section - Enhanced */}
+          {/* Newsletter Section */}
           <section id="newsletter" className="py-12 sm:py-16 bg-gray-50">
-            <div className="max-w-6xl mx-auto px-4">
-              <div className="grid lg:grid-cols-2 gap-8 items-center">
-                <div>
-                  <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
-                    The Unsigned Advantage
-                  </h2>
-                  <p className="text-lg text-gray-600 mb-5">
-                    Weekly insights from 5+ years of radio promotion. What's
-                    working, what's not, and industry intel you won't find
-                    elsewhere.
-                  </p>
-
-                  <div className="space-y-2.5 mb-6">
-                    <div className="flex items-start gap-3 text-gray-700">
-                      <span className="text-intel-600 mt-1">&#8594;</span>
-                      <span>
-                        "How to spot relationship decay before you lose the
-                        contact"
-                      </span>
-                    </div>
-                    <div className="flex items-start gap-3 text-gray-700">
-                      <span className="text-intel-600 mt-1">&#8594;</span>
-                      <span>
-                        "The submission rhythm that keeps your status 'Warm'"
-                      </span>
-                    </div>
-                    <div className="flex items-start gap-3 text-gray-700">
-                      <span className="text-intel-600 mt-1">&#8594;</span>
-                      <span>
-                        "Why relationship intelligence beats volume every time"
-                      </span>
-                    </div>
-                  </div>
-                </div>
-
-                <div>
-                  <NewsletterSignup />
-                </div>
-              </div>
+            <div className="max-w-xl mx-auto px-4 text-center">
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
+                Stay in the loop
+              </h2>
+              <p className="text-lg text-gray-600 mb-8">
+                Product updates and music PR insights. No spam.
+              </p>
+              <NewsletterSignup />
             </div>
           </section>
         </main>
@@ -1063,8 +1024,8 @@ export default function HomePage() {
                   />
                 </div>
                 <p className="text-sm text-gray-400 mb-4">
-                  Music promotion tools that actually work. Built by a radio
-                  promoter, for radio promoters.
+                  TAP -- where music PR work actually happens. Built by a radio
+                  promoter.
                 </p>
                 <div className="flex gap-4">
                   <a
@@ -1094,18 +1055,26 @@ export default function HomePage() {
                 </div>
               </div>
 
-              {/* Products */}
+              {/* Platform */}
               <div>
                 <h4 className="text-sm font-bold uppercase tracking-wider mb-4">
-                  Products
+                  Platform
                 </h4>
                 <ul className="space-y-2">
+                  <li>
+                    <a
+                      href="https://tap.totalaudiopromo.com/home?source=marketing"
+                      className="text-sm text-gray-400 hover:text-white transition-colors"
+                    >
+                      TAP
+                    </a>
+                  </li>
                   <li>
                     <a
                       href="https://intel.totalaudiopromo.com"
                       className="text-sm text-gray-400 hover:text-white transition-colors"
                     >
-                      Intel
+                      Intel Studio
                     </a>
                   </li>
                   <li>
@@ -1113,7 +1082,7 @@ export default function HomePage() {
                       href="https://pitcher.totalaudiopromo.com"
                       className="text-sm text-gray-400 hover:text-white transition-colors"
                     >
-                      Pitcher
+                      Pitcher Studio
                     </a>
                   </li>
                   <li>
@@ -1121,10 +1090,9 @@ export default function HomePage() {
                       href="https://tracker.totalaudiopromo.com"
                       className="text-sm text-gray-400 hover:text-white transition-colors"
                     >
-                      Tracker
+                      Tracker Studio
                     </a>
                   </li>
-
                 </ul>
               </div>
 
@@ -1147,12 +1115,12 @@ export default function HomePage() {
                       href="#newsletter"
                       className="text-sm text-gray-400 hover:text-white transition-colors"
                     >
-                      Newsletter
+                      Mailing List
                     </a>
                   </li>
                   <li>
                     <a
-                      href="#ecosystem"
+                      href="#studios"
                       className="text-sm text-gray-400 hover:text-white transition-colors"
                     >
                       How It Works
