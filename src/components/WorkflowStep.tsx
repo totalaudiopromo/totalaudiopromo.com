@@ -18,34 +18,31 @@ interface WorkflowStepProps {
 
 const colourClasses = {
   intel: {
-    gradient: 'from-intel-50 to-white',
-    stepBg: 'bg-intel-600',
-    border: 'border-intel-600',
-    highlightBg: 'bg-intel-100',
-    highlightBorder: 'border-intel-600',
-    highlightText: 'text-intel-900',
-    priceText: 'text-intel-600',
-    shadow: 'shadow-[8px_8px_0px_0px_#2563EB]',
+    gradient: 'from-blue-50/50 to-white',
+    stepBg: 'bg-blue-600',
+    border: 'hover:border-blue-300',
+    highlightBg: 'bg-blue-50',
+    highlightBorder: 'border-blue-200',
+    highlightText: 'text-blue-900',
+    priceText: 'text-blue-600',
   },
   pitch: {
-    gradient: 'from-pitch-50 to-white',
-    stepBg: 'bg-pitch-600',
-    border: 'border-pitch-600',
-    highlightBg: 'bg-pitch-100',
-    highlightBorder: 'border-pitch-600',
-    highlightText: 'text-pitch-900',
-    priceText: 'text-pitch-600',
-    shadow: 'shadow-[8px_8px_0px_0px_#7C3AED]',
+    gradient: 'from-amber-50/50 to-white',
+    stepBg: 'bg-amber-600',
+    border: 'hover:border-amber-300',
+    highlightBg: 'bg-amber-50',
+    highlightBorder: 'border-amber-200',
+    highlightText: 'text-amber-900',
+    priceText: 'text-amber-600',
   },
   tracker: {
-    gradient: 'from-tracker-50 to-white',
-    stepBg: 'bg-tracker-600',
-    border: 'border-tracker-600',
-    highlightBg: 'bg-tracker-100',
-    highlightBorder: 'border-tracker-600',
-    highlightText: 'text-tracker-900',
-    priceText: 'text-tracker-600',
-    shadow: 'shadow-[8px_8px_0px_0px_#D97706]',
+    gradient: 'from-teal-50/50 to-white',
+    stepBg: 'bg-teal-600',
+    border: 'hover:border-teal-300',
+    highlightBg: 'bg-teal-50',
+    highlightBorder: 'border-teal-200',
+    highlightText: 'text-teal-900',
+    priceText: 'text-teal-600',
   },
 };
 
@@ -69,25 +66,25 @@ export function WorkflowStep({
   return (
     <article
       className={`
-        rounded-2xl border-4 border-black bg-gradient-to-br ${styles.gradient}
-        ${styles.shadow} p-6 sm:p-10
-        hover:-translate-x-1 hover:-translate-y-1
-        hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)]
+        rounded-2xl border border-stone-200 bg-gradient-to-br ${styles.gradient}
+        shadow-sm p-6 sm:p-10
+        hover:-translate-y-1 hover:shadow-lg
+        ${styles.border}
         transition-all duration-200 ease-out
-        ${featured ? 'ring-4 ring-intel-400 ring-offset-4' : ''}
+        ${featured ? 'ring-1 ring-cyan-200/50 ring-offset-4' : ''}
       `}
     >
       <div className={`grid lg:grid-cols-2 gap-8 items-center ${reversed ? '' : ''}`}>
         <div className={reversed ? 'lg:order-2' : ''}>
           <div className="flex items-center gap-3 mb-4">
             <div
-              className={`w-12 h-12 rounded-full ${styles.stepBg} text-white font-bold flex items-center justify-center border-2 border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] text-xl`}
+              className={`w-12 h-12 rounded-full ${styles.stepBg} text-white font-bold flex items-center justify-center shadow-sm text-xl`}
             >
               {step}
             </div>
             <h3 className="text-2xl sm:text-3xl font-bold text-gray-900">{title}</h3>
             {featured && (
-              <span className="ml-2 px-3 py-1 text-xs font-bold uppercase bg-intel-600 text-white rounded-full border-2 border-black">
+              <span className="ml-2 px-3 py-1 text-xs font-bold uppercase bg-cyan-600 text-white rounded-full">
                 Most Popular
               </span>
             )}
@@ -105,7 +102,7 @@ export function WorkflowStep({
             ))}
           </ul>
 
-          <div className={`${styles.highlightBg} border-2 ${styles.highlightBorder} rounded-xl p-4 mb-6`}>
+          <div className={`${styles.highlightBg} border ${styles.highlightBorder} rounded-xl p-4 mb-6`}>
             <p className={`text-sm font-bold ${styles.highlightText}`}>{highlight}</p>
           </div>
 

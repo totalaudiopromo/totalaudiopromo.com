@@ -8,25 +8,22 @@ interface StatCardProps {
 
 const colourClasses = {
   intel: {
-    text: 'text-intel-600',
-    bg: 'bg-intel-50',
-    border: 'border-intel-600',
-    shadow: 'shadow-[6px_6px_0px_0px_#2563EB]',
-    shadowHover: 'hover:shadow-[9px_9px_0px_0px_#2563EB]',
+    text: 'text-blue-600',
+    bg: 'bg-blue-50/50',
+    border: 'border-blue-200',
+    hoverBorder: 'hover:border-blue-300',
   },
   green: {
     text: 'text-green-600',
-    bg: 'bg-green-50',
-    border: 'border-green-600',
-    shadow: 'shadow-[6px_6px_0px_0px_#16A34A]',
-    shadowHover: 'hover:shadow-[9px_9px_0px_0px_#16A34A]',
+    bg: 'bg-green-50/50',
+    border: 'border-green-200',
+    hoverBorder: 'hover:border-green-300',
   },
   pitch: {
-    text: 'text-pitch-600',
-    bg: 'bg-pitch-50',
-    border: 'border-pitch-600',
-    shadow: 'shadow-[6px_6px_0px_0px_#7C3AED]',
-    shadowHover: 'hover:shadow-[9px_9px_0px_0px_#7C3AED]',
+    text: 'text-amber-600',
+    bg: 'bg-amber-50/50',
+    border: 'border-amber-200',
+    hoverBorder: 'hover:border-amber-300',
   },
 };
 
@@ -37,14 +34,14 @@ export function StatCard({ value, label, description, colour, size = 'default' }
   return (
     <div
       className={`
-        ${styles.bg} rounded-2xl border-4 ${styles.border} p-6 sm:p-8
-        ${styles.shadow} ${styles.shadowHover}
-        hover:-translate-x-1 hover:-translate-y-1
+        ${styles.bg} rounded-2xl border ${styles.border} p-6 sm:p-8
+        shadow-sm ${styles.hoverBorder}
+        hover:-translate-y-1 hover:shadow-md
         transition-all duration-200 ease-out
         ${isLarge ? 'lg:col-span-1' : ''}
       `}
     >
-      <div className={`${styles.text} font-black mb-2 ${isLarge ? 'text-5xl sm:text-6xl' : 'text-4xl sm:text-5xl'}`}>
+      <div className={`${styles.text} font-bold mb-2 ${isLarge ? 'text-5xl sm:text-6xl' : 'text-4xl sm:text-5xl'}`}>
         {value}
       </div>
       <p className="font-bold text-gray-900 mb-2 text-lg">{label}</p>

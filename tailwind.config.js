@@ -11,12 +11,12 @@ module.exports = {
         // Brand colours (from app configs)
         brand: {
           blue: '#2563EB', // Intel primary
-          cyan: '#3AA9BE', // TAP Dashboard accent
+          cyan: '#0891b2', // TAP accent (cyan-600)
           amber: '#F59E0B', // Pitcher
           teal: '#14B8A6', // Tracker
-          black: '#0B0D0E', // TAP Dashboard black
-          panel: '#161A1D', // TAP Dashboard panel
-          tap: '#3AA9BE',
+          black: '#0B0D0E', // TAP black
+          panel: '#161A1D', // TAP panel
+          tap: '#0891b2', // TAP accent (cyan-600)
         },
         // Tool-specific palettes
         intel: {
@@ -69,8 +69,9 @@ module.exports = {
         },
       },
       fontFamily: {
-        sans: ['var(--font-geist-sans)', 'system-ui', 'sans-serif'],
-        mono: ['var(--font-geist-mono)', 'monospace'],
+        sans: ['var(--font-inter)', 'Inter', 'system-ui', 'sans-serif'],
+        display: ['var(--font-display)', 'Space Grotesk', 'Inter', 'system-ui', 'sans-serif'],
+        mono: ['JetBrains Mono', 'monospace'],
       },
       animation: {
         // Existing animations
@@ -166,24 +167,24 @@ module.exports = {
         'smooth': 'cubic-bezier(0.4, 0, 0.2, 1)',
       },
       boxShadow: {
-        // Brutal design shadows
-        'brutal': '4px 4px 0px 0px rgba(0,0,0,1)',
-        'brutal-md': '6px 6px 0px 0px rgba(0,0,0,1)',
-        'brutal-lg': '8px 8px 0px 0px rgba(0,0,0,1)',
-        'brutal-xl': '12px 12px 0px 0px rgba(0,0,0,1)',
-        // Brand-coloured glows (for premium CTAs)
-        'glow-intel-sm': '0 0 20px rgba(37, 99, 235, 0.3)',
-        'glow-intel': '0 0 40px rgba(37, 99, 235, 0.4)',
-        'glow-intel-lg': '0 0 60px rgba(37, 99, 235, 0.5)',
-        'glow-pitch-sm': '0 0 20px rgba(217, 119, 6, 0.3)',
-        'glow-pitch': '0 0 40px rgba(217, 119, 6, 0.4)',
-        'glow-pitch-lg': '0 0 60px rgba(217, 119, 6, 0.5)',
-        'glow-tracker-sm': '0 0 20px rgba(13, 148, 136, 0.3)',
-        'glow-tracker': '0 0 40px rgba(13, 148, 136, 0.4)',
-        'glow-tracker-lg': '0 0 60px rgba(13, 148, 136, 0.5)',
+        // Premium Studio Calm shadows (soft diffuse)
+        'brutal': '0 1px 3px 0 rgba(0,0,0,0.1), 0 1px 2px -1px rgba(0,0,0,0.06)',
+        'brutal-md': '0 4px 6px -1px rgba(0,0,0,0.07), 0 2px 4px -2px rgba(0,0,0,0.05)',
+        'brutal-lg': '0 4px 8px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04)',
+        'brutal-xl': '0 8px 24px rgba(0,0,0,0.08), 0 2px 4px rgba(0,0,0,0.04)',
+        // Brand-coloured glows (softened for premium feel)
+        'glow-intel-sm': '0 0 16px rgba(37, 99, 235, 0.2)',
+        'glow-intel': '0 0 30px rgba(37, 99, 235, 0.3)',
+        'glow-intel-lg': '0 0 50px rgba(37, 99, 235, 0.4)',
+        'glow-pitch-sm': '0 0 16px rgba(217, 119, 6, 0.2)',
+        'glow-pitch': '0 0 30px rgba(217, 119, 6, 0.3)',
+        'glow-pitch-lg': '0 0 50px rgba(217, 119, 6, 0.4)',
+        'glow-tracker-sm': '0 0 16px rgba(13, 148, 136, 0.2)',
+        'glow-tracker': '0 0 30px rgba(13, 148, 136, 0.3)',
+        'glow-tracker-lg': '0 0 50px rgba(13, 148, 136, 0.4)',
         // Subtle elevation shadows
-        'soft': '0 4px 20px rgba(0, 0, 0, 0.08)',
-        'soft-lg': '0 10px 40px rgba(0, 0, 0, 0.12)',
+        'soft': '0 4px 20px rgba(0, 0, 0, 0.06)',
+        'soft-lg': '0 10px 40px rgba(0, 0, 0, 0.08)',
       },
       backdropBlur: {
         'xs': '2px',

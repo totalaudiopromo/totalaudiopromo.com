@@ -125,7 +125,7 @@ export default function HomePage() {
         </noscript>
 
         {/* Navigation - Sticky with scroll shrink */}
-        <nav className="sticky top-0 z-50 bg-white border-b-4 border-black px-4 py-4 shadow-[0_4px_0_0_rgba(0,0,0,0.1)]">
+        <nav className="sticky top-0 z-50 bg-white border-b border-stone-200 px-4 py-4 shadow-sm">
           <div className="max-w-7xl mx-auto flex items-center justify-between">
             <Link href="/" className="flex items-center group">
               <Image
@@ -142,7 +142,7 @@ export default function HomePage() {
             <div className="flex items-center gap-2 sm:gap-4">
               <a
                 href="https://tap.totalaudiopromo.com/home?source=marketing"
-                className="px-3 py-2 text-sm font-semibold text-gray-700 hover:text-brand-cyan transition-colors rounded-lg hover:bg-cyan-50"
+                className="px-3 py-2 text-sm font-semibold text-gray-700 hover:text-cyan-600 transition-colors rounded-lg hover:bg-cyan-50"
               >
                 TAP
               </a>
@@ -162,7 +162,7 @@ export default function HomePage() {
               {/* Open TAP Button */}
               <a
                 href="https://tap.totalaudiopromo.com/home?source=marketing"
-                className="ml-2 px-4 py-2 text-sm font-bold text-gray-900 bg-white border-2 border-black rounded-lg shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] transition-all hover:shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] hover:-translate-x-0.5 hover:-translate-y-0.5"
+                className="ml-2 px-4 py-2 text-sm font-bold text-gray-900 bg-white border border-stone-200 rounded-lg shadow-sm transition-all hover:shadow-md hover:-translate-y-0.5"
               >
                 Open TAP
               </a>
@@ -175,7 +175,7 @@ export default function HomePage() {
           <HeroGradient className="py-12 sm:py-16">
             {/* Subtle grid pattern background */}
             <div
-              className="absolute inset-0 opacity-[0.03]"
+              className="absolute inset-0 opacity-[0.015]"
               style={{
                 backgroundImage:
                   "linear-gradient(#000 1px, transparent 1px), linear-gradient(90deg, #000 1px, transparent 1px)",
@@ -188,7 +188,7 @@ export default function HomePage() {
                 {/* Left Column (60%) */}
                 <div className="lg:col-span-3">
                   <MotionScrollReveal variant="fadeUp">
-                    <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-gray-900 leading-tight mb-5">
+                    <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-display text-gray-900 leading-tight mb-5">
                       Music PR is still run on spreadsheets, inboxes, and memory.
                     </h1>
                   </MotionScrollReveal>
@@ -232,6 +232,11 @@ export default function HomePage() {
                       { text: "Cancel Anytime", icon: "clock" },
                     ]}
                   />
+                  <p className="text-sm text-stone-500 mt-3">
+                    After signing up, you land in TAP — create a campaign, see
+                    what needs attention today, and step into a studio when you
+                    need depth.
+                  </p>
                 </div>
 
                 {/* Right Column (40%) */}
@@ -248,13 +253,13 @@ export default function HomePage() {
                         alt="Chris Schofield - Founder of Total Audio Promo, radio promoter with 5+ years experience"
                         width={200}
                         height={200}
-                        className="rounded-2xl border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]"
+                        className="rounded-2xl border border-stone-200 shadow-md"
                         priority
                       />
                     </div>
 
                     {/* Data ownership badge */}
-                    <div className="absolute -bottom-4 -right-4 bg-white rounded-xl border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] p-3 z-20 animate-float">
+                    <div className="absolute -bottom-4 -right-4 bg-white rounded-xl border border-stone-200 shadow-sm p-3 z-20 animate-float">
                       <div className="flex items-center gap-2 text-xs">
                         <span className="w-2 h-2 bg-blue-500 rounded-full animate-pulse" />
                         <span className="font-bold text-gray-900">
@@ -264,8 +269,8 @@ export default function HomePage() {
                     </div>
 
                     {/* Founder context badge */}
-                    <div className="absolute -top-6 -left-6 bg-white rounded-xl border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] p-3 z-30 rotate-[-4deg]">
-                      <div className="text-[11px] font-black text-gray-900 leading-tight">
+                    <div className="absolute -top-6 -left-6 bg-white rounded-xl border border-stone-200 shadow-sm p-3 z-30 rotate-[-4deg]">
+                      <div className="text-[11px] font-bold text-gray-900 leading-tight">
                         Built by a radio promoter
                       </div>
                       <div className="text-[10px] text-gray-600 font-medium">
@@ -283,7 +288,7 @@ export default function HomePage() {
           </HeroGradient>
 
           {/* TAP Workspace Strip */}
-          <section className="py-12 sm:py-14 bg-gradient-to-br from-brand-cyan/5 to-white">
+          <section className="py-12 sm:py-14 bg-stone-50">
             <div className="max-w-4xl mx-auto px-4 text-center">
               <MotionScrollReveal variant="fadeUp">
                 <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
@@ -298,15 +303,15 @@ export default function HomePage() {
 
               <MotionScrollReveal variant="fadeUp" delay={0.1}>
                 <div className="inline-flex flex-wrap justify-center gap-4 sm:gap-6">
-                  <div className="flex items-center gap-2 px-4 py-2 bg-white rounded-xl border-2 border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
+                  <div className="flex items-center gap-2 px-4 py-2 bg-white rounded-xl border border-stone-200 shadow-sm">
                     <span className="w-2 h-2 bg-blue-500 rounded-full" />
                     <span className="text-sm font-bold text-gray-900">Today View</span>
                   </div>
-                  <div className="flex items-center gap-2 px-4 py-2 bg-white rounded-xl border-2 border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
+                  <div className="flex items-center gap-2 px-4 py-2 bg-white rounded-xl border border-stone-200 shadow-sm">
                     <span className="w-2 h-2 bg-amber-500 rounded-full" />
                     <span className="text-sm font-bold text-gray-900">Campaigns</span>
                   </div>
-                  <div className="flex items-center gap-2 px-4 py-2 bg-white rounded-xl border-2 border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
+                  <div className="flex items-center gap-2 px-4 py-2 bg-white rounded-xl border border-stone-200 shadow-sm">
                     <span className="w-2 h-2 bg-teal-500 rounded-full" />
                     <span className="text-sm font-bold text-gray-900">Follow-ups</span>
                   </div>
@@ -316,7 +321,7 @@ export default function HomePage() {
           </section>
 
           {/* Who This Is For - ICP Clarity */}
-          <section className="py-16 sm:py-20 bg-gradient-to-br from-blue-50 to-white relative overflow-hidden">
+          <section className="py-16 sm:py-20 bg-stone-50 relative overflow-hidden">
             {/* Subtle background pattern */}
             <div
               className="absolute inset-0 opacity-[0.03]"
@@ -330,13 +335,13 @@ export default function HomePage() {
             <div className="max-w-6xl mx-auto px-4 relative">
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <div>
-                  <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 mb-6">
+                  <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-display text-gray-900 mb-6">
                     Built for experienced operators
                   </h2>
                   <div className="space-y-8">
                     <div>
-                      <h3 className="text-xl font-bold text-blue-600 mb-3 flex items-center gap-2">
-                        <span className="flex-shrink-0 w-6 h-6 rounded-full bg-blue-600 text-white flex items-center justify-center text-xs">
+                      <h3 className="text-xl font-bold text-cyan-600 mb-3 flex items-center gap-2">
+                        <span className="flex-shrink-0 w-6 h-6 rounded-full bg-cyan-600 text-white flex items-center justify-center text-xs">
                           ✓
                         </span>
                         This is for you if:
@@ -399,12 +404,12 @@ export default function HomePage() {
           <section id="studios" className="py-12 sm:py-16 bg-white">
             <div className="max-w-6xl mx-auto px-4">
               <header className="text-center mb-10">
-                <div className="inline-flex items-center gap-2 rounded-full border-2 border-brand-cyan bg-cyan-50 px-4 py-2 shadow-[3px_3px_0px_0px_#06B6D4] mb-4">
-                  <span className="text-sm font-bold uppercase tracking-wider text-brand-cyan">
+                <div className="inline-flex items-center gap-2 rounded-full border border-cyan-200 bg-cyan-50 px-4 py-2 shadow-sm mb-4">
+                  <span className="text-sm font-bold uppercase tracking-wider text-cyan-600">
                     Inside TAP
                   </span>
                 </div>
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-3">
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-display text-gray-900 mb-3">
                   When you need depth, step into a studio.
                 </h2>
                 <p className="text-lg text-gray-600 max-w-3xl mx-auto">
@@ -417,7 +422,7 @@ export default function HomePage() {
               {/* Studio Cards */}
               <div className="space-y-6">
                 {/* Intel Studio */}
-                <article className="rounded-2xl border-4 border-black bg-gradient-to-br from-intel-50 to-white shadow-[8px_8px_0px_0px_#2563EB] p-5 sm:p-8 hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[12px_12px_0px_0px_#2563EB] transition-all duration-200">
+                <article className="rounded-2xl border border-stone-200 bg-white shadow-md p-5 sm:p-8 hover:-translate-y-1 hover:shadow-lg hover:border-cyan-600/30 transition-all duration-200">
                   <div className="grid lg:grid-cols-2 gap-6 items-center">
                     <div>
                       <div className="flex items-center gap-3 mb-3">
@@ -464,8 +469,8 @@ export default function HomePage() {
                         </li>
                       </ul>
 
-                      <div className="bg-intel-100 border-2 border-intel-600 rounded-xl p-4">
-                        <p className="text-sm font-bold text-intel-900">
+                      <div className="bg-cyan-50 border border-cyan-500 rounded-xl p-4">
+                        <p className="text-sm font-bold text-cyan-900">
                           Validated against BBC Radio, Spotify, and major PR
                           agency databases.
                         </p>
@@ -485,7 +490,7 @@ export default function HomePage() {
                 </article>
 
                 {/* Pitcher Studio */}
-                <article className="rounded-2xl border-4 border-black bg-gradient-to-br from-pitch-50 to-white shadow-[8px_8px_0px_0px_#D97706] p-5 sm:p-8 hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[12px_12px_0px_0px_#D97706] transition-all duration-200">
+                <article className="rounded-2xl border border-stone-200 bg-white shadow-md p-5 sm:p-8 hover:-translate-y-1 hover:shadow-lg hover:border-cyan-600/30 transition-all duration-200">
                   <div className="grid lg:grid-cols-2 gap-6 items-center">
                     <div className="flex justify-center lg:order-1">
                       <Image
@@ -541,8 +546,8 @@ export default function HomePage() {
                         </li>
                       </ul>
 
-                      <div className="bg-pitch-100 border-2 border-pitch-600 rounded-xl p-4">
-                        <p className="text-sm font-bold text-pitch-900">
+                      <div className="bg-amber-50 border border-amber-400 rounded-xl p-4">
+                        <p className="text-sm font-bold text-amber-900">
                           Optimised for relationship protection and professional
                           tone.
                         </p>
@@ -552,7 +557,7 @@ export default function HomePage() {
                 </article>
 
                 {/* Tracker Studio */}
-                <article className="rounded-2xl border-4 border-black bg-gradient-to-br from-tracker-50 to-white shadow-[8px_8px_0px_0px_#0D9488] p-5 sm:p-8 hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[12px_12px_0px_0px_#0D9488] transition-all duration-200">
+                <article className="rounded-2xl border border-stone-200 bg-white shadow-md p-5 sm:p-8 hover:-translate-y-1 hover:shadow-lg hover:border-cyan-600/30 transition-all duration-200">
                   <div className="grid lg:grid-cols-2 gap-6 items-center">
                     <div>
                       <div className="flex items-center gap-3 mb-3">
@@ -565,7 +570,7 @@ export default function HomePage() {
                         Learning &amp; Reporting
                       </p>
                       <p className="text-gray-600 mb-3 text-lg">
-                        Turn campaign outcomes into actionable intelligence. Know
+                        Turn campaign outcomes into learning you can reuse. Know
                         what worked and what to try next.
                       </p>
 
@@ -598,8 +603,8 @@ export default function HomePage() {
                         </li>
                       </ul>
 
-                      <div className="bg-tracker-100 border-2 border-tracker-600 rounded-xl p-4">
-                        <p className="text-sm font-bold text-tracker-900">
+                      <div className="bg-teal-50 border border-teal-400 rounded-xl p-4">
+                        <p className="text-sm font-bold text-teal-900">
                           Build institutional memory. Know exactly how and when
                           to follow up.
                         </p>
@@ -625,7 +630,7 @@ export default function HomePage() {
                 <MotionScrollReveal variant="fadeUp">
                   <a
                     href="https://tap.totalaudiopromo.com/signup?source=marketing"
-                    className="inline-block px-8 py-4 text-lg font-bold text-white bg-gray-900 border-4 border-black rounded-2xl shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 transition-all"
+                    className="inline-block px-8 py-4 text-lg font-bold text-white bg-gray-900 border border-stone-200 rounded-2xl shadow-md hover:shadow-lg hover:-translate-y-1 transition-all"
                   >
                     Start using TAP free -- all three studios included
                   </a>
@@ -733,8 +738,8 @@ export default function HomePage() {
               <MotionScrollReveal variant="stagger">
                 <div className="grid md:grid-cols-3 gap-5">
                   <MotionStaggerChild>
-                    <div className="bg-gradient-to-br from-intel-50 to-white rounded-2xl border-4 border-intel-600 shadow-glow-intel-sm p-6 text-center">
-                      <div className="text-5xl font-black text-intel-600 mb-2">
+                    <div className="bg-white rounded-2xl border border-stone-200 shadow-md p-6 text-center">
+                      <div className="text-5xl font-bold text-intel-600 mb-2">
                         Industry-Leading
                       </div>
                       <p className="text-lg font-bold text-gray-900 mb-1">
@@ -747,8 +752,8 @@ export default function HomePage() {
                     </div>
                   </MotionStaggerChild>
                   <MotionStaggerChild>
-                    <div className="bg-gradient-to-br from-blue-50 to-white rounded-2xl border-4 border-blue-600 shadow-[0_0_30px_rgba(37,99,235,0.3)] p-6 text-center">
-                      <div className="text-5xl font-black text-blue-600 mb-2">
+                    <div className="bg-white rounded-2xl border border-stone-200 shadow-md p-6 text-center">
+                      <div className="text-5xl font-bold text-cyan-600 mb-2">
                         Data You Own
                       </div>
                       <p className="text-lg font-bold text-gray-900 mb-1">
@@ -761,8 +766,8 @@ export default function HomePage() {
                     </div>
                   </MotionStaggerChild>
                   <MotionStaggerChild>
-                    <div className="bg-gradient-to-br from-pitch-50 to-white rounded-2xl border-4 border-pitch-600 shadow-glow-pitch-sm p-6 text-center">
-                      <div className="text-5xl font-black text-pitch-600 mb-2">
+                    <div className="bg-white rounded-2xl border border-stone-200 shadow-md p-6 text-center">
+                      <div className="text-5xl font-bold text-pitch-600 mb-2">
                         <AnimatedCounter target={14} duration={1.5} />-
                         <AnimatedCounter
                           target={18}
@@ -785,11 +790,11 @@ export default function HomePage() {
           </section>
 
           {/* Pricing Section */}
-          <section id="pricing" className="py-16 sm:py-24 bg-gray-50 border-y-4 border-black">
+          <section id="pricing" className="py-16 sm:py-24 bg-stone-50 border-y border-stone-200">
             <div className="max-w-6xl mx-auto px-4">
               <header className="text-center mb-12 sm:mb-16">
-                <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 mb-4 tracking-tight">
-                  Simple pricing for <span className="text-brand-cyan">TAP</span>
+                <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-display text-gray-900 mb-4 tracking-tight">
+                  Simple pricing for <span className="text-cyan-600">TAP</span>
                 </h2>
                 <p className="text-xl text-gray-600 max-w-2xl mx-auto font-medium">
                   All three studios included in every plan. Start free, upgrade when you&apos;re ready.
@@ -798,11 +803,11 @@ export default function HomePage() {
 
               <div className="grid lg:grid-cols-3 gap-8 items-stretch">
                 {/* Tier 1: Free */}
-                <article className="bg-white border-4 border-black rounded-3xl p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 transition-all flex flex-col">
+                <article className="bg-white border border-stone-200 rounded-3xl p-8 shadow-md hover:-translate-y-1 hover:shadow-lg transition-all flex flex-col">
                   <div className="mb-8">
-                    <h3 className="text-2xl font-bold tracking-tighter mb-2">Free</h3>
+                    <h3 className="text-2xl font-bold tracking-tight mb-2">Free</h3>
                     <div className="flex items-baseline gap-1 mb-4">
-                      <span className="text-5xl font-extrabold italic">Free</span>
+                      <span className="text-5xl font-bold">Free</span>
                     </div>
                     <p className="text-gray-600 font-medium leading-relaxed">
                       All studios, genuinely free. No credit card required.
@@ -811,41 +816,41 @@ export default function HomePage() {
 
                   <ul className="space-y-4 mb-10 flex-grow">
                     <li className="flex items-center gap-3 text-sm font-bold text-gray-700">
-                      <span className="w-5 h-5 rounded-md bg-intel-100 border-2 border-intel-600 flex items-center justify-center text-[10px] text-intel-600">✓</span>
+                      <span className="w-5 h-5 rounded-md bg-cyan-50 border border-cyan-500 flex items-center justify-center text-[10px] text-cyan-600">✓</span>
                       All three studios
                     </li>
                     <li className="flex items-center gap-3 text-sm font-bold text-gray-700">
-                      <span className="w-5 h-5 rounded-md bg-intel-100 border-2 border-intel-600 flex items-center justify-center text-[10px] text-intel-600">✓</span>
+                      <span className="w-5 h-5 rounded-md bg-cyan-50 border border-cyan-500 flex items-center justify-center text-[10px] text-cyan-600">✓</span>
                       10 enrichments/month
                     </li>
                     <li className="flex items-center gap-3 text-sm font-bold text-gray-700">
-                      <span className="w-5 h-5 rounded-md bg-intel-100 border-2 border-intel-600 flex items-center justify-center text-[10px] text-intel-600">✓</span>
+                      <span className="w-5 h-5 rounded-md bg-cyan-50 border border-cyan-500 flex items-center justify-center text-[10px] text-cyan-600">✓</span>
                       5 pitches/month
                     </li>
                     <li className="flex items-center gap-3 text-sm font-bold text-gray-700">
-                      <span className="w-5 h-5 rounded-md bg-intel-100 border-2 border-intel-600 flex items-center justify-center text-[10px] text-intel-600">✓</span>
+                      <span className="w-5 h-5 rounded-md bg-cyan-50 border border-cyan-500 flex items-center justify-center text-[10px] text-cyan-600">✓</span>
                       1 campaign
                     </li>
                   </ul>
 
                   <a
                     href="https://tap.totalaudiopromo.com/signup?source=marketing"
-                    className="w-full py-4 text-center border-2 border-black rounded-xl font-bold tracking-tight hover:bg-gray-50 transition-colors block"
+                    className="w-full py-4 text-center border border-stone-200 rounded-xl font-bold tracking-tight hover:bg-stone-50 transition-colors block"
                   >
                     Start Free
                   </a>
                 </article>
 
                 {/* Tier 2: Pro (Highlight) */}
-                <article className="bg-white border-4 border-black rounded-[2.5rem] p-10 shadow-[12px_12px_0px_0px_rgba(37,99,235,1)] hover:-translate-y-2 transition-all flex flex-col relative ring-4 ring-blue-100 ring-offset-8">
-                  <div className="absolute -top-5 left-1/2 -translate-x-1/2 bg-blue-600 text-white px-6 py-2 rounded-full border-4 border-black text-xs font-black uppercase tracking-widest shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                <article className="bg-white border border-stone-200 rounded-[2.5rem] p-10 shadow-lg ring-1 ring-cyan-200/50 ring-offset-4 hover:-translate-y-1 hover:shadow-lg transition-all flex flex-col relative">
+                  <div className="absolute -top-5 left-1/2 -translate-x-1/2 bg-cyan-600 text-white px-6 py-2 rounded-full border border-cyan-500 text-xs font-bold uppercase tracking-widest shadow-sm">
                     Most Popular
                   </div>
 
                   <div className="mb-8 pt-4">
-                    <h3 className="text-3xl font-bold tracking-tighter mb-2">Pro</h3>
+                    <h3 className="text-3xl font-bold tracking-tight mb-2">Pro</h3>
                     <div className="flex items-baseline gap-1 mb-1">
-                      <span className="text-6xl font-extrabold italic text-blue-600">&pound;19</span>
+                      <span className="text-6xl font-bold text-cyan-600">&pound;19</span>
                       <span className="text-gray-400 font-bold uppercase text-xs tracking-widest">/month</span>
                     </div>
                     <p className="text-sm text-gray-500 mb-4">
@@ -858,15 +863,15 @@ export default function HomePage() {
 
                   <ul className="space-y-5 mb-10 flex-grow">
                     <li className="flex items-center gap-3 text-sm font-bold text-gray-900">
-                      <span className="w-6 h-6 rounded-lg bg-intel-600 text-white flex items-center justify-center border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">✓</span>
+                      <span className="w-6 h-6 rounded-lg bg-intel-600 text-white flex items-center justify-center border border-stone-200 shadow-sm">✓</span>
                       100 enrichments/month
                     </li>
                     <li className="flex items-center gap-3 text-sm font-bold text-gray-900">
-                      <span className="w-6 h-6 rounded-lg bg-pitch-600 text-white flex items-center justify-center border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">✓</span>
+                      <span className="w-6 h-6 rounded-lg bg-pitch-600 text-white flex items-center justify-center border border-stone-200 shadow-sm">✓</span>
                       50 pitches/month
                     </li>
                     <li className="flex items-center gap-3 text-sm font-bold text-gray-900">
-                      <span className="w-6 h-6 rounded-lg bg-tracker-600 text-white flex items-center justify-center border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">✓</span>
+                      <span className="w-6 h-6 rounded-lg bg-tracker-600 text-white flex items-center justify-center border border-stone-200 shadow-sm">✓</span>
                       Unlimited campaigns
                     </li>
                     <li className="flex items-center gap-3 text-sm font-medium text-gray-500">
@@ -876,18 +881,18 @@ export default function HomePage() {
 
                   <a
                     href="https://tap.totalaudiopromo.com/signup?source=marketing"
-                    className="w-full py-5 text-xl text-center bg-blue-600 text-white border-4 border-black rounded-2xl font-bold tracking-tight shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] transition-all block"
+                    className="w-full py-5 text-xl text-center bg-cyan-600 text-white border border-cyan-500 rounded-2xl font-bold tracking-tight shadow-md hover:shadow-lg transition-all block"
                   >
                     Upgrade to Pro
                   </a>
                 </article>
 
                 {/* Tier 3: Agency */}
-                <article className="bg-white border-4 border-black rounded-3xl p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 transition-all flex flex-col">
+                <article className="bg-white border border-stone-200 rounded-3xl p-8 shadow-md hover:-translate-y-1 hover:shadow-lg transition-all flex flex-col">
                   <div className="mb-8">
-                    <h3 className="text-2xl font-bold tracking-tighter mb-2">Agency</h3>
+                    <h3 className="text-2xl font-bold tracking-tight mb-2">Agency</h3>
                     <div className="flex items-baseline gap-1 mb-1">
-                      <span className="text-5xl font-extrabold italic">&pound;79</span>
+                      <span className="text-5xl font-bold">&pound;79</span>
                       <span className="text-gray-400 font-bold uppercase text-xs tracking-widest">/month</span>
                     </div>
                     <p className="text-sm text-gray-500 mb-4">
@@ -900,22 +905,22 @@ export default function HomePage() {
 
                   <ul className="space-y-4 mb-10 flex-grow">
                     <li className="flex items-center gap-3 text-sm font-bold text-gray-700">
-                      <span className="w-5 h-5 rounded-md bg-gray-900 text-white flex items-center justify-center text-[10px] border-2 border-black">✓</span>
+                      <span className="w-5 h-5 rounded-md bg-gray-900 text-white flex items-center justify-center text-[10px] border border-stone-200">✓</span>
                       Unlimited everything
                     </li>
                     <li className="flex items-center gap-3 text-sm font-bold text-gray-700">
-                      <span className="w-5 h-5 rounded-md bg-gray-900 text-white flex items-center justify-center text-[10px] border-2 border-black">✓</span>
+                      <span className="w-5 h-5 rounded-md bg-gray-900 text-white flex items-center justify-center text-[10px] border border-stone-200">✓</span>
                       Team access
                     </li>
                     <li className="flex items-center gap-3 text-sm font-bold text-gray-700">
-                      <span className="w-5 h-5 rounded-md bg-gray-900 text-white flex items-center justify-center text-[10px] border-2 border-black">✓</span>
+                      <span className="w-5 h-5 rounded-md bg-gray-900 text-white flex items-center justify-center text-[10px] border border-stone-200">✓</span>
                       Dedicated support
                     </li>
                   </ul>
 
                   <a
                     href="mailto:info@totalaudiopromo.com"
-                    className="w-full py-4 text-center border-2 border-black rounded-xl font-bold tracking-tight hover:bg-gray-50 transition-colors block"
+                    className="w-full py-4 text-center border border-stone-200 rounded-xl font-bold tracking-tight hover:bg-stone-50 transition-colors block"
                   >
                     Contact Us
                   </a>
@@ -931,7 +936,7 @@ export default function HomePage() {
           {/* Guarantee/Trust Section */}
           <section className="py-12 bg-white">
             <div className="max-w-4xl mx-auto px-4 text-center">
-              <div className="bg-green-50 rounded-2xl border-4 border-green-600 shadow-[8px_8px_0px_0px_#16A34A] p-6 sm:p-10">
+              <div className="bg-green-50 rounded-2xl border border-green-200 shadow-md p-6 sm:p-10">
                 <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
                   Professional standard. Powered by TAP.
                 </h2>
@@ -941,61 +946,31 @@ export default function HomePage() {
                 </p>
 
                 <div className="flex flex-wrap justify-center gap-6">
-                  <div className="flex items-center gap-2 text-sm text-gray-600">
-                    <svg
-                      className="w-5 h-5 text-green-600"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
-                      />
-                    </svg>
-                    <span>256-bit AES Encryption</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-sm text-gray-600">
-                    <svg
-                      className="w-5 h-5 text-green-600"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
-                      />
-                    </svg>
-                    <span>GDPR Compliant</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-sm text-gray-600">
-                    <svg
-                      className="w-5 h-5 text-green-600"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
-                      />
-                    </svg>
-                    <span>SOC 2 Infrastructure</span>
-                  </div>
+                  {['256-bit AES Encryption', 'GDPR Compliant', 'SOC 2 Infrastructure'].map((label) => (
+                    <div key={label} className="flex items-center gap-2 text-sm text-gray-600">
+                      <svg
+                        className="w-5 h-5 text-green-600"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                        />
+                      </svg>
+                      <span>{label}</span>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
           </section>
 
           {/* Newsletter Section */}
-          <section id="newsletter" className="py-12 sm:py-16 bg-gray-50">
+          <section id="newsletter" className="py-12 sm:py-16 bg-stone-50">
             <div className="max-w-xl mx-auto px-4 text-center">
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
                 Stay in the loop

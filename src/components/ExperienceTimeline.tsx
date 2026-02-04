@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import { MotionScrollReveal, MotionStaggerChild } from "./animations";
 import { motion, AnimatePresence } from "framer-motion";
@@ -103,7 +103,7 @@ export const ExperienceTimeline = () => {
         {[...Array(10)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute rounded-full bg-intel-500/10 blur-xl"
+            className="absolute rounded-full bg-cyan-600/10 blur-xl"
             initial={{
               width: Math.random() * 200 + 100,
               height: Math.random() * 200 + 100,
@@ -128,12 +128,12 @@ export const ExperienceTimeline = () => {
 
       <div className="max-w-[1700px] mx-auto px-6 relative z-10">
         <MotionScrollReveal variant="fadeUp" className="text-center mb-20">
-          <div className="inline-block mb-4 px-4 py-1 rounded-full border border-intel-500/30 bg-intel-500/5 text-intel-400 text-xs font-black uppercase tracking-[0.2em]">
+          <div className="inline-block mb-4 px-4 py-1 rounded-full border border-cyan-600/30 bg-cyan-600/5 text-cyan-400 text-xs font-bold uppercase tracking-[0.2em]">
             Legacy & Logic
           </div>
-          <h2 className="text-5xl lg:text-6xl font-black text-white mb-6 tracking-tight">
+          <h2 className="text-5xl lg:text-6xl font-bold text-white mb-6 tracking-tight">
             Nearly four decades{" "}
-            <span className="text-intel-500">on the ground.</span>
+            <span className="text-cyan-500">on the ground.</span>
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed font-medium">
             I built Total Audio Promo because the work demanded it. Since
@@ -163,13 +163,12 @@ export const ExperienceTimeline = () => {
           delay={0.6}
           className="mt-24 flex flex-col items-center gap-6"
         >
-          <a href="https://tap.totalaudiopromo.com/home?source=marketing" className="group">
+          <a href="https://tap.totalaudiopromo.com/signup" className="group">
             <motion.div
               whileHover={{ scale: 1.02 }}
-              className="inline-block p-[2px] rounded-full bg-gradient-to-r from-intel-500 via-blue-500 to-purple-500 shadow-[0_0_30px_rgba(58,169,190,0.3)]"
+              className="inline-block rounded-full bg-cyan-600 shadow-[0_0_20px_rgba(8,145,178,0.3)] hover:bg-cyan-500 hover:shadow-[0_0_30px_rgba(8,145,178,0.4)] transition-all duration-300"
             >
-              <div className="px-10 py-4 rounded-full bg-black text-white font-bold text-lg group-hover:bg-transparent transition-all duration-300 flex items-center gap-3">
-                <span className="w-2 h-2 rounded-full bg-intel-500 animate-pulse" />
+              <div className="px-10 py-4 rounded-full text-white font-bold text-lg flex items-center gap-3">
                 Try TAP Free
                 <svg
                   className="w-5 h-5 group-hover:translate-x-1 transition-transform"
@@ -197,7 +196,7 @@ export const ExperienceTimeline = () => {
               href="https://sadact.uk"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm text-intel-400 hover:text-intel-300 font-medium transition-colors underline decoration-intel-500/30 underline-offset-4"
+              className="text-sm text-cyan-400 hover:text-cyan-300 font-medium transition-colors underline decoration-cyan-500/30 underline-offset-4"
             >
               sadact.uk
             </a>
@@ -221,7 +220,7 @@ const JourneyCard = ({ item, index }: { item: JourneyItem; index: number }) => {
         }}
         className="h-full flex flex-col"
       >
-        <div className="relative aspect-[3/4] mb-6 overflow-hidden rounded-2xl border border-white/10 group-hover:border-intel-500/50 transition-all duration-500 shadow-2xl group-hover:shadow-intel-500/20 bg-gray-900">
+        <div className="relative aspect-[3/4] mb-6 overflow-hidden rounded-2xl border border-white/10 group-hover:border-cyan-600/50 transition-all duration-500 shadow-2xl group-hover:shadow-cyan-500/20 bg-gray-900">
           <Image
             src={item.image}
             alt={item.alt}
@@ -251,17 +250,17 @@ const JourneyCard = ({ item, index }: { item: JourneyItem; index: number }) => {
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-80 group-hover:opacity-40 transition-opacity" />
 
           <div className="absolute bottom-4 left-4 z-20">
-            <span className="text-3xl font-black text-white/50 group-hover:text-white transition-colors tracking-tighter italic">
+            <span className="text-3xl font-bold text-white/50 group-hover:text-white transition-colors tracking-tighter italic">
               {item.year}
             </span>
           </div>
         </div>
 
         <div className="space-y-3 px-1">
-          <h3 className="text-xl font-bold text-white group-hover:text-intel-400 transition-colors tracking-tight">
+          <h3 className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors tracking-tight">
             {item.title}
           </h3>
-          <p className="inline-block px-2 py-0.5 rounded bg-intel-500/10 text-[10px] font-black text-intel-400 uppercase tracking-widest border border-intel-500/20">
+          <p className="inline-block px-2 py-0.5 rounded bg-cyan-600/10 text-[10px] font-bold text-cyan-400 uppercase tracking-widest border border-cyan-600/20">
             {item.subtitle}
           </p>
           <p className="text-[15px] text-gray-400 leading-relaxed font-medium">
@@ -270,7 +269,7 @@ const JourneyCard = ({ item, index }: { item: JourneyItem; index: number }) => {
         </div>
 
         {/* Desktop vertical connector line node */}
-        <div className="hidden xl:block absolute top-[150px] -left-[14px] w-2 h-2 rounded-full bg-white/20 border border-black group-hover:bg-intel-500 group-hover:scale-125 transition-all z-30" />
+        <div className="hidden xl:block absolute top-[150px] -left-[14px] w-2 h-2 rounded-full bg-white/20 border border-black group-hover:bg-cyan-500 group-hover:scale-125 transition-all z-30" />
       </motion.div>
     </MotionStaggerChild>
   );

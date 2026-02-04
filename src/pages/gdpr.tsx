@@ -10,8 +10,8 @@ export default function GDPRPage() {
         <meta name="description" content="Our commitment to data protection and UK GDPR compliance." />
       </Head>
 
-      <div className="min-h-screen bg-white font-sans">
-        <nav className="sticky top-0 z-50 bg-white border-b-4 border-black px-4 py-4 shadow-[0_4px_0_0_rgba(0,0,0,0.1)]">
+      <div className="min-h-screen bg-stone-50 font-sans">
+        <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-stone-200 px-4 py-4">
           <div className="max-w-6xl mx-auto flex items-center justify-between">
             <Link href="/" className="flex items-center gap-3 group">
               <Image
@@ -34,14 +34,14 @@ export default function GDPRPage() {
         </nav>
 
         <main className="max-w-4xl mx-auto px-4 py-12 sm:py-20">
-          <h1 className="text-4xl sm:text-5xl font-black text-gray-900 mb-8 lowercase tracking-tight">
-            GDPR <span className="text-intel-600">Compliance</span>
+          <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-8 tracking-tight">
+            GDPR <span className="text-cyan-600">Compliance</span>
           </h1>
 
           <div className="prose prose-lg max-w-none text-gray-700 space-y-8">
-            <section className="bg-gray-50 border-4 border-black p-6 sm:p-8 rounded-2xl shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
+            <section className="bg-white border border-stone-200 p-6 sm:p-8 rounded-2xl shadow-sm">
               <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-3">
-                <span className="w-8 h-8 bg-intel-600 text-white rounded-full flex items-center justify-center text-sm">1</span>
+                <span className="w-8 h-8 bg-cyan-600 text-white rounded-full flex items-center justify-center text-sm">1</span>
                 Our Commitment
               </h2>
               <p>
@@ -50,7 +50,7 @@ export default function GDPRPage() {
             </section>
 
             <section className="space-y-4">
-              <h2 className="text-2xl font-bold text-gray-900 underline decoration-intel-600 decoration-4 underline-offset-4">Data Protection Principles</h2>
+              <h2 className="text-2xl font-bold text-gray-900 underline decoration-cyan-600 decoration-2 underline-offset-4">Data Protection Principles</h2>
               <p>
                 We process personal data in accordance with the following principles as set out in the UK GDPR:
               </p>
@@ -65,7 +65,7 @@ export default function GDPRPage() {
             </section>
 
             <section className="space-y-4">
-              <h2 className="text-2xl font-bold text-gray-900 underline decoration-intel-600 decoration-4 underline-offset-4">Your Rights</h2>
+              <h2 className="text-2xl font-bold text-gray-900 underline decoration-cyan-600 decoration-2 underline-offset-4">Your Rights</h2>
               <p>
                 Under the UK GDPR, you have the following rights:
               </p>
@@ -80,13 +80,13 @@ export default function GDPRPage() {
               </ul>
             </section>
 
-            <section className="bg-intel-50 border-4 border-black p-6 sm:p-8 rounded-2xl shadow-[8px_8px_0px_0px_#2563EB]">
+            <section className="bg-cyan-50 border border-cyan-200 p-6 sm:p-8 rounded-2xl shadow-sm">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Contact Information</h2>
               <p>
                 If you have any questions about our GDPR compliance or wish to exercise your rights, please contact our Data Protection Officer at:
               </p>
               <p className="mt-4 font-bold text-lg">
-                <a href="mailto:info@totalaudiopromo.com" className="hover:text-intel-600 transition-colors">info@totalaudiopromo.com</a>
+                <a href="mailto:info@totalaudiopromo.com" className="hover:text-cyan-600 transition-colors">info@totalaudiopromo.com</a>
               </p>
             </section>
           </div>

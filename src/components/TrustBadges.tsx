@@ -42,7 +42,7 @@ export function TrustBadges({ badges, className = '' }: TrustBadgesProps) {
       {badges.map((badge, i) => (
         <div
           key={i}
-          className="inline-flex items-center gap-2 px-3 py-1.5 bg-gray-100 border-2 border-gray-300 rounded-full text-sm font-medium text-gray-700"
+          className="inline-flex items-center gap-2 px-3 py-1.5 bg-stone-50 border border-stone-200 rounded-full text-sm font-medium text-stone-600"
         >
           {badge.icon && <span className="text-green-600">{icons[badge.icon]}</span>}
           {badge.text}

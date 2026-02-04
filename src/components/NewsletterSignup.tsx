@@ -148,12 +148,12 @@ export function NewsletterSignup({
     );
   }
 
-  // Default: card variant - full neo-brutalist styling
+  // Default: card variant - premium studio calm styling
   return (
     <div className="glass-panel">
       <div className="flex flex-col sm:flex-row items-start gap-4">
         {/* Icon */}
-        <div className="rounded-xl border-2 border-black bg-brand-cyan/10 p-3 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
+        <div className="rounded-xl border border-stone-200 bg-cyan-50 p-3 shadow-sm">
           <Mail className="h-6 w-6 text-brand-cyan" aria-hidden="true" />
         </div>
 

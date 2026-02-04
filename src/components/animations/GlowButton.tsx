@@ -52,29 +52,29 @@ type GlowButtonProps = GlowButtonLinkProps | GlowButtonClickProps;
 // Variant styles
 const variantStyles: Record<GlowVariant, { base: string; glow: string; glowHover: string }> = {
   intel: {
-    base: 'bg-intel-600 hover:bg-intel-700 text-white border-intel-700',
+    base: 'bg-intel-600 hover:bg-intel-700 text-white border-transparent',
     glow: 'shadow-glow-intel-sm',
     glowHover: 'hover:shadow-glow-intel',
   },
   pitch: {
-    base: 'bg-pitch-600 hover:bg-pitch-700 text-white border-pitch-700',
+    base: 'bg-pitch-600 hover:bg-pitch-700 text-white border-transparent',
     glow: 'shadow-glow-pitch-sm',
     glowHover: 'hover:shadow-glow-pitch',
   },
   tracker: {
-    base: 'bg-tracker-600 hover:bg-tracker-700 text-white border-tracker-700',
+    base: 'bg-tracker-600 hover:bg-tracker-700 text-white border-transparent',
     glow: 'shadow-glow-tracker-sm',
     glowHover: 'hover:shadow-glow-tracker',
   },
   primary: {
-    base: 'bg-gray-900 hover:bg-gray-800 text-white border-black',
-    glow: 'shadow-brutal',
-    glowHover: 'hover:shadow-brutal-md',
+    base: 'bg-stone-900 hover:bg-stone-800 text-white border-stone-900',
+    glow: 'shadow-sm',
+    glowHover: 'hover:shadow-md',
   },
   secondary: {
-    base: 'bg-white hover:bg-gray-50 text-gray-900 border-gray-300',
+    base: 'bg-white hover:bg-stone-50 text-gray-900 border-stone-300',
     glow: '',
-    glowHover: 'hover:border-gray-400',
+    glowHover: 'hover:border-stone-400',
   },
 };
 
@@ -110,7 +110,7 @@ export function GlowButton({
 
   const buttonClasses = clsx(
     // Base styles
-    'inline-flex items-center justify-center font-bold rounded-lg border-2',
+    'inline-flex items-center justify-center font-bold rounded-lg border',
     'transition-all duration-300 ease-out-expo',
     // Variant styles
     variantStyle.base,

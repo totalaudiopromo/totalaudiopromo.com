@@ -14,14 +14,14 @@ const BASE_TIER_PRICING = {
 export default function PricingPage() {
   const [billingCycle, setBillingCycle] = useState<BillingCycle>('monthly');
 
-  const tierPricing = useMemo(
-    () => ({
-      starter: billingCycle === 'monthly' ? BASE_TIER_PRICING.starter : BASE_TIER_PRICING.starter * 10,
-      pro: billingCycle === 'monthly' ? BASE_TIER_PRICING.pro : BASE_TIER_PRICING.pro * 10,
-      agency: billingCycle === 'monthly' ? BASE_TIER_PRICING.agency : BASE_TIER_PRICING.agency * 10,
-    }),
-    [billingCycle],
-  );
+  const tierPricing = useMemo(() => {
+    const multiplier = billingCycle === 'monthly' ? 1 : 10;
+    return {
+      starter: BASE_TIER_PRICING.starter * multiplier,
+      pro: BASE_TIER_PRICING.pro * multiplier,
+      agency: BASE_TIER_PRICING.agency * multiplier,
+    };
+  }, [billingCycle]);
 
   return (
     <>
@@ -33,7 +33,7 @@ export default function PricingPage() {
 
       <div className="min-h-screen bg-white">
         {/* Navigation */}
-        <nav className="sticky top-0 z-50 bg-white border-b-4 border-black px-4 py-4 shadow-[0_4px_0_0_rgba(0,0,0,0.1)]">
+        <nav className="sticky top-0 z-50 bg-white border-b border-stone-200 px-4 py-4 shadow-sm">
           <div className="max-w-6xl mx-auto flex items-center justify-between">
             <Link href="/" className="flex items-center group">
               <Image
@@ -61,13 +61,13 @@ export default function PricingPage() {
               </a>
               <Link
                 href="/pricing"
-                className="px-3 py-2 text-sm font-semibold text-gray-800 rounded-lg border border-gray-200 bg-gray-100 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]"
+                className="px-3 py-2 text-sm font-semibold text-gray-800 rounded-lg border border-stone-200 bg-stone-50 shadow-sm"
               >
                 Pricing
               </Link>
               <a
                 href="https://tap.totalaudiopromo.com/home?source=marketing"
-                className="ml-2 px-4 py-2 text-sm font-bold text-white bg-cyan-600 border-2 border-black rounded-lg shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] transition-all hover:shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] hover:-translate-x-0.5 hover:-translate-y-0.5"
+                className="ml-2 px-4 py-2 text-sm font-bold text-white bg-cyan-600 border border-cyan-700 rounded-lg shadow-sm transition-all hover:shadow-md hover:-translate-y-0.5 active:scale-95"
               >
                 Open TAP
               </a>
@@ -77,14 +77,14 @@ export default function PricingPage() {
 
         <main>
           {/* Header */}
-          <section className="bg-white py-14 sm:py-20 border-b-4 border-black">
+          <section className="bg-white py-14 sm:py-20 border-b border-stone-200">
             <div className="max-w-5xl mx-auto px-4">
               <div className="flex flex-wrap items-center justify-between gap-4 mb-8">
                 <div>
-                  <span className="inline-block px-4 py-1.5 text-sm font-black uppercase tracking-wider text-cyan-700 bg-cyan-100 border-2 border-cyan-600 rounded-full shadow-[3px_3px_0px_0px_rgba(0,139,139,1)] mb-4">
+                  <span className="inline-block px-4 py-1.5 text-sm font-bold uppercase tracking-wider text-cyan-700 bg-cyan-50 border border-cyan-200 rounded-full shadow-sm mb-4">
                     TAP Pricing
                   </span>
-                  <h1 className="text-3xl sm:text-4xl font-black text-gray-900 leading-tight">
+                  <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 leading-tight">
                     One workspace. Three studios. Simple pricing.
                   </h1>
                   <p className="text-lg text-gray-600 mt-2">
@@ -93,7 +93,7 @@ export default function PricingPage() {
                 </div>
 
                 {/* Billing toggle */}
-                <div className="inline-flex items-center border-2 border-black rounded-2xl overflow-hidden shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                <div className="inline-flex items-center border border-stone-200 rounded-2xl overflow-hidden shadow-sm">
                   {(['monthly', 'annual'] as BillingCycle[]).map((cycle) => (
                     <button
                       key={cycle}
@@ -112,11 +112,11 @@ export default function PricingPage() {
               {/* Tier Cards */}
               <div className="grid lg:grid-cols-3 gap-8 items-stretch pt-8">
                 {/* Free */}
-                <article className="bg-white border-4 border-black rounded-3xl p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 transition-all flex flex-col">
+                <article className="bg-white border border-stone-200 rounded-2xl p-8 shadow-md hover:-translate-y-1 hover:shadow-lg hover:border-cyan-600/30 transition-all flex flex-col">
                   <div className="mb-6">
                     <h3 className="text-2xl font-bold tracking-tighter mb-2">Free</h3>
                     <div className="flex items-baseline gap-1 mb-4">
-                      <span className="text-4xl font-extrabold italic text-gray-900">Free</span>
+                      <span className="text-4xl font-bold italic text-gray-900">Free</span>
                     </div>
                     <p className="text-sm text-gray-600 font-medium leading-relaxed">
                       Get started with TAP and explore all three studios.
@@ -125,41 +125,41 @@ export default function PricingPage() {
 
                   <ul className="space-y-4 mb-8 flex-grow">
                     <li className="flex items-center gap-3 text-xs font-bold text-gray-700">
-                      <span className="w-5 h-5 rounded-md bg-cyan-100 border-2 border-cyan-600 flex items-center justify-center text-[10px] text-cyan-700">✓</span>
+                      <span className="w-5 h-5 rounded-md bg-cyan-50 border border-cyan-200 flex items-center justify-center text-[10px] text-cyan-700">✓</span>
                       All three studios included
                     </li>
                     <li className="flex items-center gap-3 text-xs font-bold text-gray-700">
-                      <span className="w-5 h-5 rounded-md bg-cyan-100 border-2 border-cyan-600 flex items-center justify-center text-[10px] text-cyan-700">✓</span>
+                      <span className="w-5 h-5 rounded-md bg-cyan-50 border border-cyan-200 flex items-center justify-center text-[10px] text-cyan-700">✓</span>
                       10 enrichments/month
                     </li>
                     <li className="flex items-center gap-3 text-xs font-bold text-gray-700">
-                      <span className="w-5 h-5 rounded-md bg-cyan-100 border-2 border-cyan-600 flex items-center justify-center text-[10px] text-cyan-700">✓</span>
+                      <span className="w-5 h-5 rounded-md bg-cyan-50 border border-cyan-200 flex items-center justify-center text-[10px] text-cyan-700">✓</span>
                       5 pitches/month
                     </li>
                     <li className="flex items-center gap-3 text-xs font-bold text-gray-700">
-                      <span className="w-5 h-5 rounded-md bg-cyan-100 border-2 border-cyan-600 flex items-center justify-center text-[10px] text-cyan-700">✓</span>
+                      <span className="w-5 h-5 rounded-md bg-cyan-50 border border-cyan-200 flex items-center justify-center text-[10px] text-cyan-700">✓</span>
                       1 active campaign
                     </li>
                   </ul>
 
                   <a
                     href="https://tap.totalaudiopromo.com/signup?source=marketing"
-                    className="w-full py-3 text-center border-2 border-black rounded-xl font-bold tracking-tight hover:bg-gray-50 transition-colors"
+                    className="w-full py-3 text-center border border-stone-300 rounded-xl font-bold tracking-tight hover:bg-stone-50 hover:border-cyan-600/30 transition-colors active:scale-95"
                   >
                     Start Free
                   </a>
                 </article>
 
                 {/* Pro (featured) */}
-                <article className="bg-white border-4 border-black rounded-[2.5rem] p-10 shadow-[12px_12px_0px_0px_rgba(0,139,139,1)] hover:-translate-y-2 transition-all flex flex-col relative ring-4 ring-cyan-100 ring-offset-8">
-                  <div className="absolute -top-5 left-1/2 -translate-x-1/2 bg-cyan-600 text-white px-6 py-2 rounded-full border-4 border-black text-xs font-black uppercase tracking-widest shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] whitespace-nowrap">
+                <article className="bg-white border border-cyan-200 rounded-2xl p-10 shadow-lg hover:-translate-y-2 transition-all flex flex-col relative ring-1 ring-cyan-200/50 ring-offset-4">
+                  <div className="absolute -top-5 left-1/2 -translate-x-1/2 bg-cyan-600 text-white px-6 py-2 rounded-full border border-cyan-700 text-xs font-bold uppercase tracking-widest shadow-md whitespace-nowrap">
                     Recommended
                   </div>
 
                   <div className="mb-6 pt-4">
                     <h3 className="text-3xl font-bold tracking-tighter mb-2">Pro</h3>
                     <div className="flex items-baseline gap-1 mb-4">
-                      <span className="text-6xl font-extrabold italic text-cyan-600">{'\u00A3'}{tierPricing.pro}</span>
+                      <span className="text-6xl font-bold italic text-cyan-600">{'\u00A3'}{tierPricing.pro}</span>
                       <span className="text-gray-400 font-bold uppercase text-xs tracking-widest">/{billingCycle === 'monthly' ? 'mo' : 'yr'}</span>
                     </div>
                     <p className="text-sm text-gray-900 font-bold leading-relaxed">
@@ -169,41 +169,41 @@ export default function PricingPage() {
 
                   <ul className="space-y-4 mb-8 flex-grow">
                     <li className="flex items-center gap-3 text-sm font-bold text-gray-900">
-                      <span className="w-6 h-6 rounded-lg bg-cyan-600 text-white flex items-center justify-center border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">✓</span>
+                      <span className="w-6 h-6 rounded-lg bg-cyan-600 text-white flex items-center justify-center border border-cyan-700 shadow-sm">✓</span>
                       All three studios included
                     </li>
                     <li className="flex items-center gap-3 text-sm font-bold text-gray-900">
-                      <span className="w-6 h-6 rounded-lg bg-cyan-600 text-white flex items-center justify-center border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">✓</span>
+                      <span className="w-6 h-6 rounded-lg bg-cyan-600 text-white flex items-center justify-center border border-cyan-700 shadow-sm">✓</span>
                       100 enrichments/month
                     </li>
                     <li className="flex items-center gap-3 text-sm font-bold text-gray-900">
-                      <span className="w-6 h-6 rounded-lg bg-cyan-600 text-white flex items-center justify-center border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">✓</span>
+                      <span className="w-6 h-6 rounded-lg bg-cyan-600 text-white flex items-center justify-center border border-cyan-700 shadow-sm">✓</span>
                       50 pitches/month
                     </li>
                     <li className="flex items-center gap-3 text-sm font-bold text-gray-900">
-                      <span className="w-6 h-6 rounded-lg bg-cyan-600 text-white flex items-center justify-center border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">✓</span>
+                      <span className="w-6 h-6 rounded-lg bg-cyan-600 text-white flex items-center justify-center border border-cyan-700 shadow-sm">✓</span>
                       Unlimited campaigns
                     </li>
                     <li className="flex items-center gap-3 text-sm font-bold text-gray-900">
-                      <span className="w-6 h-6 rounded-lg bg-cyan-600 text-white flex items-center justify-center border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">✓</span>
+                      <span className="w-6 h-6 rounded-lg bg-cyan-600 text-white flex items-center justify-center border border-cyan-700 shadow-sm">✓</span>
                       Priority support
                     </li>
                   </ul>
 
                   <a
                     href="https://tap.totalaudiopromo.com/signup?source=marketing"
-                    className="w-full py-4 text-xl text-center bg-cyan-600 text-white border-4 border-black rounded-2xl font-bold tracking-tight shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] transition-all"
+                    className="w-full py-4 text-xl text-center bg-cyan-600 text-white border border-cyan-700 rounded-2xl font-bold tracking-tight shadow-md hover:shadow-lg hover:bg-cyan-700 transition-all active:scale-95"
                   >
                     Upgrade to Pro
                   </a>
                 </article>
 
                 {/* Agency */}
-                <article className="bg-white border-4 border-black rounded-3xl p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 transition-all flex flex-col">
+                <article className="bg-white border border-stone-200 rounded-2xl p-8 shadow-md hover:-translate-y-1 hover:shadow-lg hover:border-cyan-600/30 transition-all flex flex-col">
                   <div className="mb-6">
                     <h3 className="text-2xl font-bold tracking-tighter mb-2">Agency</h3>
                     <div className="flex items-baseline gap-1 mb-4">
-                      <span className="text-4xl font-extrabold italic text-gray-900">{'\u00A3'}{tierPricing.agency}</span>
+                      <span className="text-4xl font-bold italic text-gray-900">{'\u00A3'}{tierPricing.agency}</span>
                       <span className="text-gray-400 font-bold uppercase text-[10px] tracking-widest">/{billingCycle === 'monthly' ? 'mo' : 'yr'}</span>
                     </div>
                     <p className="text-sm text-gray-600 font-medium leading-relaxed">
@@ -213,26 +213,26 @@ export default function PricingPage() {
 
                   <ul className="space-y-4 mb-8 flex-grow">
                     <li className="flex items-center gap-3 text-xs font-bold text-gray-700">
-                      <span className="w-5 h-5 rounded-md bg-gray-900 text-white flex items-center justify-center text-[10px] border-2 border-black">✓</span>
+                      <span className="w-5 h-5 rounded-md bg-stone-900 text-white flex items-center justify-center text-[10px] border border-stone-700">✓</span>
                       Everything in Pro
                     </li>
                     <li className="flex items-center gap-3 text-xs font-bold text-gray-700">
-                      <span className="w-5 h-5 rounded-md bg-gray-900 text-white flex items-center justify-center text-[10px] border-2 border-black">✓</span>
+                      <span className="w-5 h-5 rounded-md bg-stone-900 text-white flex items-center justify-center text-[10px] border border-stone-700">✓</span>
                       Unlimited enrichments
                     </li>
                     <li className="flex items-center gap-3 text-xs font-bold text-gray-700">
-                      <span className="w-5 h-5 rounded-md bg-gray-900 text-white flex items-center justify-center text-[10px] border-2 border-black">✓</span>
+                      <span className="w-5 h-5 rounded-md bg-stone-900 text-white flex items-center justify-center text-[10px] border border-stone-700">✓</span>
                       Team collaboration
                     </li>
                     <li className="flex items-center gap-3 text-xs font-bold text-gray-700">
-                      <span className="w-5 h-5 rounded-md bg-gray-900 text-white flex items-center justify-center text-[10px] border-2 border-black">✓</span>
+                      <span className="w-5 h-5 rounded-md bg-stone-900 text-white flex items-center justify-center text-[10px] border border-stone-700">✓</span>
                       Dedicated support
                     </li>
                   </ul>
 
                   <a
                     href="mailto:info@totalaudiopromo.com"
-                    className="w-full py-3 text-center border-2 border-black rounded-xl font-bold tracking-tight hover:bg-gray-50 transition-colors"
+                    className="w-full py-3 text-center border border-stone-300 rounded-xl font-bold tracking-tight hover:bg-stone-50 hover:border-cyan-600/30 transition-colors active:scale-95"
                   >
                     Contact Us
                   </a>
