@@ -49,7 +49,7 @@ function useAnimatedNumber(
   const [hasAnimated, setHasAnimated] = useState(false);
 
   const springValue = useSpring(0, {
-    duration: duration * 1000,
+    duration: duration,
     bounce: 0,
   });
 
