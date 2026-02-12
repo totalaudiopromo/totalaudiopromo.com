@@ -11,12 +11,12 @@ module.exports = {
         // Brand colours (from app configs)
         brand: {
           blue: '#2563EB', // Intel primary
-          cyan: '#3AA9BE', // TAP Dashboard accent
+          cyan: '#0e7490', // TAP accent (cyan-700)
           amber: '#F59E0B', // Pitcher
           teal: '#14B8A6', // Tracker
           black: '#0B0D0E', // TAP Dashboard black
           panel: '#161A1D', // TAP Dashboard panel
-          tap: '#3AA9BE',
+          tap: '#0e7490',
         },
         // Tool-specific palettes
         intel: {
@@ -69,7 +69,8 @@ module.exports = {
         },
       },
       fontFamily: {
-        sans: ['var(--font-geist-sans)', 'system-ui', 'sans-serif'],
+        sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
+        display: ['var(--font-space-grotesk)', 'system-ui', 'sans-serif'],
         mono: ['var(--font-geist-mono)', 'monospace'],
       },
       animation: {
@@ -91,6 +92,7 @@ module.exports = {
         'float-delayed': 'float 6s ease-in-out infinite 3s',
         'shimmer': 'shimmer 2s linear infinite',
         'spin-slow': 'spin 8s linear infinite',
+        'scan': 'scan 2s linear infinite',
         'blur-in': 'blurIn 0.6s cubic-bezier(0.19, 1, 0.22, 1)',
         'scale-in': 'scaleIn 0.5s cubic-bezier(0.19, 1, 0.22, 1)',
       },
@@ -156,6 +158,10 @@ module.exports = {
         scaleIn: {
           '0%': { opacity: '0', transform: 'scale(0.9)' },
           '100%': { opacity: '1', transform: 'scale(1)' },
+        },
+        scan: {
+          '0%': { transform: 'translateY(-100%)' },
+          '100%': { transform: 'translateY(1000%)' },
         },
       },
       transitionTimingFunction: {

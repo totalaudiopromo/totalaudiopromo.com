@@ -1,10 +1,16 @@
 import type { AppProps } from 'next/app';
-import { Geist, Geist_Mono } from 'next/font/google';
+import { Inter, Space_Grotesk, Geist_Mono } from 'next/font/google';
 import '../styles/globals.css';
 
-const geistSans = Geist({
+const inter = Inter({
   subsets: ['latin'],
-  variable: '--font-geist-sans',
+  variable: '--font-inter',
+  display: 'swap',
+});
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ['latin'],
+  variable: '--font-space-grotesk',
   display: 'swap',
 });
 
@@ -16,7 +22,7 @@ const geistMono = Geist_Mono({
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <div className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased`}>
+    <div className={`${inter.variable} ${spaceGrotesk.variable} ${geistMono.variable} font-sans antialiased`}>
       <Component {...pageProps} />
     </div>
   );

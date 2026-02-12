@@ -29,35 +29,17 @@ const journeyItems: JourneyItem[] = [
     title: "Building Experience",
     subtitle: "Gold Soundz DJ Service",
     description:
-      "Learning that a music business is 10% music and 90% logistics, relationships, and showing up on time.",
+      "Running a music business is 10% music and 90% logistics, relationships, and showing up on time.",
     year: "2012",
   },
   {
-    image: "/images/journey/hisandhersfloor.JPG",
-    alt: "Chris Schofield performing with His & Hers hardcore band in 2015",
-    title: "Stage & Spirit",
-    subtitle: "His & Hers",
-    description:
-      "DIY or die. Touring with His & Hers taught me the reality of the grind—loading vans and empty rooms.",
-    year: "2015",
-  },
-  {
     image: "/images/journey/sadactpromopic2021.JPG",
-    alt: "Chris Schofield as a radio promoter in 2021",
+    alt: "Chris Schofield as sadact, radio promoter and producer, in 2021",
     title: "The Catalyst",
-    subtitle: "Radio Promoter",
+    subtitle: "Radio Promoter & Producer",
     description:
-      "Five years of radio promotion. Seeing first-hand how 'luck' is usually just a well-managed relationship.",
+      "Five years of radio promotion. Releasing music as sadact. Both sides of the industry -- and why the tools weren't built for the people doing the work.",
     year: "2021",
-  },
-  {
-    image: "/images/journey/sadact2023studio.jpg",
-    alt: "Chris Schofield producing music as sadact in 2023",
-    title: "Technical Depth",
-    subtitle: "sadact / Sound Design",
-    description:
-      "Back in the studio as sadact. Rediscovering the technical side of sound so I could build tools that respect the craft.",
-    year: "2023",
     link: "https://sadact.uk",
   },
   {
@@ -66,7 +48,7 @@ const journeyItems: JourneyItem[] = [
     title: "Industry Native",
     subtitle: "Decadance UK",
     description:
-      "On the air at Decadance UK. Getting a proper look at the other side of the desk and why most pitches get ignored.",
+      "On the air at Decadance UK. Seeing the other side of the desk -- and why most pitches get ignored.",
     year: "2024",
   },
   {
@@ -75,7 +57,7 @@ const journeyItems: JourneyItem[] = [
     title: "Founder",
     subtitle: "TAP by Total Audio Promo",
     description:
-      "Built TAP -- one workspace for the work of music PR. Distilling thirty years of wins, losses, and noise into the system I wish I'd had from day one.",
+      "Built TAP -- one workspace for the work of music PR. The system I wish I'd had from day one.",
     year: "2026",
   },
 ];
@@ -132,25 +114,24 @@ export const ExperienceTimeline = () => {
             Legacy & Logic
           </div>
           <h2 className="text-5xl lg:text-6xl font-black text-white mb-6 tracking-tight">
-            Nearly four decades{" "}
-            <span className="text-intel-500">on the ground.</span>
+            Built on{" "}
+            <span className="text-intel-500">real experience.</span>
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed font-medium">
-            I built Total Audio Promo because the work demanded it. Since
-            1988—from DIY tours in vans to national radio campaigns—it became
-            clear that the tools we rely on were never actually designed for the
-            people doing the work.
+            From running a music business to pitching BBC Radio 1, I built TAP
+            because the tools we rely on were never designed for the people
+            doing the work.
           </p>
         </MotionScrollReveal>
 
         <div className="relative">
           {/* Horizontal Line - Glowing */}
-          <div className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent hidden xl:block -translate-y-1/2 shadow-[0_0_15px_rgba(255,255,255,0.1)]" />
+          <div className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent hidden lg:block -translate-y-1/2 shadow-[0_0_15px_rgba(255,255,255,0.1)]" />
 
           <MotionScrollReveal
             variant="stagger"
             trigger="eager"
-            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 gap-6"
+            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6"
           >
             {journeyItems.map((item, index) => (
               <JourneyCard key={index} item={item} index={index} />
@@ -163,7 +144,7 @@ export const ExperienceTimeline = () => {
           delay={0.6}
           className="mt-24 flex flex-col items-center gap-6"
         >
-          <a href="https://tap.totalaudiopromo.com/home?source=marketing" className="group">
+          <a href="https://tap.totalaudiopromo.com/signup?source=timeline" className="group">
             <motion.div
               whileHover={{ scale: 1.02 }}
               className="inline-block p-[2px] rounded-full bg-gradient-to-r from-intel-500 via-blue-500 to-purple-500 shadow-[0_0_30px_rgba(58,169,190,0.3)]"
@@ -188,20 +169,9 @@ export const ExperienceTimeline = () => {
             </motion.div>
           </a>
 
-          <div className="flex flex-col sm:flex-row items-center gap-4">
-            <p className="text-sm text-gray-500 font-medium">
-              Established 1988
-            </p>
-            <span className="hidden sm:inline text-gray-700">•</span>
-            <a
-              href="https://sadact.uk"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm text-intel-400 hover:text-intel-300 font-medium transition-colors underline decoration-intel-500/30 underline-offset-4"
-            >
-              sadact.uk
-            </a>
-          </div>
+          <p className="text-sm text-gray-500 font-medium">
+            5+ years in radio promotion
+          </p>
         </MotionScrollReveal>
       </div>
     </section>
@@ -267,10 +237,20 @@ const JourneyCard = ({ item, index }: { item: JourneyItem; index: number }) => {
           <p className="text-[15px] text-gray-400 leading-relaxed font-medium">
             {item.description}
           </p>
+          {item.link && (
+            <a
+              href={item.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs text-intel-400/70 hover:text-intel-400 transition-colors font-medium"
+            >
+              {item.link.replace(/^https?:\/\//, "")} &rarr;
+            </a>
+          )}
         </div>
 
         {/* Desktop vertical connector line node */}
-        <div className="hidden xl:block absolute top-[150px] -left-[14px] w-2 h-2 rounded-full bg-white/20 border border-black group-hover:bg-intel-500 group-hover:scale-125 transition-all z-30" />
+        <div className="hidden lg:block absolute top-[150px] -left-[14px] w-2 h-2 rounded-full bg-white/20 border border-black group-hover:bg-intel-500 group-hover:scale-125 transition-all z-30" />
       </motion.div>
     </MotionStaggerChild>
   );

@@ -18,8 +18,8 @@ export default function Document() {
         <link rel="dns-prefetch" href="https://tracker.totalaudiopromo.com" />
 
         {/* Theme colour for mobile browsers */}
-        <meta name="theme-color" content="#2563EB" />
-        <meta name="msapplication-TileColor" content="#2563EB" />
+        <meta name="theme-color" content="#0e7490" />
+        <meta name="msapplication-TileColor" content="#0e7490" />
       </Head>
       <body className="antialiased">
         <Main />
