@@ -2,18 +2,12 @@ import Image from "next/image";
 import Link from "next/link";
 import Head from "next/head";
 import { NewsletterSignup } from "../components/NewsletterSignup";
-import { StatCard } from "../components/StatCard";
 import { CaseStudyBanner } from "../components/CaseStudyBanner";
 import { TrustBadges } from "../components/TrustBadges";
-import { FeatureShowcase } from "../components/FeatureShowcase";
-import { ScrollReveal } from "../components/ScrollReveal";
 import {
   MotionScrollReveal,
   MotionStaggerChild,
-  AnimatedCounter,
   GlowButton,
-  HeroGradient,
-  DarkGradient,
 } from "../components/animations";
 import { ExperienceTimeline } from "../components/ExperienceTimeline";
 
@@ -22,16 +16,14 @@ export default function HomePage() {
     <>
       <Head>
         {/* Primary Meta Tags */}
-        <title>
-          TAP by Total Audio Promo | The Music PR Workspace
-        </title>
+        <title>Music PR Software UK | TAP by Total Audio Promo</title>
         <meta
           name="description"
-          content="TAP is where music PR work actually happens. Campaigns, contacts, pitches, outcomes, and learning in one continuous flow. Start free."
+          content="Music PR software built for UK radio pluggers and press agents. Research contacts, draft pitches, track outcomes. Used on BBC Radio 1 campaigns. Start free."
         />
         <meta
           name="keywords"
-          content="TAP, TAP music pr, music pr workspace, pr tools, music pr platform, music promotion, radio promotion, contact research, pitch generator, campaign tracking, UK music industry, BBC Radio, playlist pitching"
+          content="music PR software, music promotion platform, radio promotion software UK, music PR workspace, contact enrichment, pitch generator, campaign tracking, UK music industry"
         />
         <meta name="author" content="Chris Schofield" />
         <meta name="robots" content="index, follow" />
@@ -44,11 +36,11 @@ export default function HomePage() {
         <meta property="og:url" content="https://totalaudiopromo.com" />
         <meta
           property="og:title"
-          content="TAP by Total Audio Promo | The Music PR Workspace"
+          content="Music PR Software UK | TAP by Total Audio Promo"
         />
         <meta
           property="og:description"
-          content="TAP is where music PR work actually happens. Campaigns, contacts, pitches, outcomes, and learning in one continuous flow. Start free."
+          content="Music PR software built for UK radio pluggers and press agents. Research contacts, draft pitches, track outcomes. Used on BBC Radio 1 campaigns. Start free."
         />
         <meta
           property="og:image"
@@ -62,11 +54,11 @@ export default function HomePage() {
         <meta name="twitter:url" content="https://totalaudiopromo.com" />
         <meta
           name="twitter:title"
-          content="TAP by Total Audio Promo | The Music PR Workspace"
+          content="Music PR Software UK | TAP by Total Audio Promo"
         />
         <meta
           name="twitter:description"
-          content="TAP is where music PR work actually happens. Campaigns, contacts, pitches, outcomes, and learning in one continuous flow. Start free."
+          content="Music PR software built for UK radio pluggers and press agents. Research contacts, draft pitches, track outcomes. Used on BBC Radio 1 campaigns. Start free."
         />
         <meta
           name="twitter:image"
@@ -84,16 +76,110 @@ export default function HomePage() {
               url: "https://totalaudiopromo.com",
               logo: "https://totalaudiopromo.com/images/total_audio_promo_logo_trans.png",
               description:
-                "TAP is the music PR workspace where campaigns, contacts, pitches, outcomes, and learning happen in one continuous flow.",
+                "Music PR software for agencies and independent operators. Research, draft, and track in one workspace.",
               founder: {
                 "@type": "Person",
                 name: "Chris Schofield",
               },
               sameAs: [
-                "https://tap.totalaudiopromo.com",
-                "https://intel.totalaudiopromo.com",
-                "https://pitcher.totalaudiopromo.com",
-                "https://tracker.totalaudiopromo.com",
+                "https://x.com/chrisschouk",
+                "https://www.linkedin.com/in/chrisschofield1/",
+              ],
+            }),
+          }}
+        />
+
+        {/* Structured Data - SoftwareApplication */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "SoftwareApplication",
+              name: "TAP",
+              applicationCategory: "BusinessApplication",
+              operatingSystem: "Web",
+              url: "https://tap.totalaudiopromo.com",
+              description:
+                "Music PR software with contact enrichment, pitch drafting, and campaign tracking for PR agencies and independent operators.",
+              offers: [
+                {
+                  "@type": "Offer",
+                  price: "0",
+                  priceCurrency: "GBP",
+                  name: "Free",
+                },
+                {
+                  "@type": "Offer",
+                  price: "19",
+                  priceCurrency: "GBP",
+                  name: "Pro",
+                  billingIncrement: "P1M",
+                },
+                {
+                  "@type": "Offer",
+                  price: "79",
+                  priceCurrency: "GBP",
+                  name: "Agency",
+                  billingIncrement: "P1M",
+                },
+              ],
+              creator: {
+                "@type": "Organization",
+                name: "Total Audio Promo",
+              },
+            }),
+          }}
+        />
+
+        {/* Structured Data - FAQPage */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: [
+                {
+                  "@type": "Question",
+                  name: "Is this another CRM?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "No. CRMs track relationships. TAP handles the actual work of music PR -- researching contacts, drafting pitches, and tracking outcomes. It replaces the spreadsheets, email templates, and manual processes you're currently juggling.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "Does TAP send emails automatically?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Never. TAP drafts pitches for you to review and send yourself. Your reputation depends on every message being intentional. We'll never auto-send on your behalf.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "What does TAP replace?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "The stack you're currently stitching together: contact spreadsheets, WARM or similar databases, email templates in Google Docs, CoverageBook, Mailchimp, and whatever you're using to track responses. TAP handles all of it.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "Can I import my existing contacts?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Yes. You can import contacts from CSV or add them manually. Intel Studio then enriches them with verified emails, submission preferences, and role detection.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "Is my data safe?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Yes. TAP is GDPR compliant, UK-hosted, and encrypted with 256-bit encryption. Your data is exportable anytime -- you always own your contacts and campaign history.",
+                  },
+                },
               ],
             }),
           }}
@@ -113,7 +199,7 @@ export default function HomePage() {
         />
       </Head>
 
-      <div className="min-h-screen bg-white flex flex-col font-sans">
+      <div className="min-h-screen bg-stone-50 flex flex-col font-sans">
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe
@@ -124,112 +210,95 @@ export default function HomePage() {
           />
         </noscript>
 
-        {/* Navigation - Sticky with scroll shrink */}
-        <nav className="sticky top-0 z-50 bg-white border-b-4 border-black px-4 py-4 shadow-[0_4px_0_0_rgba(0,0,0,0.1)]">
-          <div className="max-w-7xl mx-auto flex items-center justify-between">
+        {/* Navigation -- Floating pill */}
+        <nav className="sticky top-0 z-50 px-4 pt-3 sm:pt-4">
+          <div className="mx-auto flex max-w-3xl items-center justify-between rounded-full border border-stone-200/80 bg-stone-50/90 backdrop-blur-md px-5 py-2 sm:px-6">
             <Link href="/" className="flex items-center group">
               <Image
                 src="/images/total-audio-promo-wordmark-stacked.png"
                 alt="Total Audio Promo"
                 width={100}
                 height={100}
-                className="object-contain h-14 sm:h-20 w-auto"
+                className="object-contain h-10 sm:h-12 w-auto"
                 priority
               />
             </Link>
 
-            {/* Navigation Links */}
-            <div className="flex items-center gap-2 sm:gap-4">
-              <a
-                href="https://tap.totalaudiopromo.com/home?source=marketing"
-                className="px-3 py-2 text-sm font-semibold text-gray-700 hover:text-brand-cyan transition-colors rounded-lg hover:bg-cyan-50"
-              >
-                TAP
-              </a>
+            <div className="flex items-center gap-2 sm:gap-3">
               <a
                 href="#studios"
-                className="px-3 py-2 text-sm font-semibold text-gray-700 hover:text-intel-600 transition-colors rounded-lg hover:bg-intel-50"
+                className="hidden sm:inline-flex px-3 py-1.5 text-sm font-medium text-stone-600 hover:text-stone-900 transition-colors rounded-full hover:bg-stone-100"
               >
-                Studios
+                How It Works
               </a>
               <Link
                 href="/pricing"
-                className="px-3 py-2 text-sm font-semibold text-gray-800 rounded-lg border border-gray-200 hover:border-gray-300 hover:bg-gray-100 transition-colors"
+                className="hidden sm:inline-flex px-3 py-1.5 text-sm font-medium text-stone-600 hover:text-stone-900 transition-colors rounded-full hover:bg-stone-100"
               >
                 Pricing
               </Link>
 
-              {/* Open TAP Button */}
               <a
-                href="https://tap.totalaudiopromo.com/home?source=marketing"
-                className="ml-2 px-4 py-2 text-sm font-bold text-gray-900 bg-white border-2 border-black rounded-lg shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] transition-all hover:shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] hover:-translate-x-0.5 hover:-translate-y-0.5"
+                href="https://tap.totalaudiopromo.com/home?source=nav"
+                className="px-3 py-1.5 text-sm font-medium text-stone-600 hover:text-stone-900 transition-colors rounded-full hover:bg-stone-100"
               >
-                Open TAP
+                Log In
+              </a>
+              <a
+                href="https://tap.totalaudiopromo.com/signup?source=nav"
+                className="px-4 py-2 text-sm font-bold text-white bg-cyan-700 rounded-full hover:bg-cyan-800 transition-colors shadow-[0_1px_2px_rgba(0,0,0,0.05),0_4px_16px_rgba(8,145,178,0.25)]"
+              >
+                Start Free
               </a>
             </div>
           </div>
         </nav>
 
         <main>
-          {/* Hero Section */}
-          <HeroGradient className="py-12 sm:py-16">
-            {/* Subtle grid pattern background */}
-            <div
-              className="absolute inset-0 opacity-[0.03]"
-              style={{
-                backgroundImage:
-                  "linear-gradient(#000 1px, transparent 1px), linear-gradient(90deg, #000 1px, transparent 1px)",
-                backgroundSize: "40px 40px",
-              }}
-            />
-
-            <div className="max-w-6xl mx-auto px-4 relative">
+          {/* ============================================
+              SECTION 1: Hero -- Hook (0-3 seconds)
+              ============================================ */}
+          <section className="hero-stage py-20 sm:py-28">
+            <div className="max-w-5xl mx-auto px-4 relative">
               <div className="grid lg:grid-cols-5 gap-10 items-center">
                 {/* Left Column (60%) */}
                 <div className="lg:col-span-3">
                   <MotionScrollReveal variant="fadeUp">
-                    <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-gray-900 leading-tight mb-5">
-                      Music PR is still run on spreadsheets, inboxes, and memory.
+                    <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-stone-900 leading-[1.1] mb-6 tracking-tight">
+                      Music PR Software for Agencies and Independent Operators
                     </h1>
                   </MotionScrollReveal>
 
                   <MotionScrollReveal variant="fadeUp" delay={0.1}>
-                    <p className="text-xl text-gray-600 mb-5 leading-relaxed">
-                      TAP is one place to run your entire PR operation -- campaigns,
-                      follow-ups, outcomes, and learning. No more jumping between
-                      tools.
+                    <p className="text-xl text-stone-600 mb-4 leading-relaxed">
+                      Stop running campaigns on spreadsheets, inboxes, and
+                      memory. TAP is one place to research contacts, draft
+                      pitches, and track outcomes.
                     </p>
-                    <p className="text-lg font-bold text-gray-900 mb-5">
-                      Built for small PR agencies and experienced operators who
-                      value relationships over volume.
+                    <p className="text-lg font-semibold text-stone-800 mb-6">
+                      Built by a working radio promoter. BBC Radio 1, 6 Music,
+                      Spotify.
                     </p>
                   </MotionScrollReveal>
 
                   <MotionScrollReveal variant="fadeUp" delay={0.2}>
-                    <div className="flex flex-wrap gap-4 mb-6">
+                    <div className="mb-6">
                       <GlowButton
-                        variant="intel"
+                        variant="primary"
                         size="lg"
-                        href="https://tap.totalaudiopromo.com/signup?source=marketing"
+                        href="https://tap.totalaudiopromo.com/signup?source=hero"
                         glowPulse
                       >
                         Start Free
-                      </GlowButton>
-                      <GlowButton
-                        variant="secondary"
-                        size="lg"
-                        href="#studios"
-                      >
-                        See How It Works
                       </GlowButton>
                     </div>
                   </MotionScrollReveal>
 
                   <TrustBadges
                     badges={[
-                      { text: "One Workspace", icon: "check" },
-                      { text: "Start Free", icon: "shield" },
-                      { text: "Cancel Anytime", icon: "clock" },
+                      { text: "No credit card required", icon: "shield" },
+                      { text: "Cancel anytime", icon: "clock" },
+                      { text: "All studios included", icon: "check" },
                     ]}
                   />
                 </div>
@@ -241,457 +310,38 @@ export default function HomePage() {
                   className="lg:col-span-2 flex flex-col items-center"
                 >
                   <div className="relative">
-                    {/* Founder Photo */}
                     <div className="relative z-10">
                       <Image
                         src="/images/chris-schofield-founder-photo.jpg"
                         alt="Chris Schofield - Founder of Total Audio Promo, radio promoter with 5+ years experience"
                         width={200}
                         height={200}
-                        className="rounded-2xl border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]"
+                        className="rounded-2xl border-2 border-stone-200 shadow-soft-lg"
                         priority
                       />
                     </div>
 
-                    {/* Data ownership badge */}
-                    <div className="absolute -bottom-4 -right-4 bg-white rounded-xl border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] p-3 z-20 animate-float">
-                      <div className="flex items-center gap-2 text-xs">
-                        <span className="w-2 h-2 bg-blue-500 rounded-full animate-pulse" />
-                        <span className="font-bold text-gray-900">
-                          Data You Own
-                        </span>
-                      </div>
-                    </div>
-
                     {/* Founder context badge */}
-                    <div className="absolute -top-6 -left-6 bg-white rounded-xl border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] p-3 z-30 rotate-[-4deg]">
-                      <div className="text-[11px] font-black text-gray-900 leading-tight">
+                    <div className="absolute -top-4 -left-4 bg-white rounded-xl border border-stone-200 shadow-soft p-3 z-30 rotate-[-3deg]">
+                      <div className="text-[11px] font-bold text-stone-900 leading-tight">
                         Built by a radio promoter
                       </div>
-                      <div className="text-[10px] text-gray-600 font-medium">
-                        BBC Radio 1 · 6 Music · Spotify
+                      <div className="text-[10px] text-stone-500 font-medium">
+                        BBC Radio 1 &middot; 6 Music &middot; Spotify
                       </div>
                     </div>
                   </div>
-
-                  <p className="mt-6 text-sm text-gray-500 text-center max-w-xs">
-                    Relationship intelligence, not automation.
-                  </p>
-                </MotionScrollReveal>
-              </div>
-            </div>
-          </HeroGradient>
-
-          {/* TAP Workspace Strip */}
-          <section className="py-12 sm:py-14 bg-gradient-to-br from-brand-cyan/5 to-white">
-            <div className="max-w-4xl mx-auto px-4 text-center">
-              <MotionScrollReveal variant="fadeUp">
-                <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
-                  A calm workspace for the work that matters
-                </h2>
-                <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
-                  TAP gives you a clear view of what needs attention today, keeps
-                  campaigns organised, and moves work forward -- without
-                  context-switching between tools.
-                </p>
-              </MotionScrollReveal>
-
-              <MotionScrollReveal variant="fadeUp" delay={0.1}>
-                <div className="inline-flex flex-wrap justify-center gap-4 sm:gap-6">
-                  <div className="flex items-center gap-2 px-4 py-2 bg-white rounded-xl border-2 border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
-                    <span className="w-2 h-2 bg-blue-500 rounded-full" />
-                    <span className="text-sm font-bold text-gray-900">Today View</span>
-                  </div>
-                  <div className="flex items-center gap-2 px-4 py-2 bg-white rounded-xl border-2 border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
-                    <span className="w-2 h-2 bg-amber-500 rounded-full" />
-                    <span className="text-sm font-bold text-gray-900">Campaigns</span>
-                  </div>
-                  <div className="flex items-center gap-2 px-4 py-2 bg-white rounded-xl border-2 border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
-                    <span className="w-2 h-2 bg-teal-500 rounded-full" />
-                    <span className="text-sm font-bold text-gray-900">Follow-ups</span>
-                  </div>
-                </div>
-              </MotionScrollReveal>
-            </div>
-          </section>
-
-          {/* Who This Is For - ICP Clarity */}
-          <section className="py-16 sm:py-20 bg-gradient-to-br from-blue-50 to-white relative overflow-hidden">
-            {/* Subtle background pattern */}
-            <div
-              className="absolute inset-0 opacity-[0.03]"
-              style={{
-                backgroundImage:
-                  "repeating-linear-gradient(45deg, #000 0, #000 1px, transparent 0, transparent 50%)",
-                backgroundSize: "20px 20px",
-              }}
-            />
-
-            <div className="max-w-6xl mx-auto px-4 relative">
-              <div className="grid lg:grid-cols-2 gap-12 items-center">
-                <div>
-                  <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 mb-6">
-                    Built for experienced operators
-                  </h2>
-                  <div className="space-y-8">
-                    <div>
-                      <h3 className="text-xl font-bold text-blue-600 mb-3 flex items-center gap-2">
-                        <span className="flex-shrink-0 w-6 h-6 rounded-full bg-blue-600 text-white flex items-center justify-center text-xs">
-                          ✓
-                        </span>
-                        This is for you if:
-                      </h3>
-                      <ul className="space-y-3 text-lg text-gray-700">
-                        <li className="flex items-start gap-3">
-                          <span className="font-bold">Agency Level</span> —
-                          You&apos;re a small PR agency (1–5 people) managing
-                          multiple campaigns.
-                        </li>
-                        <li className="flex items-start gap-3">
-                          <span className="font-bold">Experienced DIY</span> —
-                          Label or manager with a proven track record.
-                        </li>
-                        <li className="flex items-start gap-3">
-                          <span className="font-bold">Relationship First</span>{" "}
-                          — You care about long-term industry reputation, not
-                          volume.
-                        </li>
-                      </ul>
-                    </div>
-
-                    <div>
-                      <h3 className="text-xl font-bold text-red-600 mb-3 flex items-center gap-2">
-                        <span className="flex-shrink-0 w-6 h-6 rounded-full bg-red-600 text-white flex items-center justify-center text-xs">
-                          ×
-                        </span>
-                        This is NOT for you if:
-                      </h3>
-                      <ul className="space-y-3 text-lg text-gray-700">
-                        <li className="flex items-start gap-3 italic">
-                          You&apos;re releasing your first record and checking
-                          how PR works.
-                        </li>
-                        <li className="flex items-start gap-3 italic">
-                          You want &quot;send it everywhere&quot; mass outreach.
-                        </li>
-                        <li className="flex items-start gap-3 italic">
-                          You need templates or hand-held guidance on what to
-                          say.
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div className="flex justify-center">
-                  <Image
-                    src="/images/total_audio_promo_logo_trans.png"
-                    alt="Total Audio Promo - Dog with headphones and speakers"
-                    width={400}
-                    height={400}
-                    className="drop-shadow-2xl"
-                  />
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* Studios Section */}
-          <section id="studios" className="py-12 sm:py-16 bg-white">
-            <div className="max-w-6xl mx-auto px-4">
-              <header className="text-center mb-10">
-                <div className="inline-flex items-center gap-2 rounded-full border-2 border-brand-cyan bg-cyan-50 px-4 py-2 shadow-[3px_3px_0px_0px_#06B6D4] mb-4">
-                  <span className="text-sm font-bold uppercase tracking-wider text-brand-cyan">
-                    Inside TAP
-                  </span>
-                </div>
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-3">
-                  When you need depth, step into a studio.
-                </h2>
-                <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                  Each studio handles one type of focused work. Research, draft,
-                  learn -- without switching context. They share intelligence
-                  across TAP, so nothing falls through the cracks.
-                </p>
-              </header>
-
-              {/* Studio Cards */}
-              <div className="space-y-6">
-                {/* Intel Studio */}
-                <article className="rounded-2xl border-4 border-black bg-gradient-to-br from-intel-50 to-white shadow-[8px_8px_0px_0px_#2563EB] p-5 sm:p-8 hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[12px_12px_0px_0px_#2563EB] transition-all duration-200">
-                  <div className="grid lg:grid-cols-2 gap-6 items-center">
-                    <div>
-                      <div className="flex items-center gap-3 mb-3">
-                        <h3 className="text-2xl sm:text-3xl font-bold text-gray-900">
-                          Intel Studio
-                        </h3>
-                      </div>
-
-                      <p className="text-xl font-semibold text-gray-900 mb-2">
-                        Research &amp; Enrichment
-                      </p>
-                      <p className="text-gray-600 mb-3 text-lg">
-                        Surface relationship signals, verify contacts, and
-                        understand submission preferences before you reach out.
-                      </p>
-
-                      <ul className="space-y-2.5 text-gray-700 mb-5">
-                        <li className="flex items-start gap-3">
-                          <span className="text-green-600 mt-0.5 text-lg">
-                            &#10003;
-                          </span>
-                          <span>
-                            Surface relationship health (warming / neutral /
-                            cooling / at risk)
-                          </span>
-                        </li>
-                        <li className="flex items-start gap-3">
-                          <span className="text-green-600 mt-0.5 text-lg">
-                            &#10003;
-                          </span>
-                          <span>
-                            Explainable context (roles, platform, and verified
-                            submission preferences)
-                          </span>
-                        </li>
-                        <li className="flex items-start gap-3">
-                          <span className="text-green-600 mt-0.5 text-lg">
-                            &#10003;
-                          </span>
-                          <span>
-                            Validation and export to Excel, PDF, or directly to
-                            Pitcher Studio
-                          </span>
-                        </li>
-                      </ul>
-
-                      <div className="bg-intel-100 border-2 border-intel-600 rounded-xl p-4">
-                        <p className="text-sm font-bold text-intel-900">
-                          Validated against BBC Radio, Spotify, and major PR
-                          agency databases.
-                        </p>
-                      </div>
-                    </div>
-
-                    <div className="flex justify-center">
-                      <Image
-                        src="/images/intelligence-complete.png"
-                        alt="Intel Studio showing enriched contact data"
-                        width={320}
-                        height={320}
-                        className="drop-shadow-2xl animate-float"
-                      />
-                    </div>
-                  </div>
-                </article>
-
-                {/* Pitcher Studio */}
-                <article className="rounded-2xl border-4 border-black bg-gradient-to-br from-pitch-50 to-white shadow-[8px_8px_0px_0px_#D97706] p-5 sm:p-8 hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[12px_12px_0px_0px_#D97706] transition-all duration-200">
-                  <div className="grid lg:grid-cols-2 gap-6 items-center">
-                    <div className="flex justify-center lg:order-1">
-                      <Image
-                        src="/images/vinyl-throw-action.png"
-                        alt="Dog throwing vinyl records"
-                        width={320}
-                        height={320}
-                        className="drop-shadow-2xl animate-float"
-                        style={{ animationDelay: "0.5s" }}
-                      />
-                    </div>
-                    <div className="lg:order-2">
-                      <div className="flex items-center gap-3 mb-3">
-                        <h3 className="text-2xl sm:text-3xl font-bold text-gray-900">
-                          Pitcher Studio
-                        </h3>
-                      </div>
-
-                      <p className="text-xl font-semibold text-gray-900 mb-2">
-                        Drafting &amp; Outreach
-                      </p>
-                      <p className="text-gray-600 mb-3 text-lg">
-                        Draft context-aware pitches that respect your voice and
-                        each contact&apos;s preferences.
-                      </p>
-
-                      <ul className="space-y-2.5 text-gray-700 mb-5">
-                        <li className="flex items-start gap-3">
-                          <span className="text-green-600 mt-0.5 text-lg">
-                            &#10003;
-                          </span>
-                          <span>
-                            Import enriched contacts from Intel Studio or add manually
-                          </span>
-                        </li>
-                        <li className="flex items-start gap-3">
-                          <span className="text-green-600 mt-0.5 text-lg">
-                            &#10003;
-                          </span>
-                          <span>
-                            AI generates pitches referencing each contact's
-                            submission guidelines
-                          </span>
-                        </li>
-                        <li className="flex items-start gap-3">
-                          <span className="text-green-600 mt-0.5 text-lg">
-                            &#10003;
-                          </span>
-                          <span>
-                            Carefully draft context-aware pitches in batches,
-                            ready for review and one-click export
-                          </span>
-                        </li>
-                      </ul>
-
-                      <div className="bg-pitch-100 border-2 border-pitch-600 rounded-xl p-4">
-                        <p className="text-sm font-bold text-pitch-900">
-                          Optimised for relationship protection and professional
-                          tone.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </article>
-
-                {/* Tracker Studio */}
-                <article className="rounded-2xl border-4 border-black bg-gradient-to-br from-tracker-50 to-white shadow-[8px_8px_0px_0px_#0D9488] p-5 sm:p-8 hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[12px_12px_0px_0px_#0D9488] transition-all duration-200">
-                  <div className="grid lg:grid-cols-2 gap-6 items-center">
-                    <div>
-                      <div className="flex items-center gap-3 mb-3">
-                        <h3 className="text-2xl sm:text-3xl font-bold text-gray-900">
-                          Tracker Studio
-                        </h3>
-                      </div>
-
-                      <p className="text-xl font-semibold text-gray-900 mb-2">
-                        Learning &amp; Reporting
-                      </p>
-                      <p className="text-gray-600 mb-3 text-lg">
-                        Turn campaign outcomes into actionable intelligence. Know
-                        what worked and what to try next.
-                      </p>
-
-                      <ul className="space-y-2.5 text-gray-700 mb-5">
-                        <li className="flex items-start gap-3">
-                          <span className="text-green-600 mt-0.5 text-lg">
-                            &#10003;
-                          </span>
-                          <span>
-                            AI campaign autopsy - what worked, what didn&apos;t,
-                            and what was learned
-                          </span>
-                        </li>
-                        <li className="flex items-start gap-3">
-                          <span className="text-green-600 mt-0.5 text-lg">
-                            &#10003;
-                          </span>
-                          <span>
-                            Compare results against BBC Radio, Spotify, blog
-                            benchmarks
-                          </span>
-                        </li>
-                        <li className="flex items-start gap-3">
-                          <span className="text-green-600 mt-0.5 text-lg">
-                            &#10003;
-                          </span>
-                          <span>
-                            Know which contacts open, reply, and add your tracks
-                          </span>
-                        </li>
-                      </ul>
-
-                      <div className="bg-tracker-100 border-2 border-tracker-600 rounded-xl p-4">
-                        <p className="text-sm font-bold text-tracker-900">
-                          Build institutional memory. Know exactly how and when
-                          to follow up.
-                        </p>
-                      </div>
-                    </div>
-
-                    <div className="flex justify-center">
-                      <Image
-                        src="/images/tracker-mascot.png"
-                        alt="Dog with magnifying glass tracking campaigns"
-                        width={320}
-                        height={320}
-                        className="drop-shadow-2xl animate-float"
-                        style={{ animationDelay: "1s" }}
-                      />
-                    </div>
-                  </div>
-                </article>
-              </div>
-
-              {/* Section-level CTA */}
-              <div className="text-center mt-10">
-                <MotionScrollReveal variant="fadeUp">
-                  <a
-                    href="https://tap.totalaudiopromo.com/signup?source=marketing"
-                    className="inline-block px-8 py-4 text-lg font-bold text-white bg-gray-900 border-4 border-black rounded-2xl shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 transition-all"
-                  >
-                    Start using TAP free -- all three studios included
-                  </a>
-                  <p className="text-sm text-gray-500 mt-4">
-                    Each studio also works as a standalone tool if you prefer.
-                  </p>
                 </MotionScrollReveal>
               </div>
             </div>
           </section>
 
-          {/* Feature Deep-Dive - Intel Studio Spotlight */}
-          <FeatureShowcase
-            headline="What Intel Studio surfaces"
-            subheadline="The research studio that powers your entire workflow"
-            features={[
-              {
-                icon: "email",
-                title: "Email Validation",
-                description:
-                  "Catches 4/12 bad emails before you send. Stop wasting pitches on dead addresses.",
-              },
-              {
-                icon: "document",
-                title: "Submission Guidelines",
-                description:
-                  "Extracts timing, format, and preferences automatically. Know exactly how to submit.",
-              },
-              {
-                icon: "user",
-                title: "Role Detection",
-                description:
-                  "DJ vs Playlist Curator vs Producer - tailor your pitch to their actual role.",
-              },
-              {
-                icon: "chart",
-                title: "Confidence Scoring",
-                description:
-                  "High/Medium/Low flags so you know which data to trust.",
-              },
-              {
-                icon: "search",
-                title: "Web Search Enhancement",
-                description:
-                  "Finds updated info, role changes, and new contact details.",
-              },
-            ]}
-            image="/images/analyzing-data.png"
-            imageAlt="Intel Studio enrichment process"
-            mockupContent={{
-              name: "Jack Saunders",
-              role: "BBC Radio 1 DJ, New Music Champion",
-              email: "verified (96% confidence)",
-              submission: "Thursday deadline, WAV format, include metadata",
-            }}
-          />
-
-          {/* Case Study Banner */}
-          <div className="max-w-6xl mx-auto px-4 mb-4">
-            <p className="text-sm text-gray-500 italic text-center">
-              Historical results from manual campaigns run by the founder. Not
-              automated outcomes.
-            </p>
-          </div>
+          {/* ============================================
+              SECTION 2: Proof -- Believe
+              "Does this actually work?"
+              ============================================ */}
           <CaseStudyBanner
-            title="BBC Radio 1 Campaign Results -- powered by TAP"
+            title="Real campaign results using TAP workflow"
             metrics={[
               { before: "18 hours", after: "1h 48m", label: "Research Time" },
               {
@@ -708,329 +358,591 @@ export default function HomePage() {
             ]}
           />
 
-          {/* New Experience Timeline Section */}
-          <ExperienceTimeline />
-
-          {/* Social Proof - Redesigned with Context */}
-          <section className="py-12 sm:py-16 bg-white">
-            <div className="max-w-6xl mx-auto px-4">
+          {/* ============================================
+              SECTION 3: The Switch -- Understand
+              "What does it actually do?"
+              ============================================ */}
+          <section id="studios" className="py-16 sm:py-24 bg-white">
+            <div className="max-w-5xl mx-auto px-4">
               <MotionScrollReveal variant="fadeUp">
-                <header className="text-center mb-10">
-                  <p className="text-sm text-gray-500 italic mb-4">
-                    Historical results from manual campaigns run by the founder.
-                    Not automated outcomes.
-                  </p>
-                  <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-3">
-                    Proven with Real Campaigns
+                <div className="text-center mb-14">
+                  <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-stone-900 mb-4 tracking-tight">
+                    Replace 7 tools with one workspace
                   </h2>
-                  <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                    Not theoretical numbers. Real metrics from 300+ pitches
-                    across 15 campaigns (2020-2025).
+                  <p className="text-lg text-stone-600 max-w-2xl mx-auto mb-8">
+                    Gmail, spreadsheets, WARM, CoverageBook, Google Drive,
+                    Mailchimp, Typeform — you&apos;re juggling too many tools.
+                    TAP handles the workflow in one place.
                   </p>
-                </header>
+                </div>
               </MotionScrollReveal>
 
-              <MotionScrollReveal variant="stagger">
-                <div className="grid md:grid-cols-3 gap-5">
+              <MotionScrollReveal variant="stagger" trigger="eager">
+                <div className="grid md:grid-cols-3 gap-8">
+                  {/* Intel */}
                   <MotionStaggerChild>
-                    <div className="bg-gradient-to-br from-intel-50 to-white rounded-2xl border-4 border-intel-600 shadow-glow-intel-sm p-6 text-center">
-                      <div className="text-5xl font-black text-intel-600 mb-2">
-                        Industry-Leading
+                    <div className="relative p-6 rounded-2xl bg-white border-l-[3px] border-l-transparent border border-stone-200 shadow-soft hover:shadow-soft-lg hover:border-l-intel-600 hover:-translate-y-0.5 transition-all duration-200">
+                      <div className="w-1 h-12 bg-intel-600 rounded-full absolute left-0 top-8 opacity-0" />
+                      <div className="pl-4">
+                        <h3 className="text-lg font-bold text-stone-900 mb-2">
+                          Research
+                        </h3>
+                        <a
+                          href="https://intel.totalaudiopromo.com"
+                          className="text-sm font-medium text-intel-600 hover:text-intel-700 transition-colors mb-3 inline-block"
+                        >
+                          Intel Studio &rarr;
+                        </a>
+                        <p className="text-stone-600 text-sm leading-relaxed">
+                          Enrich contacts with verified emails, submission
+                          preferences, and role detection. Know who to pitch
+                          before you pitch them.
+                        </p>
                       </div>
-                      <p className="text-lg font-bold text-gray-900 mb-1">
-                        Data Accuracy
-                      </p>
-                      <p className="text-sm text-gray-600">
-                        Tested with BBC Radio 1, Spotify, and 200+ industry
-                        contacts.
-                      </p>
                     </div>
                   </MotionStaggerChild>
+
+                  {/* Pitcher */}
                   <MotionStaggerChild>
-                    <div className="bg-gradient-to-br from-blue-50 to-white rounded-2xl border-4 border-blue-600 shadow-[0_0_30px_rgba(37,99,235,0.3)] p-6 text-center">
-                      <div className="text-5xl font-black text-blue-600 mb-2">
-                        Data You Own
+                    <div className="relative p-6 rounded-2xl bg-white border-l-[3px] border-l-transparent border border-stone-200 shadow-soft hover:shadow-soft-lg hover:border-l-pitch-600 hover:-translate-y-0.5 transition-all duration-200">
+                      <div className="w-1 h-12 bg-pitch-600 rounded-full absolute left-0 top-8 opacity-0" />
+                      <div className="pl-4">
+                        <h3 className="text-lg font-bold text-stone-900 mb-2">
+                          Draft
+                        </h3>
+                        <a
+                          href="https://pitcher.totalaudiopromo.com"
+                          className="text-sm font-medium text-pitch-600 hover:text-pitch-700 transition-colors mb-3 inline-block"
+                        >
+                          Pitcher Studio &rarr;
+                        </a>
+                        <p className="text-stone-600 text-sm leading-relaxed">
+                          Generate context-aware pitches that reference each
+                          contact&apos;s submission guidelines. Review, edit,
+                          and export in batches.
+                        </p>
                       </div>
-                      <p className="text-lg font-bold text-gray-900 mb-1">
-                        Professional Control
-                      </p>
-                      <p className="text-sm text-gray-600">
-                        Export-ready intelligence that belongs to you, not the
-                        platform.
-                      </p>
                     </div>
                   </MotionStaggerChild>
+
+                  {/* Tracker */}
                   <MotionStaggerChild>
-                    <div className="bg-gradient-to-br from-pitch-50 to-white rounded-2xl border-4 border-pitch-600 shadow-glow-pitch-sm p-6 text-center">
-                      <div className="text-5xl font-black text-pitch-600 mb-2">
-                        <AnimatedCounter target={14} duration={1.5} />-
-                        <AnimatedCounter
-                          target={18}
-                          suffix="%"
-                          duration={1.5}
-                          delay={0.3}
-                        />
+                    <div className="relative p-6 rounded-2xl bg-white border-l-[3px] border-l-transparent border border-stone-200 shadow-soft hover:shadow-soft-lg hover:border-l-tracker-600 hover:-translate-y-0.5 transition-all duration-200">
+                      <div className="w-1 h-12 bg-tracker-600 rounded-full absolute left-0 top-8 opacity-0" />
+                      <div className="pl-4">
+                        <h3 className="text-lg font-bold text-stone-900 mb-2">
+                          Track
+                        </h3>
+                        <a
+                          href="https://tracker.totalaudiopromo.com"
+                          className="text-sm font-medium text-tracker-600 hover:text-tracker-700 transition-colors mb-3 inline-block"
+                        >
+                          Tracker Studio &rarr;
+                        </a>
+                        <p className="text-stone-600 text-sm leading-relaxed">
+                          See which contacts opened, replied, and added your
+                          track. Turn campaign outcomes into intelligence for
+                          next time.
+                        </p>
                       </div>
-                      <p className="text-lg font-bold text-gray-900 mb-1">
-                        Response Rate
-                      </p>
-                      <p className="text-sm text-gray-600">
-                        vs 2-5% industry average for cold outreach.
-                      </p>
                     </div>
                   </MotionStaggerChild>
                 </div>
               </MotionScrollReveal>
+
+              <div className="text-center mt-10">
+                <MotionScrollReveal variant="fadeUp">
+                  <a
+                    href="https://tap.totalaudiopromo.com/signup?source=studios"
+                    className="inline-block px-8 py-4 text-base font-bold text-white bg-cyan-700 rounded-full hover:bg-cyan-800 transition-colors shadow-[0_1px_2px_rgba(0,0,0,0.05),0_4px_16px_rgba(8,145,178,0.25)]"
+                  >
+                    Start using TAP free — all three studios included
+                  </a>
+                </MotionScrollReveal>
+              </div>
             </div>
           </section>
 
-          {/* Pricing Section */}
-          <section id="pricing" className="py-16 sm:py-24 bg-gray-50 border-y-4 border-black">
-            <div className="max-w-6xl mx-auto px-4">
-              <header className="text-center mb-12 sm:mb-16">
-                <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 mb-4 tracking-tight">
-                  Simple pricing for <span className="text-brand-cyan">TAP</span>
+          {/* ============================================
+              SECTION 4: ICP Filter -- Self-Select
+              "Is this for someone like me?"
+              ============================================ */}
+          <section className="py-16 sm:py-20 bg-stone-100">
+            <div className="max-w-5xl mx-auto px-4">
+              <div className="grid lg:grid-cols-2 gap-12 items-start">
+                <div>
+                  <MotionScrollReveal variant="fadeUp">
+                    <h2 className="text-3xl sm:text-4xl font-bold text-stone-900 mb-8 tracking-tight">
+                      Built for experienced operators
+                    </h2>
+                  </MotionScrollReveal>
+
+                  <div className="space-y-8">
+                    <div>
+                      <h3 className="text-lg font-bold text-stone-900 mb-3 flex items-center gap-2">
+                        <span className="flex-shrink-0 w-6 h-6 rounded-full bg-green-600 text-white flex items-center justify-center text-xs">
+                          &#10003;
+                        </span>
+                        This is for you if:
+                      </h3>
+                      <ul className="space-y-3 text-stone-700">
+                        <li className="flex items-start gap-3">
+                          <span className="font-semibold">Agency Level</span> —
+                          You&apos;re a small PR agency (1–5 people) managing
+                          multiple campaigns.
+                        </li>
+                        <li className="flex items-start gap-3">
+                          <span className="font-semibold">Experienced DIY</span>{" "}
+                          — Label or manager with a proven track record.
+                        </li>
+                        <li className="flex items-start gap-3">
+                          <span className="font-semibold">
+                            Relationship First
+                          </span>{" "}
+                          — You care about long-term industry reputation, not
+                          volume.
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div>
+                      <h3 className="text-lg font-bold text-stone-900 mb-3 flex items-center gap-2">
+                        <span className="flex-shrink-0 w-6 h-6 rounded-full bg-red-500 text-white flex items-center justify-center text-xs">
+                          &times;
+                        </span>
+                        This is NOT for you if:
+                      </h3>
+                      <ul className="space-y-3 text-stone-500 italic">
+                        <li>
+                          You&apos;re releasing your first record and exploring
+                          how PR works.
+                        </li>
+                        <li>
+                          You want &quot;send it everywhere&quot; mass outreach.
+                        </li>
+                        <li>
+                          You need templates or hand-held guidance on what to
+                          say.
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div className="mt-8">
+                    <a
+                      href="https://tap.totalaudiopromo.com/signup?source=icp-filter"
+                      className="inline-block px-6 py-3 text-base font-bold text-white bg-cyan-700 rounded-full hover:bg-cyan-800 transition-colors shadow-[0_1px_2px_rgba(0,0,0,0.05),0_4px_16px_rgba(8,145,178,0.25)]"
+                    >
+                      Start Free — No Card Required
+                    </a>
+                  </div>
+                </div>
+
+                <MotionScrollReveal variant="fadeLeft" delay={0.2}>
+                  <div className="flex justify-center">
+                    <Image
+                      src="/images/total_audio_promo_logo_trans.png"
+                      alt="Total Audio Promo dog mascot with speakers"
+                      width={320}
+                      height={320}
+                      className="drop-shadow-lg animate-float-slow"
+                    />
+                  </div>
+                </MotionScrollReveal>
+              </div>
+            </div>
+          </section>
+
+          {/* ============================================
+              SECTION 5: Founder Journey -- Trust
+              "Who built this?"
+              ============================================ */}
+          <ExperienceTimeline />
+
+          {/* ============================================
+              SECTION 6: Trust Strip + Pricing
+              ============================================ */}
+          <section className="py-10 bg-stone-50 border-y border-stone-200 border-t-cyan-700/20">
+            <div className="max-w-4xl mx-auto px-4">
+              <div className="flex flex-wrap justify-center gap-8 text-sm text-stone-600">
+                <div className="flex items-center gap-2">
+                  <svg
+                    className="w-5 h-5 text-green-600"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                    />
+                  </svg>
+                  256-bit encrypted, UK-hosted
+                </div>
+                <div className="flex items-center gap-2">
+                  <svg
+                    className="w-5 h-5 text-green-600"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                    />
+                  </svg>
+                  GDPR compliant
+                </div>
+                <div className="flex items-center gap-2">
+                  <svg
+                    className="w-5 h-5 text-green-600"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                    />
+                  </svg>
+                  UK-based
+                </div>
+                <div className="flex items-center gap-2">
+                  <svg
+                    className="w-5 h-5 text-green-600"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                    />
+                  </svg>
+                  Your data, exportable anytime
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section
+            id="pricing"
+            className="py-16 sm:py-24 bg-white"
+          >
+            <div className="max-w-5xl mx-auto px-4">
+              <header className="text-center mb-12">
+                <div className="inline-block mb-3 px-3 py-1 rounded-full bg-amber-50 border border-amber-200 text-amber-800 text-xs font-bold uppercase tracking-wide">
+                  Early adopter pricing
+                </div>
+                <h2 className="text-3xl sm:text-4xl font-bold text-stone-900 mb-3 tracking-tight">
+                  Music PR Software Pricing
                 </h2>
-                <p className="text-xl text-gray-600 max-w-2xl mx-auto font-medium">
-                  All three studios included in every plan. Start free, upgrade when you&apos;re ready.
+                <p className="text-lg text-stone-600 max-w-xl mx-auto">
+                  All three studios included in every plan. Start free, upgrade
+                  when you&apos;re ready. Lock in these rates before they go up.
                 </p>
               </header>
 
-              <div className="grid lg:grid-cols-3 gap-8 items-stretch">
-                {/* Tier 1: Free */}
-                <article className="bg-white border-4 border-black rounded-3xl p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 transition-all flex flex-col">
-                  <div className="mb-8">
-                    <h3 className="text-2xl font-bold tracking-tighter mb-2">Free</h3>
-                    <div className="flex items-baseline gap-1 mb-4">
-                      <span className="text-5xl font-extrabold italic">Free</span>
+              <div className="grid lg:grid-cols-3 gap-6 items-stretch">
+                {/* Free */}
+                <article className="bg-white border border-stone-200 rounded-2xl p-7 shadow-soft hover:shadow-soft-lg transition-shadow flex flex-col">
+                  <div className="mb-6">
+                    <h3 className="text-xl font-bold text-stone-900 mb-1">
+                      Free
+                    </h3>
+                    <div className="flex items-baseline gap-1 mb-3">
+                      <span className="text-4xl font-bold text-stone-900">
+                        Free
+                      </span>
                     </div>
-                    <p className="text-gray-600 font-medium leading-relaxed">
-                      All studios, genuinely free. No credit card required.
+                    <p className="text-sm text-stone-600">
+                      Run your first campaign for free. No credit card required.
                     </p>
                   </div>
 
-                  <ul className="space-y-4 mb-10 flex-grow">
-                    <li className="flex items-center gap-3 text-sm font-bold text-gray-700">
-                      <span className="w-5 h-5 rounded-md bg-intel-100 border-2 border-intel-600 flex items-center justify-center text-[10px] text-intel-600">✓</span>
+                  <ul className="space-y-3 mb-8 flex-grow text-sm text-stone-700">
+                    <li className="flex items-center gap-2">
+                      <span className="text-green-600">&#10003;</span>
                       All three studios
                     </li>
-                    <li className="flex items-center gap-3 text-sm font-bold text-gray-700">
-                      <span className="w-5 h-5 rounded-md bg-intel-100 border-2 border-intel-600 flex items-center justify-center text-[10px] text-intel-600">✓</span>
+                    <li className="flex items-center gap-2">
+                      <span className="text-green-600">&#10003;</span>
                       10 enrichments/month
                     </li>
-                    <li className="flex items-center gap-3 text-sm font-bold text-gray-700">
-                      <span className="w-5 h-5 rounded-md bg-intel-100 border-2 border-intel-600 flex items-center justify-center text-[10px] text-intel-600">✓</span>
-                      5 pitches/month
+                    <li className="flex items-center gap-2">
+                      <span className="text-green-600">&#10003;</span>
+                      3 pitches/month
                     </li>
-                    <li className="flex items-center gap-3 text-sm font-bold text-gray-700">
-                      <span className="w-5 h-5 rounded-md bg-intel-100 border-2 border-intel-600 flex items-center justify-center text-[10px] text-intel-600">✓</span>
-                      1 campaign
+                    <li className="flex items-center gap-2">
+                      <span className="text-green-600">&#10003;</span>
+                      2 campaigns
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="text-green-600">&#10003;</span>
+                      25 contacts
                     </li>
                   </ul>
 
                   <a
-                    href="https://tap.totalaudiopromo.com/signup?source=marketing"
-                    className="w-full py-4 text-center border-2 border-black rounded-xl font-bold tracking-tight hover:bg-gray-50 transition-colors block"
+                    href="https://tap.totalaudiopromo.com/signup?source=pricing"
+                    className="w-full py-3 text-center text-sm font-bold text-stone-900 border border-stone-300 rounded-full hover:bg-stone-50 transition-colors block"
                   >
                     Start Free
                   </a>
                 </article>
 
-                {/* Tier 2: Pro (Highlight) */}
-                <article className="bg-white border-4 border-black rounded-[2.5rem] p-10 shadow-[12px_12px_0px_0px_rgba(37,99,235,1)] hover:-translate-y-2 transition-all flex flex-col relative ring-4 ring-blue-100 ring-offset-8">
-                  <div className="absolute -top-5 left-1/2 -translate-x-1/2 bg-blue-600 text-white px-6 py-2 rounded-full border-4 border-black text-xs font-black uppercase tracking-widest shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                {/* Pro */}
+                <article className="bg-white border-2 border-cyan-700 rounded-2xl p-7 shadow-soft-lg flex flex-col relative">
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-cyan-700 text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wide">
                     Most Popular
                   </div>
 
-                  <div className="mb-8 pt-4">
-                    <h3 className="text-3xl font-bold tracking-tighter mb-2">Pro</h3>
+                  <div className="mb-6 pt-2">
+                    <h3 className="text-xl font-bold text-stone-900 mb-1">
+                      Pro
+                    </h3>
                     <div className="flex items-baseline gap-1 mb-1">
-                      <span className="text-6xl font-extrabold italic text-blue-600">&pound;19</span>
-                      <span className="text-gray-400 font-bold uppercase text-xs tracking-widest">/month</span>
+                      <span className="text-4xl font-bold text-stone-900">
+                        &pound;19
+                      </span>
+                      <span className="text-stone-400 text-sm">/month</span>
                     </div>
-                    <p className="text-sm text-gray-500 mb-4">
+                    <p className="text-xs text-stone-500 mb-1">
                       or &pound;190/year (save 2 months)
                     </p>
-                    <p className="text-gray-900 font-bold leading-relaxed">
-                      Everything you need for professional PR operations.
+                    <p className="text-xs text-amber-700 font-medium mb-3">
+                      Early adopter rate -- lock it in
+                    </p>
+                    <p className="text-sm text-stone-700 font-medium">
+                      Full access for operators running real campaigns.
                     </p>
                   </div>
 
-                  <ul className="space-y-5 mb-10 flex-grow">
-                    <li className="flex items-center gap-3 text-sm font-bold text-gray-900">
-                      <span className="w-6 h-6 rounded-lg bg-intel-600 text-white flex items-center justify-center border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">✓</span>
-                      100 enrichments/month
+                  <ul className="space-y-3 mb-8 flex-grow text-sm text-stone-700">
+                    <li className="flex items-center gap-2">
+                      <span className="text-green-600">&#10003;</span>
+                      200 enrichments/month
                     </li>
-                    <li className="flex items-center gap-3 text-sm font-bold text-gray-900">
-                      <span className="w-6 h-6 rounded-lg bg-pitch-600 text-white flex items-center justify-center border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">✓</span>
-                      50 pitches/month
+                    <li className="flex items-center gap-2">
+                      <span className="text-green-600">&#10003;</span>
+                      Unlimited pitches
                     </li>
-                    <li className="flex items-center gap-3 text-sm font-bold text-gray-900">
-                      <span className="w-6 h-6 rounded-lg bg-tracker-600 text-white flex items-center justify-center border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">✓</span>
-                      Unlimited campaigns
+                    <li className="flex items-center gap-2">
+                      <span className="text-green-600">&#10003;</span>
+                      10 active campaigns
                     </li>
-                    <li className="flex items-center gap-3 text-sm font-medium text-gray-500">
-                      <span className="text-green-600 font-bold">→</span> Priority support
+                    <li className="flex items-center gap-2">
+                      <span className="text-green-600">&#10003;</span>
+                      Unlimited contacts
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="text-green-600">&#10003;</span>
+                      Priority support
                     </li>
                   </ul>
 
                   <a
-                    href="https://tap.totalaudiopromo.com/signup?source=marketing"
-                    className="w-full py-5 text-xl text-center bg-blue-600 text-white border-4 border-black rounded-2xl font-bold tracking-tight shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] transition-all block"
+                    href="https://tap.totalaudiopromo.com/signup?source=pricing"
+                    className="w-full py-3 text-center text-sm font-bold text-white bg-cyan-700 rounded-full hover:bg-cyan-800 transition-colors block shadow-[0_1px_2px_rgba(0,0,0,0.05),0_4px_16px_rgba(8,145,178,0.25)]"
                   >
                     Upgrade to Pro
                   </a>
                 </article>
 
-                {/* Tier 3: Agency */}
-                <article className="bg-white border-4 border-black rounded-3xl p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 transition-all flex flex-col">
-                  <div className="mb-8">
-                    <h3 className="text-2xl font-bold tracking-tighter mb-2">Agency</h3>
+                {/* Agency */}
+                <article className="bg-white border border-stone-200 rounded-2xl p-7 shadow-soft hover:shadow-soft-lg transition-shadow flex flex-col">
+                  <div className="mb-6">
+                    <h3 className="text-xl font-bold text-stone-900 mb-1">
+                      Agency
+                    </h3>
                     <div className="flex items-baseline gap-1 mb-1">
-                      <span className="text-5xl font-extrabold italic">&pound;79</span>
-                      <span className="text-gray-400 font-bold uppercase text-xs tracking-widest">/month</span>
+                      <span className="text-4xl font-bold text-stone-900">
+                        &pound;79
+                      </span>
+                      <span className="text-stone-400 text-sm">/month</span>
                     </div>
-                    <p className="text-sm text-gray-500 mb-4">
+                    <p className="text-xs text-stone-500 mb-1">
                       or &pound;790/year (save 2 months)
                     </p>
-                    <p className="text-gray-600 font-medium leading-relaxed">
-                      For teams and labels managing multiple artist rosters.
+                    <p className="text-xs text-amber-700 font-medium mb-3">
+                      Early adopter rate -- lock it in
+                    </p>
+                    <p className="text-sm text-stone-600">
+                      For teams running multiple artist campaigns.
                     </p>
                   </div>
 
-                  <ul className="space-y-4 mb-10 flex-grow">
-                    <li className="flex items-center gap-3 text-sm font-bold text-gray-700">
-                      <span className="w-5 h-5 rounded-md bg-gray-900 text-white flex items-center justify-center text-[10px] border-2 border-black">✓</span>
-                      Unlimited everything
+                  <ul className="space-y-3 mb-8 flex-grow text-sm text-stone-700">
+                    <li className="flex items-center gap-2">
+                      <span className="text-green-600">&#10003;</span>
+                      500 enrichments/month
                     </li>
-                    <li className="flex items-center gap-3 text-sm font-bold text-gray-700">
-                      <span className="w-5 h-5 rounded-md bg-gray-900 text-white flex items-center justify-center text-[10px] border-2 border-black">✓</span>
-                      Team access
+                    <li className="flex items-center gap-2">
+                      <span className="text-green-600">&#10003;</span>
+                      Unlimited pitches &amp; campaigns
                     </li>
-                    <li className="flex items-center gap-3 text-sm font-bold text-gray-700">
-                      <span className="w-5 h-5 rounded-md bg-gray-900 text-white flex items-center justify-center text-[10px] border-2 border-black">✓</span>
+                    <li className="flex items-center gap-2">
+                      <span className="text-green-600">&#10003;</span>
+                      Up to 5 team members
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="text-green-600">&#10003;</span>
                       Dedicated support
                     </li>
                   </ul>
 
                   <a
                     href="mailto:info@totalaudiopromo.com"
-                    className="w-full py-4 text-center border-2 border-black rounded-xl font-bold tracking-tight hover:bg-gray-50 transition-colors block"
+                    className="w-full py-3 text-center text-sm font-bold text-stone-900 border border-stone-300 rounded-full hover:bg-stone-50 transition-colors block"
                   >
                     Contact Us
                   </a>
                 </article>
               </div>
 
-              <p className="text-center text-sm text-gray-500 mt-8">
-                All plans include all three studios. Annual billing saves 2 months. Cancel anytime.
+              <p className="text-center text-sm text-stone-500 mt-6">
+                All plans include all three studios. Early adopter pricing --
+                these rates won&apos;t last forever. Cancel anytime.
               </p>
             </div>
           </section>
 
-          {/* Guarantee/Trust Section */}
-          <section className="py-12 bg-white">
-            <div className="max-w-4xl mx-auto px-4 text-center">
-              <div className="bg-green-50 rounded-2xl border-4 border-green-600 shadow-[8px_8px_0px_0px_#16A34A] p-6 sm:p-10">
-                <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
-                  Professional standard. Powered by TAP.
-                </h2>
-                <p className="text-lg text-gray-600 mb-6 max-w-2xl mx-auto">
-                  Built for professionals who require precise intelligence and
-                  relationship protection in their daily workflow.
-                </p>
+          {/* ============================================
+              SECTION 7: FAQ
+              ============================================ */}
+          <section className="py-16 sm:py-20 bg-stone-100">
+            <div className="max-w-3xl mx-auto px-4">
+              <h2 className="text-3xl sm:text-4xl font-bold text-stone-900 mb-10 tracking-tight text-center">
+                Frequently Asked Questions
+              </h2>
 
-                <div className="flex flex-wrap justify-center gap-6">
-                  <div className="flex items-center gap-2 text-sm text-gray-600">
-                    <svg
-                      className="w-5 h-5 text-green-600"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
-                      />
+              <div className="space-y-6">
+                <details className="group bg-white border border-stone-200 rounded-2xl shadow-soft">
+                  <summary className="flex items-center justify-between px-6 py-5 cursor-pointer text-lg font-semibold text-stone-900 [&::-webkit-details-marker]:hidden">
+                    Is this another CRM?
+                    <svg className="w-5 h-5 text-stone-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
-                    <span>256-bit AES Encryption</span>
+                  </summary>
+                  <div className="px-6 pb-5 text-stone-600 leading-relaxed">
+                    No. CRMs track relationships. TAP handles the actual work of
+                    music PR -- researching contacts, drafting pitches, and
+                    tracking outcomes. It replaces the spreadsheets, email
+                    templates, and manual processes you&apos;re currently juggling.
                   </div>
-                  <div className="flex items-center gap-2 text-sm text-gray-600">
-                    <svg
-                      className="w-5 h-5 text-green-600"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
-                      />
+                </details>
+
+                <details className="group bg-white border border-stone-200 rounded-2xl shadow-soft">
+                  <summary className="flex items-center justify-between px-6 py-5 cursor-pointer text-lg font-semibold text-stone-900 [&::-webkit-details-marker]:hidden">
+                    Does TAP send emails automatically?
+                    <svg className="w-5 h-5 text-stone-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
-                    <span>GDPR Compliant</span>
+                  </summary>
+                  <div className="px-6 pb-5 text-stone-600 leading-relaxed">
+                    Never. TAP drafts pitches for you to review and send yourself.
+                    Your reputation depends on every message being intentional.
+                    We&apos;ll never auto-send on your behalf.
                   </div>
-                  <div className="flex items-center gap-2 text-sm text-gray-600">
-                    <svg
-                      className="w-5 h-5 text-green-600"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
-                      />
+                </details>
+
+                <details className="group bg-white border border-stone-200 rounded-2xl shadow-soft">
+                  <summary className="flex items-center justify-between px-6 py-5 cursor-pointer text-lg font-semibold text-stone-900 [&::-webkit-details-marker]:hidden">
+                    What does TAP replace?
+                    <svg className="w-5 h-5 text-stone-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
-                    <span>SOC 2 Infrastructure</span>
+                  </summary>
+                  <div className="px-6 pb-5 text-stone-600 leading-relaxed">
+                    The stack you&apos;re currently stitching together: contact
+                    spreadsheets, WARM or similar databases, email templates in
+                    Google Docs, CoverageBook, Mailchimp, and whatever you&apos;re
+                    using to track responses. TAP handles all of it.
                   </div>
-                </div>
+                </details>
+
+                <details className="group bg-white border border-stone-200 rounded-2xl shadow-soft">
+                  <summary className="flex items-center justify-between px-6 py-5 cursor-pointer text-lg font-semibold text-stone-900 [&::-webkit-details-marker]:hidden">
+                    Can I import my existing contacts?
+                    <svg className="w-5 h-5 text-stone-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </summary>
+                  <div className="px-6 pb-5 text-stone-600 leading-relaxed">
+                    Yes. You can import contacts from CSV or add them manually.
+                    Intel Studio then enriches them with verified emails,
+                    submission preferences, and role detection.
+                  </div>
+                </details>
+
+                <details className="group bg-white border border-stone-200 rounded-2xl shadow-soft">
+                  <summary className="flex items-center justify-between px-6 py-5 cursor-pointer text-lg font-semibold text-stone-900 [&::-webkit-details-marker]:hidden">
+                    Is my data safe?
+                    <svg className="w-5 h-5 text-stone-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </summary>
+                  <div className="px-6 pb-5 text-stone-600 leading-relaxed">
+                    Yes. TAP is GDPR compliant, UK-hosted, and encrypted with
+                    256-bit encryption. Your data is exportable anytime -- you
+                    always own your contacts and campaign history.
+                  </div>
+                </details>
               </div>
             </div>
           </section>
 
-          {/* Newsletter Section */}
-          <section id="newsletter" className="py-12 sm:py-16 bg-gray-50">
+          {/* ============================================
+              SECTION 8: Newsletter -- Nurture
+              ============================================ */}
+          <section id="newsletter" className="py-14 sm:py-20 bg-stone-50">
             <div className="max-w-xl mx-auto px-4 text-center">
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
-                Stay in the loop
+              <h2 className="text-2xl sm:text-3xl font-bold text-stone-900 mb-3">
+                Not ready to sign up?
               </h2>
-              <p className="text-lg text-gray-600 mb-8">
-                Product updates and music PR insights. No spam.
+              <p className="text-lg text-stone-600 mb-8">
+                Fortnightly tips for music PR operators. No spam.
               </p>
               <NewsletterSignup />
             </div>
           </section>
         </main>
 
-        {/* Footer - Complete with Legal */}
-        <footer className="bg-gray-900 text-white py-12 sm:py-16">
-          <div className="max-w-6xl mx-auto px-4">
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
-              {/* Brand Section */}
+        {/* Footer */}
+        <footer className="relative bg-stone-900 text-white pt-14 sm:pt-20 pb-10 sm:pb-14">
+          {/* Subtle cyan gradient accent at top */}
+          <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-cyan-700/40 to-transparent" />
+
+          <div className="max-w-5xl mx-auto px-4">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+              {/* Brand */}
               <div className="sm:col-span-2 lg:col-span-1">
-                <div className="mb-4">
+                <div className="mb-5">
                   <Image
                     src="/images/total-audio-promo-wordmark-stacked.png"
                     alt="Total Audio Promo"
                     width={80}
                     height={80}
-                    className="object-contain h-16 w-auto brightness-0 invert"
+                    className="object-contain h-14 w-auto brightness-0 invert"
                   />
                 </div>
-                <p className="text-sm text-gray-400 mb-4">
-                  TAP -- where music PR work actually happens. Built by a radio
-                  promoter.
+                <p className="text-sm text-stone-400 mb-5 leading-relaxed">
+                  Music PR software built by a working radio promoter. Research,
+                  draft, track -- one workspace.
                 </p>
                 <div className="flex gap-4">
                   <a
                     href="https://x.com/chrisschouk"
-                    className="text-gray-400 hover:text-white transition-colors"
+                    className="text-stone-500 hover:text-cyan-400 transition-colors"
+                    aria-label="Follow on X (Twitter)"
                   >
                     <svg
                       className="w-5 h-5"
@@ -1042,7 +954,8 @@ export default function HomePage() {
                   </a>
                   <a
                     href="https://www.linkedin.com/in/chrisschofield1/"
-                    className="text-gray-400 hover:text-white transition-colors"
+                    className="text-stone-500 hover:text-cyan-400 transition-colors"
+                    aria-label="Connect on LinkedIn"
                   >
                     <svg
                       className="w-5 h-5"
@@ -1057,22 +970,22 @@ export default function HomePage() {
 
               {/* Platform */}
               <div>
-                <h4 className="text-sm font-bold uppercase tracking-wider mb-4">
+                <h4 className="text-xs font-bold uppercase tracking-widest text-stone-500 mb-4">
                   Platform
                 </h4>
-                <ul className="space-y-2">
+                <ul className="space-y-2.5">
                   <li>
                     <a
-                      href="https://tap.totalaudiopromo.com/home?source=marketing"
-                      className="text-sm text-gray-400 hover:text-white transition-colors"
+                      href="https://tap.totalaudiopromo.com/home?source=footer"
+                      className="text-sm text-stone-400 hover:text-white transition-colors"
                     >
-                      TAP
+                      TAP Workspace
                     </a>
                   </li>
                   <li>
                     <a
                       href="https://intel.totalaudiopromo.com"
-                      className="text-sm text-gray-400 hover:text-white transition-colors"
+                      className="text-sm text-stone-400 hover:text-white transition-colors"
                     >
                       Intel Studio
                     </a>
@@ -1080,7 +993,7 @@ export default function HomePage() {
                   <li>
                     <a
                       href="https://pitcher.totalaudiopromo.com"
-                      className="text-sm text-gray-400 hover:text-white transition-colors"
+                      className="text-sm text-stone-400 hover:text-white transition-colors"
                     >
                       Pitcher Studio
                     </a>
@@ -1088,7 +1001,7 @@ export default function HomePage() {
                   <li>
                     <a
                       href="https://tracker.totalaudiopromo.com"
-                      className="text-sm text-gray-400 hover:text-white transition-colors"
+                      className="text-sm text-stone-400 hover:text-white transition-colors"
                     >
                       Tracker Studio
                     </a>
@@ -1098,38 +1011,22 @@ export default function HomePage() {
 
               {/* Resources */}
               <div>
-                <h4 className="text-sm font-bold uppercase tracking-wider mb-4">
+                <h4 className="text-xs font-bold uppercase tracking-widest text-stone-500 mb-4">
                   Resources
                 </h4>
-                <ul className="space-y-2">
-                  <li>
-                    <a
-                      href="https://intel.totalaudiopromo.com/blog"
-                      className="text-sm text-gray-400 hover:text-white transition-colors"
-                    >
-                      Blog
-                    </a>
-                  </li>
+                <ul className="space-y-2.5">
                   <li>
                     <a
                       href="#newsletter"
-                      className="text-sm text-gray-400 hover:text-white transition-colors"
+                      className="text-sm text-stone-400 hover:text-white transition-colors"
                     >
-                      Mailing List
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#studios"
-                      className="text-sm text-gray-400 hover:text-white transition-colors"
-                    >
-                      How It Works
+                      Newsletter
                     </a>
                   </li>
                   <li>
                     <Link
                       href="/pricing"
-                      className="text-sm text-gray-400 hover:text-white transition-colors"
+                      className="text-sm text-stone-400 hover:text-white transition-colors"
                     >
                       Pricing
                     </Link>
@@ -1137,7 +1034,7 @@ export default function HomePage() {
                   <li>
                     <a
                       href="mailto:info@totalaudiopromo.com"
-                      className="text-sm text-gray-400 hover:text-white transition-colors"
+                      className="text-sm text-stone-400 hover:text-white transition-colors"
                     >
                       Contact
                     </a>
@@ -1147,14 +1044,14 @@ export default function HomePage() {
 
               {/* Legal */}
               <div>
-                <h4 className="text-sm font-bold uppercase tracking-wider mb-4">
+                <h4 className="text-xs font-bold uppercase tracking-widest text-stone-500 mb-4">
                   Legal
                 </h4>
-                <ul className="space-y-2">
+                <ul className="space-y-2.5">
                   <li>
                     <Link
                       href="/privacy"
-                      className="text-sm text-gray-400 hover:text-white transition-colors"
+                      className="text-sm text-stone-400 hover:text-white transition-colors"
                     >
                       Privacy Policy
                     </Link>
@@ -1162,23 +1059,15 @@ export default function HomePage() {
                   <li>
                     <Link
                       href="/terms"
-                      className="text-sm text-gray-400 hover:text-white transition-colors"
+                      className="text-sm text-stone-400 hover:text-white transition-colors"
                     >
                       Terms of Service
                     </Link>
                   </li>
                   <li>
-                    <a
-                      href="https://intel.totalaudiopromo.com/cookies"
-                      className="text-sm text-gray-400 hover:text-white transition-colors"
-                    >
-                      Cookie Policy
-                    </a>
-                  </li>
-                  <li>
                     <Link
                       href="/gdpr"
-                      className="text-sm text-gray-400 hover:text-white transition-colors"
+                      className="text-sm text-stone-400 hover:text-white transition-colors"
                     >
                       GDPR
                     </Link>
@@ -1187,10 +1076,12 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="pt-6 border-t border-white/10 text-center">
-              <p className="text-sm text-gray-400">
-                © {new Date().getFullYear()} Total Audio Promo. Built in
-                Brighton by Chris Schofield.
+            <div className="pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
+              <p className="text-sm text-stone-500">
+                &copy; {new Date().getFullYear()} Total Audio Promo
+              </p>
+              <p className="text-sm text-stone-500">
+                Built in Brighton by Chris Schofield
               </p>
             </div>
           </div>

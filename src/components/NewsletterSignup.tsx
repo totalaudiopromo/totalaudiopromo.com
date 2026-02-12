@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Mail, ArrowRight, CheckCircle2, Loader2 } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Loader2 } from 'lucide-react';
 
 interface NewsletterSignupProps {
   variant?: 'inline' | 'card' | 'footer';
@@ -99,8 +99,8 @@ export function NewsletterSignup({
     return (
       <div className="space-y-4">
         <div className="space-y-2">
-          <h3 className="font-display text-lg font-bold text-gray-900">{title}</h3>
-          <p className="text-sm text-gray-600">{description}</p>
+          <h3 className="font-display text-lg font-bold text-stone-900">{title}</h3>
+          <p className="text-sm text-stone-600">{description}</p>
         </div>
         <form onSubmit={handleSubmit} className="space-y-3">
           <input
@@ -141,80 +141,64 @@ export function NewsletterSignup({
             </p>
           )}
         </form>
-        <p className="text-xs text-gray-500">
+        <p className="text-xs text-stone-400">
           No spam, unsubscribe anytime.
         </p>
       </div>
     );
   }
 
-  // Default: card variant - full neo-brutalist styling
+  // Default: card variant - TAP-aligned clean styling
   return (
-    <div className="glass-panel">
-      <div className="flex flex-col sm:flex-row items-start gap-4">
-        {/* Icon */}
-        <div className="rounded-xl border-2 border-black bg-brand-cyan/10 p-3 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
-          <Mail className="h-6 w-6 text-brand-cyan" aria-hidden="true" />
-        </div>
-
-        {/* Content */}
-        <div className="flex-1 space-y-4 w-full">
-          <div className="space-y-2">
-            <h3 className="font-display text-xl font-bold text-gray-900">{title}</h3>
-            <p className="text-gray-600">{description}</p>
-          </div>
-
-          {/* Form */}
-          <form onSubmit={handleSubmit} className="space-y-3">
-            <div className="flex flex-col sm:flex-row gap-3">
-              <input
-                type="email"
-                value={email}
-                onChange={e => setEmail(e.target.value)}
-                placeholder={placeholder}
-                required
-                disabled={loading || status === 'success'}
-                aria-label="Email address"
-                className="input-field flex-1 min-h-[48px]"
-              />
-              <button
-                type="submit"
-                disabled={loading || status === 'success'}
-                className="cta-button min-h-[48px] whitespace-nowrap"
-              >
-                {status === 'success' ? (
-                  <>
-                    <CheckCircle2 className="h-4 w-4 mr-2" aria-hidden="true" /> Done
-                  </>
-                ) : loading ? (
-                  <>
-                    <Loader2 className="h-4 w-4 mr-2 animate-spin" aria-hidden="true" /> Subscribing...
-                  </>
-                ) : (
-                  <>
-                    Subscribe <ArrowRight className="h-4 w-4 ml-2" aria-hidden="true" />
-                  </>
-                )}
-              </button>
-            </div>
-
-            {/* Status message */}
-            {message && (
-              <p
-                className={`text-sm font-medium ${status === 'success' ? 'text-green-600' : 'text-red-600'}`}
-                role={status === 'error' ? 'alert' : 'status'}
-              >
-                {message}
-              </p>
+    <div className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8 shadow-soft">
+      {/* Form */}
+      <form onSubmit={handleSubmit} className="space-y-4">
+        <div className="flex flex-col sm:flex-row gap-3">
+          <input
+            type="email"
+            value={email}
+            onChange={e => setEmail(e.target.value)}
+            placeholder={placeholder}
+            required
+            disabled={loading || status === 'success'}
+            aria-label="Email address"
+            className="input-field flex-1 min-h-[48px]"
+          />
+          <button
+            type="submit"
+            disabled={loading || status === 'success'}
+            className="cta-button min-h-[48px] whitespace-nowrap"
+          >
+            {status === 'success' ? (
+              <>
+                <CheckCircle2 className="h-4 w-4 mr-2" aria-hidden="true" /> Done
+              </>
+            ) : loading ? (
+              <>
+                <Loader2 className="h-4 w-4 mr-2 animate-spin" aria-hidden="true" /> Subscribing...
+              </>
+            ) : (
+              <>
+                Subscribe <ArrowRight className="h-4 w-4 ml-2" aria-hidden="true" />
+              </>
             )}
-          </form>
-
-          {/* Social proof */}
-          <p className="text-sm text-gray-500">
-            No spam, unsubscribe anytime.
-          </p>
+          </button>
         </div>
-      </div>
+
+        {/* Status message */}
+        {message && (
+          <p
+            className={`text-sm font-medium ${status === 'success' ? 'text-green-600' : 'text-red-600'}`}
+            role={status === 'error' ? 'alert' : 'status'}
+          >
+            {message}
+          </p>
+        )}
+      </form>
+
+      <p className="text-xs text-stone-400 mt-3">
+        No spam, unsubscribe anytime.
+      </p>
     </div>
   );
 }

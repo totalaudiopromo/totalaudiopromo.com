@@ -67,9 +67,9 @@ const variantStyles: Record<GlowVariant, { base: string; glow: string; glowHover
     glowHover: 'hover:shadow-glow-tracker',
   },
   primary: {
-    base: 'bg-gray-900 hover:bg-gray-800 text-white border-black',
-    glow: 'shadow-brutal',
-    glowHover: 'hover:shadow-brutal-md',
+    base: 'bg-cyan-700 hover:bg-cyan-800 text-white border-cyan-700 shadow-[0_1px_2px_rgba(0,0,0,0.05),0_4px_16px_rgba(8,145,178,0.25)] hover:shadow-[0_2px_4px_rgba(0,0,0,0.1),0_8px_24px_rgba(8,145,178,0.35)]',
+    glow: '',
+    glowHover: '',
   },
   secondary: {
     base: 'bg-white hover:bg-gray-50 text-gray-900 border-gray-300',
