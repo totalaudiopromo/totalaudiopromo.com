@@ -1,14 +1,14 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+import { Resend } from 'resend';
 
 interface MailingListResponse {
   success: boolean;
   message: string;
 }
 
-// Simple email validation regex
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-export default function handler(
+export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<MailingListResponse>
 ) {
@@ -38,12 +38,36 @@ export default function handler(
     });
   }
 
-  // TODO: Connect to actual email service or database
-  // e.g. store in Supabase, send to Mailchimp, etc.
-  console.log(`[mailing-list] New subscriber: ${trimmedEmail}`);
+  const apiKey = process.env.RESEND_API_KEY;
+  const audienceId = process.env.RESEND_AUDIENCE_ID;
 
-  return res.status(200).json({
-    success: true,
-    message: 'Subscribed successfully',
-  });
+  if (!apiKey || !audienceId) {
+    console.warn('[mailing-list] RESEND_API_KEY or RESEND_AUDIENCE_ID not configured');
+    return res.status(503).json({
+      success: false,
+      message: 'Newsletter service is temporarily unavailable.',
+    });
+  }
+
+  try {
+    const resend = new Resend(apiKey);
+
+    await resend.contacts.create({
+      email: trimmedEmail,
+      audienceId,
+    });
+
+    return res.status(200).json({
+      success: true,
+      message: 'Subscribed successfully',
+    });
+  } catch (error: unknown) {
+    const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+    console.warn('[mailing-list] Resend error:', errorMessage);
+
+    return res.status(500).json({
+      success: false,
+      message: 'Something went wrong. Please try again.',
+    });
+  }
 }
