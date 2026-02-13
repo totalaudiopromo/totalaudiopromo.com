@@ -16,11 +16,11 @@ interface JourneyItem {
 const journeyItems: JourneyItem[] = [
   {
     image: "/images/journey/chris1992.png",
-    alt: "Chris Schofield as a child in 1988, asleep with headphones on",
+    alt: "Chris Schofield aged 5, asleep with headphones on",
     title: "Rooted in Sound",
     subtitle: "Early Obsession",
     description:
-      "Headphones on before I could talk. The obsession started early and never really stopped.",
+      "Headphones on, world off. The obsession started early and never really stopped.",
     year: "1988",
   },
   {
@@ -64,7 +64,7 @@ const journeyItems: JourneyItem[] = [
 
 export const ExperienceTimeline = () => {
   return (
-    <section className="py-24 bg-black overflow-visible relative">
+    <section className="py-16 sm:py-20 bg-black overflow-visible relative">
       {/* Background Decorative Elements */}
       <div className="absolute inset-0 opacity-[0.05] pointer-events-none mix-blend-overlay">
         <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
@@ -80,44 +80,16 @@ export const ExperienceTimeline = () => {
         </svg>
       </div>
 
-      {/* Floating Network Nodes */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        {[...Array(10)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute rounded-full bg-intel-500/10 blur-xl"
-            initial={{
-              width: Math.random() * 200 + 100,
-              height: Math.random() * 200 + 100,
-              x: Math.random() * 100 + "%",
-              y: Math.random() * 100 + "%",
-              opacity: 0,
-            }}
-            animate={{
-              x: [null, (Math.random() - 0.5) * 10 + "%"],
-              y: [null, (Math.random() - 0.5) * 10 + "%"],
-              opacity: [0.1, 0.3, 0.1],
-            }}
-            transition={{
-              duration: Math.random() * 10 + 10,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-            style={{ willChange: "transform, opacity" }}
-          />
-        ))}
-      </div>
-
-      <div className="max-w-[1700px] mx-auto px-6 relative z-10">
-        <MotionScrollReveal variant="fadeUp" className="text-center mb-20">
-          <div className="inline-block mb-4 px-4 py-1 rounded-full border border-intel-500/30 bg-intel-500/5 text-intel-400 text-xs font-black uppercase tracking-[0.2em]">
-            Legacy & Logic
+      <div className="max-w-6xl mx-auto px-6 relative z-10">
+        <MotionScrollReveal variant="fadeUp" className="text-center mb-12">
+          <div className="inline-block mb-4 px-4 py-1 rounded-full border border-cyan-500/30 bg-cyan-500/5 text-cyan-400 text-xs font-black uppercase tracking-[0.2em]">
+            The Journey
           </div>
-          <h2 className="text-5xl lg:text-6xl font-black text-white mb-6 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white mb-6 tracking-tight">
             Built on{" "}
-            <span className="text-intel-500">real experience.</span>
+            <span className="text-cyan-500">real experience.</span>
           </h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed font-medium">
+          <p className="text-xl text-stone-400 max-w-3xl mx-auto leading-relaxed font-medium">
             From running a music business to pitching BBC Radio 1, I built TAP
             because the tools we rely on were never designed for the people
             doing the work.
@@ -142,34 +114,16 @@ export const ExperienceTimeline = () => {
         <MotionScrollReveal
           variant="fadeUp"
           delay={0.6}
-          className="mt-24 flex flex-col items-center gap-6"
+          className="mt-14 flex flex-col items-center gap-6"
         >
-          <a href="https://tap.totalaudiopromo.com/signup?source=timeline" className="group">
-            <motion.div
-              whileHover={{ scale: 1.02 }}
-              className="inline-block p-[2px] rounded-full bg-gradient-to-r from-intel-500 via-blue-500 to-purple-500 shadow-[0_0_30px_rgba(58,169,190,0.3)]"
-            >
-              <div className="px-10 py-4 rounded-full bg-black text-white font-bold text-lg group-hover:bg-transparent transition-all duration-300 flex items-center gap-3">
-                <span className="w-2 h-2 rounded-full bg-intel-500 animate-pulse" />
-                Try TAP Free
-                <svg
-                  className="w-5 h-5 group-hover:translate-x-1 transition-transform"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M17 8l4 4m0 0l-4 4m4-4H3"
-                  />
-                </svg>
-              </div>
-            </motion.div>
+          <a
+            href="https://tap.totalaudiopromo.com/signup?source=timeline"
+            className="inline-block px-8 py-4 text-base font-bold text-white bg-cyan-700 rounded-full hover:bg-cyan-800 transition-colors shadow-[0_1px_2px_rgba(0,0,0,0.05),0_4px_16px_rgba(8,145,178,0.25)]"
+          >
+            Try TAP Free
           </a>
 
-          <p className="text-sm text-gray-500 font-medium">
+          <p className="text-sm text-stone-500 font-medium">
             5+ years in radio promotion
           </p>
         </MotionScrollReveal>
@@ -191,7 +145,7 @@ const JourneyCard = ({ item, index }: { item: JourneyItem; index: number }) => {
         }}
         className="h-full flex flex-col"
       >
-        <div className="relative aspect-[3/4] mb-6 overflow-hidden rounded-2xl border border-white/10 group-hover:border-intel-500/50 transition-all duration-500 shadow-2xl group-hover:shadow-intel-500/20 bg-gray-900">
+        <div className="relative aspect-[3/4] mb-6 overflow-hidden rounded-2xl border border-white/10 group-hover:border-cyan-500/50 transition-all duration-500 shadow-2xl group-hover:shadow-cyan-500/20 bg-stone-900">
           <Image
             src={item.image}
             alt={item.alt}
@@ -228,13 +182,13 @@ const JourneyCard = ({ item, index }: { item: JourneyItem; index: number }) => {
         </div>
 
         <div className="space-y-3 px-1">
-          <h3 className="text-xl font-bold text-white group-hover:text-intel-400 transition-colors tracking-tight">
+          <h3 className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors tracking-tight">
             {item.title}
           </h3>
-          <p className="inline-block px-2 py-0.5 rounded bg-intel-500/10 text-[10px] font-black text-intel-400 uppercase tracking-widest border border-intel-500/20">
+          <p className="inline-block px-2 py-0.5 rounded bg-cyan-500/10 text-[10px] font-black text-cyan-400 uppercase tracking-widest border border-cyan-500/20">
             {item.subtitle}
           </p>
-          <p className="text-[15px] text-gray-400 leading-relaxed font-medium">
+          <p className="text-[15px] text-stone-400 leading-relaxed font-medium">
             {item.description}
           </p>
           {item.link && (
@@ -242,7 +196,7 @@ const JourneyCard = ({ item, index }: { item: JourneyItem; index: number }) => {
               href={item.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xs text-intel-400/70 hover:text-intel-400 transition-colors font-medium"
+              className="text-xs text-cyan-400/70 hover:text-cyan-400 transition-colors font-medium"
             >
               {item.link.replace(/^https?:\/\//, "")} &rarr;
             </a>
@@ -250,7 +204,7 @@ const JourneyCard = ({ item, index }: { item: JourneyItem; index: number }) => {
         </div>
 
         {/* Desktop vertical connector line node */}
-        <div className="hidden lg:block absolute top-[150px] -left-[14px] w-2 h-2 rounded-full bg-white/20 border border-black group-hover:bg-intel-500 group-hover:scale-125 transition-all z-30" />
+        <div className="hidden lg:block absolute top-[150px] -left-[14px] w-2 h-2 rounded-full bg-white/20 border border-black group-hover:bg-cyan-500 group-hover:scale-125 transition-all z-30" />
       </motion.div>
     </MotionStaggerChild>
   );

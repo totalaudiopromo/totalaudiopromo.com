@@ -94,7 +94,7 @@ export default function PricingPage() {
             <div className="max-w-5xl mx-auto px-4">
               <div className="flex flex-wrap items-center justify-between gap-4 mb-10">
                 <div>
-                  <div className="inline-block mb-2 px-3 py-1 rounded-full bg-amber-50 border border-amber-200 text-amber-800 text-xs font-bold uppercase tracking-wide">
+                  <div className="inline-block mb-2 px-3 py-1 rounded-full bg-stone-100 border border-stone-300 text-stone-700 text-xs font-bold uppercase tracking-wide">
                     Early adopter pricing
                   </div>
                   <h1 className="text-3xl sm:text-4xl font-bold text-stone-900 leading-tight tracking-tight">
@@ -147,23 +147,23 @@ export default function PricingPage() {
 
                   <ul className="space-y-3 mb-8 flex-grow text-sm text-stone-700">
                     <li className="flex items-center gap-2">
-                      <span className="text-green-600">&#10003;</span>
+                      <span className="text-cyan-700">&#10003;</span>
                       All three studios
                     </li>
                     <li className="flex items-center gap-2">
-                      <span className="text-green-600">&#10003;</span>
+                      <span className="text-cyan-700">&#10003;</span>
                       10 enrichments/month
                     </li>
                     <li className="flex items-center gap-2">
-                      <span className="text-green-600">&#10003;</span>
+                      <span className="text-cyan-700">&#10003;</span>
                       3 pitches/month
                     </li>
                     <li className="flex items-center gap-2">
-                      <span className="text-green-600">&#10003;</span>
+                      <span className="text-cyan-700">&#10003;</span>
                       2 campaigns
                     </li>
                     <li className="flex items-center gap-2">
-                      <span className="text-green-600">&#10003;</span>
+                      <span className="text-cyan-700">&#10003;</span>
                       25 contacts
                     </li>
                   </ul>
@@ -199,7 +199,7 @@ export default function PricingPage() {
                         ? "or \u00A3190/year (save 2 months)"
                         : "\u00A3190/year -- save 2 months"}
                     </p>
-                    <p className="text-xs text-amber-700 font-medium mb-3">
+                    <p className="text-xs text-stone-500 font-medium mb-3">
                       Early adopter rate -- lock it in
                     </p>
                     <p className="text-sm text-stone-700 font-medium">
@@ -209,23 +209,23 @@ export default function PricingPage() {
 
                   <ul className="space-y-3 mb-8 flex-grow text-sm text-stone-700">
                     <li className="flex items-center gap-2">
-                      <span className="text-green-600">&#10003;</span>
+                      <span className="text-cyan-700">&#10003;</span>
                       200 enrichments/month
                     </li>
                     <li className="flex items-center gap-2">
-                      <span className="text-green-600">&#10003;</span>
+                      <span className="text-cyan-700">&#10003;</span>
                       Unlimited pitches
                     </li>
                     <li className="flex items-center gap-2">
-                      <span className="text-green-600">&#10003;</span>
+                      <span className="text-cyan-700">&#10003;</span>
                       10 active campaigns
                     </li>
                     <li className="flex items-center gap-2">
-                      <span className="text-green-600">&#10003;</span>
+                      <span className="text-cyan-700">&#10003;</span>
                       Unlimited contacts
                     </li>
                     <li className="flex items-center gap-2">
-                      <span className="text-green-600">&#10003;</span>
+                      <span className="text-cyan-700">&#10003;</span>
                       Priority support
                     </li>
                   </ul>
@@ -257,7 +257,7 @@ export default function PricingPage() {
                         ? "or \u00A3790/year (save 2 months)"
                         : "\u00A3790/year -- save 2 months"}
                     </p>
-                    <p className="text-xs text-amber-700 font-medium mb-3">
+                    <p className="text-xs text-stone-500 font-medium mb-3">
                       Early adopter rate -- lock it in
                     </p>
                     <p className="text-sm text-stone-600">
@@ -267,19 +267,19 @@ export default function PricingPage() {
 
                   <ul className="space-y-3 mb-8 flex-grow text-sm text-stone-700">
                     <li className="flex items-center gap-2">
-                      <span className="text-green-600">&#10003;</span>
+                      <span className="text-cyan-700">&#10003;</span>
                       500 enrichments/month
                     </li>
                     <li className="flex items-center gap-2">
-                      <span className="text-green-600">&#10003;</span>
+                      <span className="text-cyan-700">&#10003;</span>
                       Unlimited pitches &amp; campaigns
                     </li>
                     <li className="flex items-center gap-2">
-                      <span className="text-green-600">&#10003;</span>
+                      <span className="text-cyan-700">&#10003;</span>
                       Up to 5 team members
                     </li>
                     <li className="flex items-center gap-2">
-                      <span className="text-green-600">&#10003;</span>
+                      <span className="text-cyan-700">&#10003;</span>
                       Dedicated support
                     </li>
                   </ul>
@@ -317,7 +317,7 @@ export default function PricingPage() {
                   />
                 </div>
                 <p className="text-sm text-stone-400 mb-4">
-                  Music PR software built by a radio promoter.
+                  Music PR software built by a freelance radio plugger.
                 </p>
               </div>
 

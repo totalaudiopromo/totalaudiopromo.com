@@ -16,10 +16,10 @@ export default function HomePage() {
     <>
       <Head>
         {/* Primary Meta Tags */}
-        <title>Music PR Software UK | TAP by Total Audio Promo</title>
+        <title>Music PR Software for Freelance Pluggers &amp; Small Agencies | TAP</title>
         <meta
           name="description"
-          content="Music PR software built for UK radio pluggers and press agents. Research contacts, draft pitches, track outcomes. Used on BBC Radio 1 campaigns. Start free."
+          content="Music PR software built by a freelance radio plugger. Research contacts, draft pitches, track outcomes. BBC Radio 1 and Kiss FM campaigns. Start free."
         />
         <meta
           name="keywords"
@@ -36,11 +36,11 @@ export default function HomePage() {
         <meta property="og:url" content="https://totalaudiopromo.com" />
         <meta
           property="og:title"
-          content="Music PR Software UK | TAP by Total Audio Promo"
+          content="Music PR Software for Freelance Pluggers & Small Agencies | TAP"
         />
         <meta
           property="og:description"
-          content="Music PR software built for UK radio pluggers and press agents. Research contacts, draft pitches, track outcomes. Used on BBC Radio 1 campaigns. Start free."
+          content="Music PR software built by a freelance radio plugger. Research contacts, draft pitches, track outcomes. BBC Radio 1 and Kiss FM campaigns. Start free."
         />
         <meta
           property="og:image"
@@ -54,11 +54,11 @@ export default function HomePage() {
         <meta name="twitter:url" content="https://totalaudiopromo.com" />
         <meta
           name="twitter:title"
-          content="Music PR Software UK | TAP by Total Audio Promo"
+          content="Music PR Software for Freelance Pluggers & Small Agencies | TAP"
         />
         <meta
           name="twitter:description"
-          content="Music PR software built for UK radio pluggers and press agents. Research contacts, draft pitches, track outcomes. Used on BBC Radio 1 campaigns. Start free."
+          content="Music PR software built by a freelance radio plugger. Research contacts, draft pitches, track outcomes. BBC Radio 1 and Kiss FM campaigns. Start free."
         />
         <meta
           name="twitter:image"
@@ -76,7 +76,7 @@ export default function HomePage() {
               url: "https://totalaudiopromo.com",
               logo: "https://totalaudiopromo.com/images/total_audio_promo_logo_trans.png",
               description:
-                "Music PR software for agencies and independent operators. Research, draft, and track in one workspace.",
+                "Music PR software built by a freelance radio plugger for small agencies and independent operators. Research, draft, and track in one workspace.",
               founder: {
                 "@type": "Person",
                 name: "Chris Schofield",
@@ -101,7 +101,7 @@ export default function HomePage() {
               operatingSystem: "Web",
               url: "https://tap.totalaudiopromo.com",
               description:
-                "Music PR software with contact enrichment, pitch drafting, and campaign tracking for PR agencies and independent operators.",
+                "Music PR software with contact enrichment, pitch drafting, and campaign tracking. Built by a freelance radio plugger for small agencies and independent operators.",
               offers: [
                 {
                   "@type": "Offer",
@@ -258,26 +258,26 @@ export default function HomePage() {
           {/* ============================================
               SECTION 1: Hero -- Hook (0-3 seconds)
               ============================================ */}
-          <section className="hero-stage py-20 sm:py-28">
+          <section className="hero-stage py-14 sm:py-20">
             <div className="max-w-5xl mx-auto px-4 relative">
               <div className="grid lg:grid-cols-5 gap-10 items-center">
                 {/* Left Column (60%) */}
                 <div className="lg:col-span-3">
                   <MotionScrollReveal variant="fadeUp">
                     <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-stone-900 leading-[1.1] mb-6 tracking-tight">
-                      Music PR Software for Agencies and Independent Operators
+                      Music PR software built inside real radio campaigns
                     </h1>
                   </MotionScrollReveal>
 
                   <MotionScrollReveal variant="fadeUp" delay={0.1}>
                     <p className="text-xl text-stone-600 mb-4 leading-relaxed">
-                      Stop running campaigns on spreadsheets, inboxes, and
-                      memory. TAP is one place to research contacts, draft
-                      pitches, and track outcomes.
+                      I got tired of running campaigns across spreadsheets,
+                      inboxes, and memory. So I built one workspace to research
+                      contacts, draft pitches, and track outcomes.
                     </p>
                     <p className="text-lg font-semibold text-stone-800 mb-6">
-                      Built by a working radio promoter. BBC Radio 1, 6 Music,
-                      Spotify.
+                      Built by a freelance radio plugger. BBC Radio 1, 6 Music,
+                      Kiss FM.
                     </p>
                   </MotionScrollReveal>
 
@@ -324,10 +324,10 @@ export default function HomePage() {
                     {/* Founder context badge */}
                     <div className="absolute -top-4 -left-4 bg-white rounded-xl border border-stone-200 shadow-soft p-3 z-30 rotate-[-3deg]">
                       <div className="text-[11px] font-bold text-stone-900 leading-tight">
-                        Built by a radio promoter
+                        Built by a freelance plugger
                       </div>
                       <div className="text-[10px] text-stone-500 font-medium">
-                        BBC Radio 1 &middot; 6 Music &middot; Spotify
+                        BBC Radio 1 &middot; 6 Music &middot; Kiss FM
                       </div>
                     </div>
                   </div>
@@ -362,10 +362,10 @@ export default function HomePage() {
               SECTION 3: The Switch -- Understand
               "What does it actually do?"
               ============================================ */}
-          <section id="studios" className="py-16 sm:py-24 bg-white">
+          <section id="studios" className="py-12 sm:py-16 bg-white">
             <div className="max-w-5xl mx-auto px-4">
               <MotionScrollReveal variant="fadeUp">
-                <div className="text-center mb-14">
+                <div className="text-center mb-10">
                   <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-stone-900 mb-4 tracking-tight">
                     Replace 7 tools with one workspace
                   </h2>
@@ -389,7 +389,7 @@ export default function HomePage() {
                         </h3>
                         <a
                           href="https://intel.totalaudiopromo.com"
-                          className="text-sm font-medium text-intel-600 hover:text-intel-700 transition-colors mb-3 inline-block"
+                          className="text-sm font-medium text-cyan-700 hover:text-cyan-800 transition-colors mb-3 inline-block"
                         >
                           Intel Studio &rarr;
                         </a>
@@ -412,7 +412,7 @@ export default function HomePage() {
                         </h3>
                         <a
                           href="https://pitcher.totalaudiopromo.com"
-                          className="text-sm font-medium text-pitch-600 hover:text-pitch-700 transition-colors mb-3 inline-block"
+                          className="text-sm font-medium text-cyan-700 hover:text-cyan-800 transition-colors mb-3 inline-block"
                         >
                           Pitcher Studio &rarr;
                         </a>
@@ -435,7 +435,7 @@ export default function HomePage() {
                         </h3>
                         <a
                           href="https://tracker.totalaudiopromo.com"
-                          className="text-sm font-medium text-tracker-600 hover:text-tracker-700 transition-colors mb-3 inline-block"
+                          className="text-sm font-medium text-cyan-700 hover:text-cyan-800 transition-colors mb-3 inline-block"
                         >
                           Tracker Studio &rarr;
                         </a>
@@ -467,20 +467,20 @@ export default function HomePage() {
               SECTION 4: ICP Filter -- Self-Select
               "Is this for someone like me?"
               ============================================ */}
-          <section className="py-16 sm:py-20 bg-stone-100">
+          <section className="py-12 sm:py-16 bg-stone-100">
             <div className="max-w-5xl mx-auto px-4">
-              <div className="grid lg:grid-cols-2 gap-12 items-start">
+              <div className="grid lg:grid-cols-2 gap-10 items-start">
                 <div>
                   <MotionScrollReveal variant="fadeUp">
-                    <h2 className="text-3xl sm:text-4xl font-bold text-stone-900 mb-8 tracking-tight">
+                    <h2 className="text-3xl sm:text-4xl font-bold text-stone-900 mb-6 tracking-tight">
                       Built for experienced operators
                     </h2>
                   </MotionScrollReveal>
 
-                  <div className="space-y-8">
+                  <div className="space-y-6">
                     <div>
                       <h3 className="text-lg font-bold text-stone-900 mb-3 flex items-center gap-2">
-                        <span className="flex-shrink-0 w-6 h-6 rounded-full bg-green-600 text-white flex items-center justify-center text-xs">
+                        <span className="flex-shrink-0 w-6 h-6 rounded-full bg-cyan-700 text-white flex items-center justify-center text-xs">
                           &#10003;
                         </span>
                         This is for you if:
@@ -493,7 +493,7 @@ export default function HomePage() {
                         </li>
                         <li className="flex items-start gap-3">
                           <span className="font-semibold">Experienced DIY</span>{" "}
-                          — Label or manager with a proven track record.
+                          — Freelance plugger, label, or manager with a proven track record.
                         </li>
                         <li className="flex items-start gap-3">
                           <span className="font-semibold">
@@ -507,7 +507,7 @@ export default function HomePage() {
 
                     <div>
                       <h3 className="text-lg font-bold text-stone-900 mb-3 flex items-center gap-2">
-                        <span className="flex-shrink-0 w-6 h-6 rounded-full bg-red-500 text-white flex items-center justify-center text-xs">
+                        <span className="flex-shrink-0 w-6 h-6 rounded-full bg-stone-400 text-white flex items-center justify-center text-xs">
                           &times;
                         </span>
                         This is NOT for you if:
@@ -562,12 +562,12 @@ export default function HomePage() {
           {/* ============================================
               SECTION 6: Trust Strip + Pricing
               ============================================ */}
-          <section className="py-10 bg-stone-50 border-y border-stone-200 border-t-cyan-700/20">
+          <section className="py-6 bg-stone-50 border-y border-stone-200 border-t-cyan-700/20">
             <div className="max-w-4xl mx-auto px-4">
               <div className="flex flex-wrap justify-center gap-8 text-sm text-stone-600">
                 <div className="flex items-center gap-2">
                   <svg
-                    className="w-5 h-5 text-green-600"
+                    className="w-5 h-5 text-cyan-700"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -583,7 +583,7 @@ export default function HomePage() {
                 </div>
                 <div className="flex items-center gap-2">
                   <svg
-                    className="w-5 h-5 text-green-600"
+                    className="w-5 h-5 text-cyan-700"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -599,7 +599,7 @@ export default function HomePage() {
                 </div>
                 <div className="flex items-center gap-2">
                   <svg
-                    className="w-5 h-5 text-green-600"
+                    className="w-5 h-5 text-cyan-700"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -615,7 +615,7 @@ export default function HomePage() {
                 </div>
                 <div className="flex items-center gap-2">
                   <svg
-                    className="w-5 h-5 text-green-600"
+                    className="w-5 h-5 text-cyan-700"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -635,11 +635,11 @@ export default function HomePage() {
 
           <section
             id="pricing"
-            className="py-16 sm:py-24 bg-white"
+            className="py-12 sm:py-16 bg-white"
           >
             <div className="max-w-5xl mx-auto px-4">
               <header className="text-center mb-12">
-                <div className="inline-block mb-3 px-3 py-1 rounded-full bg-amber-50 border border-amber-200 text-amber-800 text-xs font-bold uppercase tracking-wide">
+                <div className="inline-block mb-3 px-3 py-1 rounded-full bg-stone-100 border border-stone-300 text-stone-700 text-xs font-bold uppercase tracking-wide">
                   Early adopter pricing
                 </div>
                 <h2 className="text-3xl sm:text-4xl font-bold text-stone-900 mb-3 tracking-tight">
@@ -670,23 +670,23 @@ export default function HomePage() {
 
                   <ul className="space-y-3 mb-8 flex-grow text-sm text-stone-700">
                     <li className="flex items-center gap-2">
-                      <span className="text-green-600">&#10003;</span>
+                      <span className="text-cyan-700">&#10003;</span>
                       All three studios
                     </li>
                     <li className="flex items-center gap-2">
-                      <span className="text-green-600">&#10003;</span>
+                      <span className="text-cyan-700">&#10003;</span>
                       10 enrichments/month
                     </li>
                     <li className="flex items-center gap-2">
-                      <span className="text-green-600">&#10003;</span>
+                      <span className="text-cyan-700">&#10003;</span>
                       3 pitches/month
                     </li>
                     <li className="flex items-center gap-2">
-                      <span className="text-green-600">&#10003;</span>
+                      <span className="text-cyan-700">&#10003;</span>
                       2 campaigns
                     </li>
                     <li className="flex items-center gap-2">
-                      <span className="text-green-600">&#10003;</span>
+                      <span className="text-cyan-700">&#10003;</span>
                       25 contacts
                     </li>
                   </ul>
@@ -718,7 +718,7 @@ export default function HomePage() {
                     <p className="text-xs text-stone-500 mb-1">
                       or &pound;190/year (save 2 months)
                     </p>
-                    <p className="text-xs text-amber-700 font-medium mb-3">
+                    <p className="text-xs text-stone-500 font-medium mb-3">
                       Early adopter rate -- lock it in
                     </p>
                     <p className="text-sm text-stone-700 font-medium">
@@ -728,23 +728,23 @@ export default function HomePage() {
 
                   <ul className="space-y-3 mb-8 flex-grow text-sm text-stone-700">
                     <li className="flex items-center gap-2">
-                      <span className="text-green-600">&#10003;</span>
+                      <span className="text-cyan-700">&#10003;</span>
                       200 enrichments/month
                     </li>
                     <li className="flex items-center gap-2">
-                      <span className="text-green-600">&#10003;</span>
+                      <span className="text-cyan-700">&#10003;</span>
                       Unlimited pitches
                     </li>
                     <li className="flex items-center gap-2">
-                      <span className="text-green-600">&#10003;</span>
+                      <span className="text-cyan-700">&#10003;</span>
                       10 active campaigns
                     </li>
                     <li className="flex items-center gap-2">
-                      <span className="text-green-600">&#10003;</span>
+                      <span className="text-cyan-700">&#10003;</span>
                       Unlimited contacts
                     </li>
                     <li className="flex items-center gap-2">
-                      <span className="text-green-600">&#10003;</span>
+                      <span className="text-cyan-700">&#10003;</span>
                       Priority support
                     </li>
                   </ul>
@@ -772,7 +772,7 @@ export default function HomePage() {
                     <p className="text-xs text-stone-500 mb-1">
                       or &pound;790/year (save 2 months)
                     </p>
-                    <p className="text-xs text-amber-700 font-medium mb-3">
+                    <p className="text-xs text-stone-500 font-medium mb-3">
                       Early adopter rate -- lock it in
                     </p>
                     <p className="text-sm text-stone-600">
@@ -782,19 +782,19 @@ export default function HomePage() {
 
                   <ul className="space-y-3 mb-8 flex-grow text-sm text-stone-700">
                     <li className="flex items-center gap-2">
-                      <span className="text-green-600">&#10003;</span>
+                      <span className="text-cyan-700">&#10003;</span>
                       500 enrichments/month
                     </li>
                     <li className="flex items-center gap-2">
-                      <span className="text-green-600">&#10003;</span>
+                      <span className="text-cyan-700">&#10003;</span>
                       Unlimited pitches &amp; campaigns
                     </li>
                     <li className="flex items-center gap-2">
-                      <span className="text-green-600">&#10003;</span>
+                      <span className="text-cyan-700">&#10003;</span>
                       Up to 5 team members
                     </li>
                     <li className="flex items-center gap-2">
-                      <span className="text-green-600">&#10003;</span>
+                      <span className="text-cyan-700">&#10003;</span>
                       Dedicated support
                     </li>
                   </ul>
@@ -818,7 +818,7 @@ export default function HomePage() {
           {/* ============================================
               SECTION 7: FAQ
               ============================================ */}
-          <section className="py-16 sm:py-20 bg-stone-100">
+          <section className="py-12 sm:py-16 bg-stone-100">
             <div className="max-w-3xl mx-auto px-4">
               <h2 className="text-3xl sm:text-4xl font-bold text-stone-900 mb-10 tracking-tight text-center">
                 Frequently Asked Questions
@@ -903,7 +903,7 @@ export default function HomePage() {
           {/* ============================================
               SECTION 8: Newsletter -- Nurture
               ============================================ */}
-          <section id="newsletter" className="py-14 sm:py-20 bg-stone-50">
+          <section id="newsletter" className="py-10 sm:py-14 bg-stone-50">
             <div className="max-w-xl mx-auto px-4 text-center">
               <h2 className="text-2xl sm:text-3xl font-bold text-stone-900 mb-3">
                 Not ready to sign up?
@@ -935,7 +935,7 @@ export default function HomePage() {
                   />
                 </div>
                 <p className="text-sm text-stone-400 mb-5 leading-relaxed">
-                  Music PR software built by a working radio promoter. Research,
+                  Music PR software built by a freelance radio plugger. Research,
                   draft, track -- one workspace.
                 </p>
                 <div className="flex gap-4">

@@ -57,6 +57,35 @@ export default async function handler(
       audienceId,
     });
 
+    // Send welcome email -- failure doesn't block subscription
+    try {
+      await resend.emails.send({
+        from: process.env.RESEND_FROM_EMAIL || 'TAP <onboarding@resend.dev>',
+        to: trimmedEmail,
+        subject: 'Welcome to the TAP mailing list',
+        html: `
+          <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 520px; margin: 0 auto; padding: 32px 20px; color: #292524;">
+            <h1 style="font-size: 22px; font-weight: 700; margin: 0 0 16px;">Thanks for subscribing</h1>
+            <p style="font-size: 15px; line-height: 1.6; color: #57534e; margin: 0 0 16px;">
+              You'll get fortnightly tips on music PR workflow, contact research, and campaign strategy. Written by someone who actually runs campaigns.
+            </p>
+            <p style="font-size: 15px; line-height: 1.6; color: #57534e; margin: 0 0 24px;">
+              In the meantime, you can try TAP free -- all three studios included, no card required.
+            </p>
+            <a href="https://tap.totalaudiopromo.com/signup?source=welcome-email" style="display: inline-block; padding: 10px 24px; background: #0e7490; color: #fff; text-decoration: none; border-radius: 999px; font-size: 14px; font-weight: 700;">
+              Try TAP Free
+            </a>
+            <p style="font-size: 12px; color: #a8a29e; margin: 32px 0 0; border-top: 1px solid #e7e5e4; padding-top: 16px;">
+              TAP by Total Audio Promo
+            </p>
+          </div>
+        `,
+      });
+    } catch (emailError: unknown) {
+      const emailMsg = emailError instanceof Error ? emailError.message : 'Unknown error';
+      console.warn('[mailing-list] Welcome email failed (subscription still succeeded):', emailMsg);
+    }
+
     return res.status(200).json({
       success: true,
       message: 'Subscribed successfully',

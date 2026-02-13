@@ -84,7 +84,7 @@ export function NewsletterSignup({
         </button>
         {message && (
           <p
-            className={`text-sm font-medium sm:hidden ${status === 'success' ? 'text-green-600' : 'text-red-600'}`}
+            className={`text-sm font-medium sm:hidden ${status === 'success' ? 'text-cyan-700' : 'text-stone-600'}`}
             role={status === 'error' ? 'alert' : 'status'}
           >
             {message}
@@ -134,7 +134,7 @@ export function NewsletterSignup({
           </button>
           {message && (
             <p
-              className={`text-sm font-medium ${status === 'success' ? 'text-green-600' : 'text-red-600'}`}
+              className={`text-sm font-medium ${status === 'success' ? 'text-cyan-700' : 'text-stone-600'}`}
               role={status === 'error' ? 'alert' : 'status'}
             >
               {message}
@@ -188,7 +188,7 @@ export function NewsletterSignup({
         {/* Status message */}
         {message && (
           <p
-            className={`text-sm font-medium ${status === 'success' ? 'text-green-600' : 'text-red-600'}`}
+            className={`text-sm font-medium ${status === 'success' ? 'text-cyan-700' : 'text-stone-600'}`}
             role={status === 'error' ? 'alert' : 'status'}
           >
             {message}

@@ -72,9 +72,9 @@ const variantStyles: Record<GlowVariant, { base: string; glow: string; glowHover
     glowHover: '',
   },
   secondary: {
-    base: 'bg-white hover:bg-gray-50 text-gray-900 border-gray-300',
+    base: 'bg-white hover:bg-stone-50 text-stone-900 border-stone-300',
     glow: '',
-    glowHover: 'hover:border-gray-400',
+    glowHover: 'hover:border-stone-400',
   },
 };
 

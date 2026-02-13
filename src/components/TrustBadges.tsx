@@ -44,7 +44,7 @@ export function TrustBadges({ badges, className = '' }: TrustBadgesProps) {
           key={i}
           className="inline-flex items-center gap-1.5 text-sm font-medium text-stone-500"
         >
-          {badge.icon && <span className="text-green-600">{icons[badge.icon]}</span>}
+          {badge.icon && <span className="text-cyan-700">{icons[badge.icon]}</span>}
           {badge.text}
         </div>
       ))}
