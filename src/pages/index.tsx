@@ -16,14 +16,14 @@ export default function HomePage() {
     <>
       <Head>
         {/* Primary Meta Tags */}
-        <title>Music PR Software for Freelance Pluggers &amp; Small Agencies | TAP</title>
+        <title>TAP by Total Audio Promo | Music PR Workspace</title>
         <meta
           name="description"
-          content="Music PR software built by a freelance radio plugger. Research contacts, draft pitches, track outcomes. BBC Radio 1 and Kiss FM campaigns. Start free."
+          content="TAP is the music PR workspace for small agencies and independent promoters. Research contacts, draft pitches, track outcomes. Built by a radio plugger with BBC Radio 1 experience. Start free."
         />
         <meta
           name="keywords"
-          content="music PR software, music promotion platform, radio promotion software UK, music PR workspace, contact enrichment, pitch generator, campaign tracking, UK music industry"
+          content="music PR workspace, music promotion platform, radio promotion software UK, TAP music PR, contact enrichment, pitch generator, campaign tracking, UK music industry, BBC Radio"
         />
         <meta name="author" content="Chris Schofield" />
         <meta name="robots" content="index, follow" />
@@ -36,11 +36,11 @@ export default function HomePage() {
         <meta property="og:url" content="https://totalaudiopromo.com" />
         <meta
           property="og:title"
-          content="Music PR Software for Freelance Pluggers & Small Agencies | TAP"
+          content="TAP by Total Audio Promo | Music PR Workspace"
         />
         <meta
           property="og:description"
-          content="Music PR software built by a freelance radio plugger. Research contacts, draft pitches, track outcomes. BBC Radio 1 and Kiss FM campaigns. Start free."
+          content="TAP is the music PR workspace for small agencies and independent promoters. Research contacts, draft pitches, track outcomes. Built by a radio plugger with BBC Radio 1 experience."
         />
         <meta
           property="og:image"
@@ -54,11 +54,11 @@ export default function HomePage() {
         <meta name="twitter:url" content="https://totalaudiopromo.com" />
         <meta
           name="twitter:title"
-          content="Music PR Software for Freelance Pluggers & Small Agencies | TAP"
+          content="TAP by Total Audio Promo | Music PR Workspace"
         />
         <meta
           name="twitter:description"
-          content="Music PR software built by a freelance radio plugger. Research contacts, draft pitches, track outcomes. BBC Radio 1 and Kiss FM campaigns. Start free."
+          content="TAP is the music PR workspace for small agencies and independent promoters. Research contacts, draft pitches, track outcomes. Built by a radio plugger with BBC Radio 1 experience."
         />
         <meta
           name="twitter:image"
@@ -76,7 +76,7 @@ export default function HomePage() {
               url: "https://totalaudiopromo.com",
               logo: "https://totalaudiopromo.com/images/total_audio_promo_logo_trans.png",
               description:
-                "Music PR software built by a freelance radio plugger for small agencies and independent operators. Research, draft, and track in one workspace.",
+                "TAP is the music PR workspace for small agencies and independent promoters. Research contacts, draft pitches, track outcomes — in one continuous flow.",
               founder: {
                 "@type": "Person",
                 name: "Chris Schofield",
@@ -385,14 +385,8 @@ export default function HomePage() {
                       <div className="w-1 h-12 bg-intel-600 rounded-full absolute left-0 top-8 opacity-0" />
                       <div className="pl-4">
                         <h3 className="text-lg font-bold text-stone-900 mb-2">
-                          Research
+                          Contact Enrichment
                         </h3>
-                        <a
-                          href="https://intel.totalaudiopromo.com"
-                          className="text-sm font-medium text-cyan-700 hover:text-cyan-800 transition-colors mb-3 inline-block"
-                        >
-                          Intel Studio &rarr;
-                        </a>
                         <p className="text-stone-600 text-sm leading-relaxed">
                           Enrich contacts with verified emails, submission
                           preferences, and role detection. Know who to pitch
@@ -408,18 +402,12 @@ export default function HomePage() {
                       <div className="w-1 h-12 bg-pitch-600 rounded-full absolute left-0 top-8 opacity-0" />
                       <div className="pl-4">
                         <h3 className="text-lg font-bold text-stone-900 mb-2">
-                          Draft
+                          Draft Pitches
                         </h3>
-                        <a
-                          href="https://pitcher.totalaudiopromo.com"
-                          className="text-sm font-medium text-cyan-700 hover:text-cyan-800 transition-colors mb-3 inline-block"
-                        >
-                          Pitcher Studio &rarr;
-                        </a>
                         <p className="text-stone-600 text-sm leading-relaxed">
                           Generate context-aware pitches that reference each
-                          contact&apos;s submission guidelines. Review, edit,
-                          and export in batches.
+                          contact&apos;s submission preferences. Review, edit,
+                          and send in batches.
                         </p>
                       </div>
                     </div>
@@ -431,14 +419,8 @@ export default function HomePage() {
                       <div className="w-1 h-12 bg-tracker-600 rounded-full absolute left-0 top-8 opacity-0" />
                       <div className="pl-4">
                         <h3 className="text-lg font-bold text-stone-900 mb-2">
-                          Track
+                          Track Outcomes
                         </h3>
-                        <a
-                          href="https://tracker.totalaudiopromo.com"
-                          className="text-sm font-medium text-cyan-700 hover:text-cyan-800 transition-colors mb-3 inline-block"
-                        >
-                          Tracker Studio &rarr;
-                        </a>
                         <p className="text-stone-600 text-sm leading-relaxed">
                           See which contacts opened, replied, and added your
                           track. Turn campaign outcomes into intelligence for
@@ -456,7 +438,7 @@ export default function HomePage() {
                     href="https://tap.totalaudiopromo.com/signup?source=studios"
                     className="inline-block px-8 py-4 text-base font-bold text-white bg-cyan-700 rounded-full hover:bg-cyan-800 transition-colors shadow-[0_1px_2px_rgba(0,0,0,0.05),0_4px_16px_rgba(8,145,178,0.25)]"
                   >
-                    Start using TAP free — all three studios included
+                    Start using TAP free — everything included
                   </a>
                 </MotionScrollReveal>
               </div>
@@ -480,6 +462,28 @@ export default function HomePage() {
                   <div className="space-y-6">
                     <div>
                       <h3 className="text-lg font-bold text-stone-900 mb-3 flex items-center gap-2">
+                        <span className="flex-shrink-0 w-6 h-6 rounded-full bg-stone-400 text-white flex items-center justify-center text-xs">
+                          &times;
+                        </span>
+                        This is NOT for you if:
+                      </h3>
+                      <ul className="space-y-3 text-stone-500 italic">
+                        <li>
+                          You&apos;re releasing your first record and exploring
+                          how PR works.
+                        </li>
+                        <li>
+                          You want &quot;send it everywhere&quot; mass outreach.
+                        </li>
+                        <li>
+                          You need templates or hand-held guidance on what to
+                          say.
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div>
+                      <h3 className="text-lg font-bold text-stone-900 mb-3 flex items-center gap-2">
                         <span className="flex-shrink-0 w-6 h-6 rounded-full bg-cyan-700 text-white flex items-center justify-center text-xs">
                           &#10003;
                         </span>
@@ -501,28 +505,6 @@ export default function HomePage() {
                           </span>{" "}
                           — You care about long-term industry reputation, not
                           volume.
-                        </li>
-                      </ul>
-                    </div>
-
-                    <div>
-                      <h3 className="text-lg font-bold text-stone-900 mb-3 flex items-center gap-2">
-                        <span className="flex-shrink-0 w-6 h-6 rounded-full bg-stone-400 text-white flex items-center justify-center text-xs">
-                          &times;
-                        </span>
-                        This is NOT for you if:
-                      </h3>
-                      <ul className="space-y-3 text-stone-500 italic">
-                        <li>
-                          You&apos;re releasing your first record and exploring
-                          how PR works.
-                        </li>
-                        <li>
-                          You want &quot;send it everywhere&quot; mass outreach.
-                        </li>
-                        <li>
-                          You need templates or hand-held guidance on what to
-                          say.
                         </li>
                       </ul>
                     </div>
@@ -646,7 +628,7 @@ export default function HomePage() {
                   Music PR Software Pricing
                 </h2>
                 <p className="text-lg text-stone-600 max-w-xl mx-auto">
-                  All three studios included in every plan. Start free, upgrade
+                  Everything included in every plan. Start free, upgrade
                   when you&apos;re ready. Lock in these rates before they go up.
                 </p>
               </header>
@@ -671,7 +653,7 @@ export default function HomePage() {
                   <ul className="space-y-3 mb-8 flex-grow text-sm text-stone-700">
                     <li className="flex items-center gap-2">
                       <span className="text-cyan-700">&#10003;</span>
-                      All three studios
+                      Full workspace access
                     </li>
                     <li className="flex items-center gap-2">
                       <span className="text-cyan-700">&#10003;</span>
@@ -787,7 +769,11 @@ export default function HomePage() {
                     </li>
                     <li className="flex items-center gap-2">
                       <span className="text-cyan-700">&#10003;</span>
-                      Unlimited pitches &amp; campaigns
+                      Unlimited pitches
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="text-cyan-700">&#10003;</span>
+                      Unlimited campaigns
                     </li>
                     <li className="flex items-center gap-2">
                       <span className="text-cyan-700">&#10003;</span>
@@ -809,7 +795,7 @@ export default function HomePage() {
               </div>
 
               <p className="text-center text-sm text-stone-500 mt-6">
-                All plans include all three studios. Early adopter pricing --
+                All features included in every plan. Early adopter pricing --
                 these rates won&apos;t last forever. Cancel anytime.
               </p>
             </div>
