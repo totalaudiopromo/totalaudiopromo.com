@@ -23,7 +23,7 @@ export default function HomePage() {
         />
         <meta
           name="keywords"
-          content="music PR workspace, music promotion platform, radio promotion software UK, TAP music PR, contact enrichment, pitch generator, campaign tracking, UK music industry, BBC Radio"
+          content="music PR workspace, music promotion platform, music PR software, TAP music PR, contact enrichment, pitch generator, campaign tracking, music industry software, radio promotion platform"
         />
         <meta name="author" content="Chris Schofield" />
         <meta name="robots" content="index, follow" />
@@ -47,7 +47,7 @@ export default function HomePage() {
           content="https://totalaudiopromo.com/images/total_audio_promo_logo_trans.png"
         />
         <meta property="og:site_name" content="Total Audio Promo" />
-        <meta property="og:locale" content="en_GB" />
+        <meta property="og:locale" content="en" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
@@ -177,7 +177,7 @@ export default function HomePage() {
                   name: "Is my data safe?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Yes. TAP is GDPR compliant, UK-hosted, and encrypted with 256-bit encryption. Your data is exportable anytime -- you always own your contacts and campaign history.",
+                    text: "Yes. TAP is GDPR compliant, secure, and encrypted with 256-bit encryption. Your data is exportable anytime -- you always own your contacts and campaign history.",
                   },
                 },
               ],
@@ -276,8 +276,8 @@ export default function HomePage() {
                       contacts, draft pitches, and track outcomes.
                     </p>
                     <p className="text-lg font-semibold text-stone-800 mb-6">
-                      Built by a freelance radio plugger. BBC Radio 1, 6 Music,
-                      Kiss FM.
+                      Built by a freelance radio plugger with 5+ years
+                      professional radio promotion experience.
                     </p>
                   </MotionScrollReveal>
 
@@ -324,7 +324,7 @@ export default function HomePage() {
                     {/* Founder context badge */}
                     <div className="absolute -top-4 -left-4 bg-white rounded-xl border border-stone-200 shadow-soft p-3 z-30 rotate-[-3deg]">
                       <div className="text-[11px] font-bold text-stone-900 leading-tight">
-                        Built by a freelance plugger
+                        5+ years radio promotion
                       </div>
                       <div className="text-[10px] text-stone-500 font-medium">
                         BBC Radio 1 &middot; 6 Music &middot; Kiss FM
@@ -561,7 +561,7 @@ export default function HomePage() {
                       d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
                     />
                   </svg>
-                  256-bit encrypted, UK-hosted
+                  Secure &amp; encrypted
                 </div>
                 <div className="flex items-center gap-2">
                   <svg
@@ -593,7 +593,7 @@ export default function HomePage() {
                       d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
                     />
                   </svg>
-                  UK-based
+                  Independent
                 </div>
                 <div className="flex items-center gap-2">
                   <svg
@@ -877,7 +877,7 @@ export default function HomePage() {
                     </svg>
                   </summary>
                   <div className="px-6 pb-5 text-stone-600 leading-relaxed">
-                    Yes. TAP is GDPR compliant, UK-hosted, and encrypted with
+                    Yes. TAP is GDPR compliant, secure, and encrypted with
                     256-bit encryption. Your data is exportable anytime -- you
                     always own your contacts and campaign history.
                   </div>
@@ -1067,7 +1067,7 @@ export default function HomePage() {
                 &copy; {new Date().getFullYear()} Total Audio Promo
               </p>
               <p className="text-sm text-stone-500">
-                Built in Brighton by Chris Schofield
+                Built by Chris Schofield, music PR professional
               </p>
             </div>
           </div>

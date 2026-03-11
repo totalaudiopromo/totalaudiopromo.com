@@ -43,7 +43,7 @@ export function CaseStudyBanner({ title, metrics }: CaseStudyBannerProps) {
 
         <div className="mt-8 text-center">
           <p className="text-stone-400 text-sm">
-            Real results from a BBC Radio 1 campaign using Intel Studio + Pitcher Studio
+            Real results from a professional radio campaign using Intel Studio + Pitcher Studio
           </p>
         </div>
       </div>
